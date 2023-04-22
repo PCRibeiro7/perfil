@@ -1,4 +1,6 @@
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+import { Zoom } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 type TipPanelProps = {
     currentQuestionIndex: number;
@@ -14,13 +16,28 @@ export default function TipPanel({
     canGoBack,
     canGoForward,
 }: TipPanelProps) {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setMounted(true);
+        }, 2000);
+    }, []);
+
     return (
         <div className="h-fit bg-white rounded-xl p-2 relative">
             <div>
-                <h1 className="text-xl mb-4 text-slate-400">{'Dica: '}</h1>
-                <h1 className="text-2xl max-w-md">
-                    {currentCard.questions[currentQuestionIndex]}
-                </h1>
+                <Zoom in={mounted}>
+                    <h1 className="text-xl mb-4 text-slate-400">{'Dica: '}</h1>
+                </Zoom>
+                <Zoom
+                    in={mounted}
+                    style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
+                >
+                    <h1 className="text-2xl max-w-md">
+                        {currentCard.questions[currentQuestionIndex]}
+                    </h1>
+                </Zoom>
             </div>
             <div className="absolute px-4 right-0 top-4">
                 <button

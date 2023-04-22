@@ -6,7 +6,7 @@ import TipPanel from '../components/TipPanel';
 import TipTypePanel from '../components/TipTypePanel';
 import FeedbackSnackbar from '../components/FeedbackSnackbar';
 import cards from './cards.json';
-import { Slide } from '@mui/material';
+import { Slide, Zoom } from '@mui/material';
 
 const INITIAL_CARD_INDEX = 0;
 const MINIMUN_SIMILARITY = 0.8;
@@ -129,18 +129,20 @@ export default function Home(): JSX.Element {
                 ...state,
                 slides: { ...state.slides, second: true },
             }));
-        }, 3000);
+        }, 4000);
     };
 
     if (!state.gameStarted) {
         return (
             <main className="flex justify-center items-center h-screen bg-slate-100">
-                <button
-                    onClick={startGame}
-                    className="bg-white p-2 rounded-xl w-40"
-                >
-                    <h1 className="text-3xl ">Jogar</h1>
-                </button>
+                <Zoom in={true} timeout={1000}>
+                    <button
+                        onClick={startGame}
+                        className="bg-white p-2 rounded-xl w-40"
+                    >
+                        <h1 className="text-3xl ">Jogar</h1>
+                    </button>
+                </Zoom>
             </main>
         );
     }
@@ -183,7 +185,6 @@ export default function Home(): JSX.Element {
                         <GuessComponent
                             handleQuestionAnswered={handleQuestionAnswered}
                             wrongAnswers={state.wrongAnswers}
-                            askedQuestions={state.askedQuestions}
                             usedTips={state.usedTips}
                         />
                     </div>
