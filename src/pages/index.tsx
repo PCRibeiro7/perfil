@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import stringSimilarity from 'string-similarity';
-import GuessComponent from './components/GuessComponent';
-import GuessOptions from './components/GuessOptions';
-import TipPanel from './components/TipPanel';
-import TipTypePanel from './components/TipTypePanel';
-import FeedbackSnackbar from './components/FeedbackSnackbar';
+import GuessComponent from '../components/GuessComponent';
+import GuessOptions from '../components/GuessOptions';
+import TipPanel from '../components/TipPanel';
+import TipTypePanel from '../components/TipTypePanel';
+import FeedbackSnackbar from '../components/FeedbackSnackbar';
 import cards from './cards.json';
 
 const INITIAL_CARD_INDEX = 0;
