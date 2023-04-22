@@ -21,7 +21,7 @@ export default function GuessComponent({
                     type="text"
                     name="answer"
                     placeholder="Digite seu palpite aqui..."
-                    className="text-center w-full h-10 text-xl border-slate-600 rounded-xl mb-2"
+                    className="text-center w-full h-10 text-xl border-slate-600 rounded-xl mb-2 placeholder:text-slate-500"
                 />
                 <div>
                     <button className="w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600">
