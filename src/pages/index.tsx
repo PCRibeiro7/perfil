@@ -6,12 +6,18 @@ import TipPanel from '../components/TipPanel';
 import TipTypePanel from '../components/TipTypePanel';
 import FeedbackSnackbar from '../components/FeedbackSnackbar';
 import cards from './cards.json';
+import { Slide } from '@mui/material';
 
 const INITIAL_CARD_INDEX = 0;
 const MINIMUN_SIMILARITY = 0.8;
 
 type SnackbarType = 'success' | 'error';
 export interface IState {
+    gameStarted: boolean;
+    slides: {
+        first: boolean;
+        second: boolean;
+    };
     cards: any[];
     currentCardIndex: number;
     askedQuestions: number[];
@@ -26,6 +32,11 @@ export interface IState {
 }
 export default function Home(): JSX.Element {
     const [state, setState] = useState<IState>({
+        gameStarted: false,
+        slides: {
+            first: false,
+            second: false,
+        },
         cards: cards,
         currentCardIndex: INITIAL_CARD_INDEX,
         askedQuestions: [0],
@@ -107,32 +118,76 @@ export default function Home(): JSX.Element {
         }
     };
 
+    const startGame = () => {
+        setState(state => ({
+            ...state,
+            gameStarted: true,
+            slides: { ...state.slides, first: true },
+        }));
+        setTimeout(() => {
+            setState(state => ({
+                ...state,
+                slides: { ...state.slides, second: true },
+            }));
+        }, 3000);
+    };
+
+    if (!state.gameStarted) {
+        return (
+            <main className="flex justify-center items-center h-screen bg-slate-100">
+                <button
+                    onClick={startGame}
+                    className="bg-white p-2 rounded-xl w-40"
+                >
+                    <h1 className="text-3xl ">Jogar</h1>
+                </button>
+            </main>
+        );
+    }
+
     return (
         <main className="pt-12 pb-12 flex justify-center h-screen bg-slate-100 sm:pt-0 sm:pb-0">
             <div className="justify-between flex flex-col p-6 w-[30rem] sm:p-2">
-                <div className="bg-white flex flex-col   p-6 rounded-lg">
-                    <TipTypePanel currentCard={currentCard} />
-                    <TipPanel
-                        currentCard={currentCard}
-                        currentQuestionIndex={state.currentQuestionIndex}
-                        changeTip={changeTip}
-                        canGoForward={canGoForward}
-                        canGoBack={canGoBack}
-                    />
-                </div>
-                <div className="bg-white flex flex-col   p-6 rounded-lg">
-                    <GuessOptions
-                        currentCard={currentCard}
-                        askedQuestions={state.askedQuestions}
-                        handleClickonGuessOption={handleClickonGuessOption}
-                    />
-                    <GuessComponent
-                        handleQuestionAnswered={handleQuestionAnswered}
-                        wrongAnswers={state.wrongAnswers}
-                        askedQuestions={state.askedQuestions}
-                        usedTips={state.usedTips}
-                    />
-                </div>
+                <Slide
+                    direction="up"
+                    in={state.slides.first}
+                    timeout={1000}
+                    mountOnEnter
+                    unmountOnExit
+                >
+                    <div className="bg-white flex flex-col   p-6 rounded-lg">
+                        <TipTypePanel currentCard={currentCard} />
+                        <TipPanel
+                            currentCard={currentCard}
+                            currentQuestionIndex={state.currentQuestionIndex}
+                            changeTip={changeTip}
+                            canGoForward={canGoForward}
+                            canGoBack={canGoBack}
+                        />
+                    </div>
+                </Slide>
+
+                <Slide
+                    direction="up"
+                    in={state.slides.second}
+                    timeout={1000}
+                    mountOnEnter
+                    unmountOnExit
+                >
+                    <div className="bg-white flex flex-col   p-6 rounded-lg">
+                        <GuessOptions
+                            currentCard={currentCard}
+                            askedQuestions={state.askedQuestions}
+                            handleClickonGuessOption={handleClickonGuessOption}
+                        />
+                        <GuessComponent
+                            handleQuestionAnswered={handleQuestionAnswered}
+                            wrongAnswers={state.wrongAnswers}
+                            askedQuestions={state.askedQuestions}
+                            usedTips={state.usedTips}
+                        />
+                    </div>
+                </Slide>
             </div>
             <FeedbackSnackbar
                 snackbar={state.snackbar}
