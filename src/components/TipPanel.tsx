@@ -15,14 +15,14 @@ export default function TipPanel({
     canGoForward,
 }: TipPanelProps) {
     return (
-        <div className="self-center h-1/4 bg-white rounded-xl w-80 p-2 relative">
+        <div className="h-fit bg-white rounded-xl p-2 relative">
             <div>
-                <h1 className="text-2xl mb-4">{'Dica: '}</h1>
-                <h1 className="text-xl max-w-md">
+                <h1 className="text-xl mb-4 text-slate-400">{'Dica: '}</h1>
+                <h1 className="text-2xl max-w-md">
                     {currentCard.questions[currentQuestionIndex]}
                 </h1>
             </div>
-            <div className="absolute px-4 left-0 top-4 flex w-80 justify-between">
+            <div className="absolute px-4 right-0 top-4">
                 <button
                     onClick={() => changeTip('back')}
                     disabled={!canGoBack}

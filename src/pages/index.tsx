@@ -10,41 +10,6 @@ import cards from './cards.json';
 const INITIAL_CARD_INDEX = 0;
 const MINIMUN_SIMILARITY = 0.8;
 
-const mockCards = [
-    {
-        type: 'Pessoa',
-        answer: 'Monalisa',
-        questions: [
-            'Também sou conhecida como Gioconda.',
-            'Fui feita por um dos pintores mais conhecidos do renascimento italian, Leonardo da Vinci,',
-            'Atualmente estou exposta no Museu do Louvre, em Paris.',
-            'Eu retrato a figura de uma mulher com um soso enigmatic.',
-            'Volte uma casa.',
-            'Ful avaliada, na década de 1960, em cerca de 100 milhes de dolares.',
-            'Avance uma casa.',
-            'Sou um dos quadros mais famosos do mundo.',
-            'Minha pintura foi iniciada do ano de 1503.',
-            'Perca sua vez.',
-        ],
-    },
-    {
-        type: 'Pessoa',
-        answer: 'Mecenas',
-        questions: [
-            'Minha funggo é financiar as atividades intelectuais e artisticas dos artistas do Renascimento.',
-            'OS mals conhecidos foram Lourenco de Médici, banqueiro ftallano, Come de Médici, politico bangqueira italiano e Francisca |, rei da Franga',
-            'Ameu ver a patrocinio das obras do renascimento era uma forma de abter status social.',
-            'Escolha uma pessoa para avangar uma casa.',
-            'Perca sua vez,',
-            'Eu patracino einvisto na produgo cultural dos artistas do Renascimento.',
-            'Artistas como Leonardo Da Vince, Sandro Boticelli, Michelangelo Buonarotti, Rafael Sanzio, entre outros, foram finandiados por mim.',
-            'Avance uma casa.',
-            'Essa palavra tem origem na Roma Antiga. Caio Mecenaspatrocinou a produggio de varios artistas e poetas nesta época.',
-            'Como eram chamados os comerciantes, principes, condes, bispos e banqueiros que financiavam a sobras de arte no Renascimento.',
-        ],
-    },
-];
-
 type SnackbarType = 'success' | 'error';
 export interface IState {
     cards: any[];
@@ -143,30 +108,31 @@ export default function Home(): JSX.Element {
     };
 
     return (
-        <main className="pt-12 pb-12 flex justify-center h-screen">
-            <div
-                className="text-center justify-between flex flex-col snap-center
-                     bg-slate-100 p-6 w-fit rounded-lg"
-            >
-                <TipTypePanel currentCard={currentCard} />
-                <TipPanel
-                    currentCard={currentCard}
-                    currentQuestionIndex={state.currentQuestionIndex}
-                    changeTip={changeTip}
-                    canGoForward={canGoForward}
-                    canGoBack={canGoBack}
-                />
-                <GuessOptions
-                    currentCard={currentCard}
-                    askedQuestions={state.askedQuestions}
-                    handleClickonGuessOption={handleClickonGuessOption}
-                />
-                <GuessComponent
-                    handleQuestionAnswered={handleQuestionAnswered}
-                    wrongAnswers={state.wrongAnswers}
-                    askedQuestions={state.askedQuestions}
-                    usedTips={state.usedTips}
-                />
+        <main className="pt-12 pb-12 flex justify-center h-screen bg-slate-100">
+            <div className="justify-between flex flex-col p-6 w-[30rem]">
+                <div className="bg-white flex flex-col   p-6 rounded-lg">
+                    <TipTypePanel currentCard={currentCard} />
+                    <TipPanel
+                        currentCard={currentCard}
+                        currentQuestionIndex={state.currentQuestionIndex}
+                        changeTip={changeTip}
+                        canGoForward={canGoForward}
+                        canGoBack={canGoBack}
+                    />
+                </div>
+                <div className="bg-white flex flex-col   p-6 rounded-lg">
+                    <GuessOptions
+                        currentCard={currentCard}
+                        askedQuestions={state.askedQuestions}
+                        handleClickonGuessOption={handleClickonGuessOption}
+                    />
+                    <GuessComponent
+                        handleQuestionAnswered={handleQuestionAnswered}
+                        wrongAnswers={state.wrongAnswers}
+                        askedQuestions={state.askedQuestions}
+                        usedTips={state.usedTips}
+                    />
+                </div>
             </div>
             <FeedbackSnackbar
                 snackbar={state.snackbar}

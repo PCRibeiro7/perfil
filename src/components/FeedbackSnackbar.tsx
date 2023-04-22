@@ -15,6 +15,7 @@ export default function FeedbackSnackbar({
             autoHideDuration={1000}
             onClose={() => handleSnackBar({ open: false })}
             anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+            className='w-96'
         >
             <Alert
                 onClose={() => handleSnackBar({ open: false })}

@@ -11,8 +11,12 @@ export default function GuessComponent({
     askedQuestions,
 }: GuessComponentProps) {
     return (
-        <div className="self-center bg-white rounded-xl w-80 p-3 flex flex-col items-center">
-            <form onSubmit={handleQuestionAnswered} className="w-72" autoComplete="off" >
+        <div className="self-center bg-white rounded-xl w-full p-3 flex flex-col items-center">
+            <form
+                onSubmit={handleQuestionAnswered}
+                className="w-full"
+                autoComplete="off"
+            >
                 <input
                     type="text"
                     name="answer"
@@ -26,8 +30,11 @@ export default function GuessComponent({
                 </div>
             </form>
             <div className="mt-4">
-                <h1> Palpites Errados: {wrongAnswers}</h1>
-                <h1> Dicas Usadas: {usedTips}</h1>
+                <h1 className="text-slate-400">
+                    {' '}
+                    Palpites Errados: {wrongAnswers}
+                </h1>
+                <h1 className="text-slate-400"> Dicas Usadas: {usedTips}</h1>
             </div>
         </div>
     );

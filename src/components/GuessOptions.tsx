@@ -10,15 +10,15 @@ export default function GuessOptions({
     currentCard,
 }: GuessOptionsProps) {
     return (
-        <div className="self-center rounded-xl w-60 p-2">
-            <h1 className="mb-4">Dicas disponíveis:</h1>
+        <div className="rounded-xl p-2">
+            <h1 className="text-xl mb-4 text-slate-400">Dicas disponíveis:</h1>
             <div className="grid grid-cols-3 gap-2">
                 {[...Array(currentCard.questions.length).keys()].map(
                     (question, index) => (
                         <button
                             onClick={e => handleClickonGuessOption(index)}
                             key={question}
-                            className="w-12 h-12 justify-self-center bg-slate-950 rounded-full disabled:bg-slate-300 hover:bg-slate-600"
+                            className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-300 hover:bg-slate-600"
                             disabled={askedQuestions.includes(index)}
                         >
                             <h1 className="text-xl text-slate-100">
