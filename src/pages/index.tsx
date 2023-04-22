@@ -108,8 +108,8 @@ export default function Home(): JSX.Element {
     };
 
     return (
-        <main className="pt-12 pb-12 flex justify-center h-screen bg-slate-100">
-            <div className="justify-between flex flex-col p-6 w-[30rem]">
+        <main className="pt-12 pb-12 flex justify-center h-screen bg-slate-100 sm:pt-0 sm:pb-0">
+            <div className="justify-between flex flex-col p-6 w-[30rem] sm:p-2">
                 <div className="bg-white flex flex-col   p-6 rounded-lg">
                     <TipTypePanel currentCard={currentCard} />
                     <TipPanel
