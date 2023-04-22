@@ -1,11 +1,11 @@
 import { Alert, Snackbar } from '@mui/material';
-import { IState } from '.';
+import { IState } from '..';
 
 interface IFeedbackSnackbarProps {
     snackbar: Partial<IState['snackbar']>;
     handleSnackBar: (snackbarData: Partial<IState['snackbar']>) => void;
 }
-export function FeedbackSnackbar({
+export default function FeedbackSnackbar({
     snackbar,
     handleSnackBar,
 }: IFeedbackSnackbarProps): JSX.Element {

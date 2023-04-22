@@ -7,7 +7,7 @@ type TipPanelProps = {
     canGoBack: boolean;
     canGoForward: boolean;
 };
-export function TipPanel({
+export default function TipPanel({
     currentCard,
     currentQuestionIndex,
     changeTip,

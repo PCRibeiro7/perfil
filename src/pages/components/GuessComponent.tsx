@@ -4,7 +4,7 @@ interface GuessComponentProps {
     usedTips: number;
     askedQuestions: number[];
 }
-export function GuessComponent({
+export default function GuessComponent({
     handleQuestionAnswered,
     wrongAnswers,
     usedTips,

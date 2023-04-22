@@ -4,7 +4,7 @@ type GuessOptionsProps = {
     currentCard: any;
 };
 
-export function GuessOptions({
+export default function GuessOptions({
     askedQuestions,
     handleClickonGuessOption,
     currentCard,

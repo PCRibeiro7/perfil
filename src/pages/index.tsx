@@ -1,20 +1,11 @@
-import { Modal, AlertColor } from '@mui/material';
-import { Inter } from 'next/font/google';
 import { useState } from 'react';
 import stringSimilarity from 'string-similarity';
-import { GuessComponent } from './GuessComponent';
-import { GuessOptions } from './GuessOptions';
-import { TipPanel } from './TipPanel';
-import { TipTypePanel } from './TipTypePanel';
-import { EventHandler } from 'react';
-import { FeedbackSnackbar } from './FeedbackSnackbar';
+import GuessComponent from './components/GuessComponent';
+import GuessOptions from './components/GuessOptions';
+import TipPanel from './components/TipPanel';
+import TipTypePanel from './components/TipTypePanel';
+import FeedbackSnackbar from './components/FeedbackSnackbar';
 import cards from './cards.json';
-
-const inter = Inter({ subsets: ['latin'] });
-const random = (x: number) => Math.floor(Math.random() * x);
-const removeItemByIndex = (array: any[], index: number) => {
-    return array.slice(0, index).concat(array.slice(index + 1));
-};
 
 const INITIAL_CARD_INDEX = 0;
 const MINIMUN_SIMILARITY = 0.8;

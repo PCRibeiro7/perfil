@@ -1,7 +1,7 @@
 type TipTypePanelProps = {
     currentCard: any;
 };
-export function TipTypePanel({ currentCard }: TipTypePanelProps) {
+export default function TipTypePanel({ currentCard }: TipTypePanelProps) {
     return (
         <div className="bg-white rounded-xl w-80 self-center p-2">
             <h1 className="text-2xl">{'Sou um(a) ... '}</h1>
