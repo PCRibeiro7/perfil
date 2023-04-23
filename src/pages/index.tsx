@@ -3,6 +3,7 @@ import cards from '../consts/cards.json';
 import Home from './Home';
 import Card from './Card';
 import Success from './Success';
+import { shuffleArray } from '@/utils/shuffleArray';
 
 const INITIAL_CARD_INDEX = 0;
 
@@ -51,6 +52,7 @@ export default function Main(): JSX.Element {
     const startGame = () => {
         setState(state => ({
             ...state,
+            cards: shuffleArray(state.cards),
             gameStarted: true,
             slides: { ...state.slides, first: true },
         }));
