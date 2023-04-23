@@ -3,15 +3,14 @@ import cards from '../consts/cards.json';
 import Home from '../components/Home/Home';
 import Card from '../components/Card/Card';
 import Success from '../components/Success/Success';
-import { shuffleArray } from '@/utils/shuffleArray';
 
 const INITIAL_CARD_INDEX = 0;
 
 type SnackbarType = 'success' | 'error';
 export interface IState {
     gameStarted: boolean;
-    showQuestionAnsweredPage: boolean;
-    slides: {
+    showSuccessPage: boolean;
+    cardSlides: {
         first: boolean;
         second: boolean;
     };
@@ -31,8 +30,8 @@ export interface IState {
 export default function Main(): JSX.Element {
     const [state, setState] = useState<IState>({
         gameStarted: false,
-        showQuestionAnsweredPage: false,
-        slides: {
+        showSuccessPage: false,
+        cardSlides: {
             first: false,
             second: false,
         },
@@ -49,27 +48,12 @@ export default function Main(): JSX.Element {
         },
     });
 
-    const startGame = () => {
-        setState(state => ({
-            ...state,
-            cards: shuffleArray(state.cards),
-            gameStarted: true,
-            slides: { ...state.slides, first: true },
-        }));
-        setTimeout(() => {
-            setState(state => ({
-                ...state,
-                slides: { ...state.slides, second: true },
-            }));
-        }, 4000);
-    };
-
     if (!state.gameStarted) {
-        return <Home startGame={startGame} />;
+        return <Home setState={setState} />;
     }
 
-    if (state.showQuestionAnsweredPage) {
-        return <Success setState={setState} startGame={startGame} />;
+    if (state.showSuccessPage) {
+        return <Success setState={setState} />;
     }
 
     return <Card state={state} setState={setState} />;

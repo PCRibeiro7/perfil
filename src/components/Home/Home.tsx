@@ -1,10 +1,26 @@
+import { IState } from '@/pages';
 import { Zoom } from '@mui/material';
+import { Dispatch, SetStateAction } from 'react';
 
 interface IHomeProps {
-    startGame: () => void;
+    setState: Dispatch<SetStateAction<IState>>;
 }
 
-export default function Home({ startGame }: IHomeProps): JSX.Element {
+export default function Home({ setState }: IHomeProps): JSX.Element {
+    const startGame = () => {
+        setState(state => ({
+            ...state,
+            // cards: shuffleArray(state.cards),
+            gameStarted: true,
+            cardSlides: { ...state.cardSlides, first: true },
+        }));
+        setTimeout(() => {
+            setState(state => ({
+                ...state,
+                cardSlides: { ...state.cardSlides, second: true },
+            }));
+        }, 4000);
+    };
     return (
         <main className="flex justify-center items-center h-screen bg-slate-100">
             <Zoom in={true} timeout={1000}>

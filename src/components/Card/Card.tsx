@@ -36,9 +36,9 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                 currentCardIndex: state.currentCardIndex + 1,
                 askedQuestions: [0],
                 currentQuestionIndex: 0,
-                showQuestionAnsweredPage: true,
                 snackbar: { type: 'success', open: true, message: 'Acertou!' },
-                slides:{
+                showSuccessPage: true,
+                cardSlides:{
                     first: false,
                     second: false,
                 }
@@ -93,7 +93,7 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
             <div className="justify-between flex flex-col p-6 w-[30rem] sm:p-2">
                 <Slide
                     direction="up"
-                    in={state.slides.first}
+                    in={state.cardSlides.first}
                     timeout={1000}
                     mountOnEnter
                     unmountOnExit
@@ -112,7 +112,7 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
 
                 <Slide
                     direction="up"
-                    in={state.slides.second}
+                    in={state.cardSlides.second}
                     timeout={1000}
                     mountOnEnter
                     unmountOnExit

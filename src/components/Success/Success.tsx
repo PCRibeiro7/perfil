@@ -3,12 +3,10 @@ import { IState } from '../../pages';
 
 interface ISuccessProps {
     setState: React.Dispatch<React.SetStateAction<IState>>;
-    startGame: () => void;
 }
 
 export default function Sucess({
     setState,
-    startGame,
 }: ISuccessProps): JSX.Element {
     return (
         <div className='h-screen bg-slate-100'>
@@ -23,13 +21,13 @@ export default function Sucess({
                         onClick={() => {
                             setState(state => ({
                                 ...state,
-                                showQuestionAnsweredPage: false,
-                                slides: { ...state.slides, first: true },
+                                showSuccessPage: false,
+                                cardSlides: { ...state.cardSlides, first: true },
                             }));
                             setTimeout(() => {
                                 setState(state => ({
                                     ...state,
-                                    slides: { ...state.slides, second: true },
+                                    cardSlides: { ...state.cardSlides, second: true },
                                 }));
                             }, 4000);
                         }}
