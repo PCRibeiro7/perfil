@@ -40,7 +40,7 @@
         "prettier": "^2.8.7"
     },
     "lint-staged": {
-        "*.{ts,tsx}": "npm run lint",
-        "*.{ts,tsx,js,css,md,html,json}": "npm run format"
+        "*.{ts,tsx}": "eslint --fix",
+        "*.{ts,tsx,js,css,md,html,json}": "npm run prettier-format"
     }
 }
