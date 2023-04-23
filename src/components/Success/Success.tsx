@@ -16,7 +16,6 @@ export default function Sucess({
                 <div className="flex flex-col justify-center items-center h-screen">
                     <div>
                         <h1 className="text-5xl text-center mb-8">
-
                             Parabéns!
                             <br />
                             <br />
