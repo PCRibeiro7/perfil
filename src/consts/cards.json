@@ -7,9 +7,9 @@
             " Fui feita por um dos pintores mais conhecidos do renascimento italiana, Leonardo da Vinci,",
             "Atualmente estou exposta no Museu do Louvre, em Paris.",
             "Eu retrato a figura de uma mulher com um sorriso enigmático.",
-            "Ful avaliada, na década de 1960, em cerca de 100 milhões de dólares.",
+            "Fui avaliada, na década de 1960, em cerca de 100 milhões de dólares.",
             "Sou um dos quadros mais famosos do mundo.",
-            "Minha pintura foi iniciada do ano de 1503."
+            "Minha pintura foi iniciada no ano de 1503."
         ]
     },
     {
@@ -33,22 +33,22 @@
             " Pintei 0 teto da Capela Sistina situada no Vaticano.",
             "Esculpi Piet, Davi e Moisés.",
             "Fui um pintor, escultor e arquiteto italiano.",
-            "Meu nome em portugués é “Miguel  Angelo",
+            "Meu nome em portugués é “Miguel   ngelo",
             "Tenho 0 mesmo nome de um dos personagens do desenho “Tartarugas Ninja",
             "Nasci em 1475 em Caprese, nas vizinhanças de Florença na Itália."
         ]
     },
     {
         "type": "objeto.",
-        "answer": "Biblia",
+        "answer": "Bíblia",
         "questions": [
-            "Biblia.",
+            "Bíblia.",
             " Padre.",
             "Papa.",
             "Poder econômico durante a Idade Moderna.",
             "Santos.",
             "Catequese.",
-            " Local de adoragéo."
+            " Local de adoração."
         ]
     },
     {
@@ -62,7 +62,7 @@
             "Eu era cercada por altos muros a fim de evitar invasões e saques.",
             "De surgimento as cidades.",
             "Concentrava trabalhadores livres e comerciantes durante o final da Idade Média,",
-            " Uma cidade da Espanha é um bairro da Zona Leste de São Paulo que tem omesmo nome que o meu."
+            " Uma cidade da Espanha é um bairro da Zona Leste de São Paulo que tem o mesmo nome que o meu."
         ]
     },
     {
@@ -70,7 +70,7 @@
         "answer": "Heliocentrismo",
         "questions": [
             "Nicolau Copérnico (1453-1543) é considerado o fundador da astronomia moderna e meu pa.",
-            "\"Galle Galle (1564-1642) contribuiu para reforgaressa teoria de que a terra giraria em torno do sol",
+            "\"Galle Galle (1564-1642) contribuiu para reforçar essa teoria de que a terra giraria em torno do sol",
             "Contrario a teoria defendida por Aristóteles e Ptolomeu De que a terra seria o centro do universo.",
             " oposto da minha teoria é 0 geocentrismo.",
             "Perea sua vez,",
@@ -87,7 +87,7 @@
             "Sai de Portugal e avancei até as Índias contornando o continente africano.",
             "Um clube de futebol brasileiro tem o mesmo nome que eu.",
             "Sal de Lisboa em 1497 e cheguei a Calicute no ano seguinte, em 1498.",
-            "Fui o comandante dos primeiros navios a navegar da Europa para a India.",
+            "Fui o comandante dos primeiros navios a navegar da Europa para a Índia.",
             "Nasci por volta do ano de 1460 em uma cidade de Portugal e morre inicia no ano de 1524,",
             " No ano de 1497 minha frota saiu de Portugal rum 3s Índias com 170 homens que ocupavam 4 navies,"
         ]
@@ -110,7 +110,7 @@
         "answer": "Portugal",
         "questions": [
             "Fui 0 pioneiro na expansão marítima durante a idade Moderna(Xv-xviii)",
-            " Ocupei diferentes regides do continente fricano, como o Congo, Mozambique, Angos, Guiné- Bissau e Cabo Verde.",
+            " Ocupei diferentes regiões do continente fricano, como o Congo, Moçambique, Angola, Guiné- Bissau e Cabo Verde.",
             "Na gastronomia do meu país  possível perceber a presença de diversas regiões do mundo: do Brasil level o milho e a mandioca, das terras africanas o consumo de quiabo e da Índia, alguns pratos como o sarapatel.",
             " jogador de futebol Cristiano Ronaldo nasceu aqui.",
             "Estou localizado na península Ibérica.",
@@ -134,13 +134,13 @@
     },
     {
         "type": "Pessoa",
-        "answer": "Pedro Alvares Cabral",
+        "answer": "Pedro Álvares Cabral",
         "questions": [
             "A Lagoa do Taquaral em Campinas possui uma réplica da Caravela Anunciação utilizada por mim no ano de 1500 para realizar minhas viagens marítimas.",
             "Sai de Lisboa em 9 de março de 1500 em direção às Índias.",
             "Junto comigo veio o cronista Pero Vaz de Caminha que escreveu suas impressÕes sobre a terra recém-descoberta.",
             "Eu e minha frota chegamos no dia 22 de abril de 1500, na costa do atual estado da Bahia.",
-            "Fui nomeado comandante de uma frota de 13 navios que partiram em Margo de 1500 rumo as Indias.",
+            "Fui nomeado comandante de uma frota de 13 navios que partiram em Margo de 1500 rumo às Índias.",
             "No Museu Paulista da Universidade de S30 Paulo encontra se uma pintura de Oscar Pereira da Silva que retrata a minha chegada em Porto Seguro no ano de 1500.",
             " Recebi 10 mil cruzados pela viagem. Além disso, eu poderia ainda comprar 30 toneladas de pimenta & transport-Jas gratuitamente no navig,"
         ]
@@ -153,14 +153,14 @@
             " Livro Sagrado.",
             "Tenho versículos.",
             "Tenho mais de 1500 tradugdes.",
-            "Lutero foi a primeira pessoa em me traduzir para o alemdo.",
+            "Lutero foi a primeira pessoa em me traduzir para o além do.",
             "Fui principal fonte de conhecimento durante a Idade Média.",
             " Lutero defendeu a minha livre interpretação da população."
         ]
     },
     {
         "type": "Pessoa",
-        "answer": "Fernando de Magalhaes",
+        "answer": "Fernando de Magalhães",
         "questions": [
             "Serviço do rei da Espanha planejei e executei em 1519 a expedição marítima que completou a primeira volta 20 mundo, comprovando a esfericidade da terra.",
             " Percorri toda a parte Sul do oceano Atl ntico em busca de uma passagem para o oceano Pacifico.",
@@ -172,7 +172,7 @@
         ]
     },
     {
-        "type": "economica.",
+        "type": "econômica.",
         "answer": "Mercantilismo",
         "questions": [
             "Sou um conjunto de práticas econômicas realizadas na Europa durante a ldade Moderna entre os séculos XV e XVIII",
@@ -207,7 +207,7 @@
             "Em italiano sou chamada de “Firenze”",
             "Em latim sou chamada de “Florentia”",
             "A Fiorentina” é o principal clube de futebol da cidade.",
-            "Ful muito tempo considerada a capital da moda."
+            "Fui muito tempo considerada a capital da moda."
         ]
     },
     {
@@ -216,7 +216,7 @@
         "questions": [
             "Trabalho para o senhor feudal.",
             "Trabalho em troca de seguranca.",
-            "Pago impostos como a talha, banalidades, corveia e mdomorta.",
+            "Pago impostos como a talha, banalidades, corveia e mão morta.",
             " senhor feudal determinava as regras e leis que minha família deveria seguir.",
             "Ndo tinha a posse de terra na ldade Média.",
             "Na sociedade feudal eu representava o grupo daqueles que “trabalhavam”",
@@ -237,8 +237,8 @@
         ]
     },
     {
-        "type": "economica",
-        "answer": "Balanca comercial favoravel",
+        "type": "Teoria Econômica",
+        "answer": "Balança comercial favorável",
         "questions": [
             "Para que a economia de um país crescesse o governo se esforçava para exportar mais e importar menos mercadorias.",
             " Sou uma das características do mercantilismo.",
@@ -250,7 +250,7 @@
         ]
     },
     {
-        "type": "gaverno,",
+        "type": "governo,",
         "answer": "Absolutismo ",
         "questions": [
             "Sistema de governo que vigorou durante a idade Moderna na Europa.",
@@ -286,7 +286,7 @@
             "Eu era dirigida por um juiz ordinário que era escolhido pelos integrantes da elite da cidade.",
             "Eu possuía várias fontes, como por exemplo, resolver problemas de ordem econômica,administrativa e política das cidades.",
             "No século XVII a denominatio “homens bons” foi substituída por vereador.",
-            " primeira foi estabelecida no Brasil no ano de 1532."
+            "A primeira foi estabelecida no Brasil no ano de 1532."
         ]
     },
     {
@@ -295,23 +295,23 @@
         "questions": [
             "Progredi debido a producto de canadá-aplicar.",
             " Fui fundada em 22 de janeiro de 1532 pelo portugugs Martim Afonso de Souza.",
-            "Ful uma capitania hereditiria.",
+            "Ful uma capitania hereditária.",
             "Sou considerada uma das primeiras cidades do Brasil.",
             "Ficou próxima de outras povoadores do período como Santos, S3c Paulo e Sant’ana de Mogi.",
             "No Museu Paulista da USP está exposta uma pintura de Benedito Calixto feita em 1900 que representa a minha fundag 3o.",
-            "Meu nome é uma homenagem a um padre espanhol que hoje & o santo padroeiro de Lisboa."
+            "Meu nome é uma homenagem a um padre espanhol que hoje é o santo padroeiro de Lisboa."
         ]
     },
     {
         "type": "Pessoa",
         "answer": "Criollo",
         "questions": [
-            "Muitos filhos iam estudar na Espanha e ao voltar exerciam a carreira de médico eadvogado.",
+            "Muitos filhos iam estudar na Espanha e ao voltar exerciam a carreira de médico e advogado.",
             " Filhos de espanhóis nascidos na América.",
             "Atuava no comércio",
             "Possuía grandes propriedades na América Espanhola.",
             "Possui poder económico, mas no tinha participado política na América Espanhola.",
-            "omos importantes na independência da América Espanhola.",
+            "Fomos importantes na independência da América Espanhola.",
             " Participava do cabildo."
         ]
     },
@@ -345,7 +345,7 @@
         "type": "Pessoa",
         "answer": "Homens-bons",
         "questions": [
-            "Componho a Cdmara Municipal.",
+            "Componho a Câmara Municipal.",
             "Sou latifundiário, dono de escravos  catélico.",
             "Nome utilizado para determinar as pessoas que poderiam ocupar cargos políticos.",
             "Preciso ter mais de 25 anos para me tomar um.",
@@ -359,7 +359,7 @@
         "answer": "Mesoamérica ",
         "questions": [
             " Sou um termo utilizado para fazer referência a uma grande área geográfica e cultural do continente americano.",
-            "Localizagdo das civilizacOes précolombianas.",
+            "Localização das civilizações pré colombianas.",
             "As civilizações Olmeca, Asteca e Maia se desenvolveram aqui.",
             "05 Olmecas formaram a primeira grande civilizado dessa regido.",
             "Incluo o sul do México até os territórios da Guatemala, El Salvador, Belize Nicarágua, Honduras e Costa Rica,",
@@ -378,7 +378,7 @@
             "Surgiu há cerca de 7.000 anos onde hoje é o México e a Guatemala. Sou cultivado hd 4.000 anos.",
             "Desempenhou um papel central na mitologia grega.",
             "Posso ser acompanhado com fed, amaranto e chia.",
-            "posso ser feito em receitas doces ou salgadas"
+            "pode ser feito em receitas doces ou salgadas"
         ]
     },
     {
@@ -388,8 +388,8 @@
             "Grande financiador da construção dos engenhos no Brasil Colonial.",
             " Invadiu o Brasil em duas oportunidades. Na Bahia e Pernambuco no século XVII.",
             "A camisa da seleção de futebol é laranja.",
-            "No século XVI a Espanha proibiu 0 nosso comércio com suas colonias.",
-            "Invadimos Salvador entre os anos de 1624 e 1625 mas fomos expulsos pelos portugueses e espanhois.",
+            "No século XVI a Espanha proibiu 0 nosso comércio com suas colônias.",
+            "Invadimos Salvador entre os anos de 1624 e 1625 mas fomos expulsos pelos portugueses e espanhóis.",
             "Em 1630 invadiram Pernambuco e 56 saímos de 13 em 1654.",
             " Sou chamada também de 'Países Baixos'"
         ]
@@ -398,13 +398,13 @@
         "type": "local",
         "answer": "Calicute",
         "questions": [
-            "Estou localizada na costa ocidental da India.",
+            "Estou localizada na costa ocidental da Índia.",
             " Aqui aportaram navegadores como Pedro Álvares Cabral e Vasco da Gama.",
             "Fui Um centro de comércio muito importante durante a ldade Moderna.",
             "Possuía muitas especiarias.",
             "Fiquei famosa por ser o principal porto comercial da Índia no século XV.",
             "Na minha cidade havia vários armazéns, mesquitas e templos.",
-            "Apesar de ser o centro das relações comerciais entre o Oriente e Ocidente eu no me encontrava fortificada e 0 meu porto era bastante inóspito."
+            "Apesar de ser o centro das relações comerciais entre o Oriente e Ocidente eu não me encontrava fortificada e 0 meu porto era bastante inóspito."
         ]
     },
     {
@@ -417,18 +417,18 @@
             " corante extraído de mim & utilizado no tingimento de tecidos.",
             "Recebi esse nome em fungo da madeira cortada lembrar uma brasa.",
             "De 1500 a 1600, calcula-se que 2 milhões vieram abaixo. Hoje, está quase extinto.",
-            " Sirvo para construir instrumentos de corda."
+            "Serve para construir instrumentos de corda."
         ]
     },
     {
         "type": "objeto.",
-        "answer": "Calendario Azteca",
+        "answer": "Calendário Azteca",
         "questions": [
             " Também sou conhecido como Pedra do Sol.",
             "Possui 365 dias.",
             "Tenho cinco dias especiais dedicados aos sacrifícios",
             "Cada mês é representado por um símbolo: crocodilo, vento, casa, lagarto, serpente cérebro...",
-            "Cada més tem 20 dias.",
+            "Cada mês tem 20 dias.",
             "Estou dividido em 18 meses,",
             " Sirvo para contar o tempo"
         ]
@@ -441,7 +441,7 @@
             " significado do meu nome é “3gua amarga”.",
             " povo asteca foi uma das primeiras a consumir uma mistura salgada e ardida, feita a base do seu produto, por volta do ano de 1300 DC. A bebida era considerada sagrada.",
             "Na Suíça, cada cidadão consome em média 10 quilos do meu produto por ano. O Brasil fica em sexto lugar na lista, com apenas 2 quilos por pessoa.",
-            "Sou conhecido como a bebida dos guerreiros e nabres.",
+            "Sou conhecido como a bebida dos guerreiros e nobres.",
             "0s griôs possuem substâncias antioxidantes chamadas flavonóides, que ajudam a fortalecer a sadde vascular e a prevenir certos tipos de câncer.",
             " Imigrantes europeus ajudaram a monitorar as primeiras fábricas aqui no Brasil somente no início do século XX,"
         ]
@@ -457,17 +457,17 @@
             "Muitas vezes, os escravos eram acorrentados dentro dela para evitar as fugas.",
             "Costuma haver na frente dela um pelourinho.",
             "Os escravos dormiam no chão duro de terra batida ou sobre palha",
-            " Escolha um participante para voltar um espaço."
+            " Escolha um participante para voltar a um espaço."
         ]
     },
     {
         "type": "umlocal,",
-        "answer": "Capitanias Hereditarias",
+        "answer": "Capitanias Hereditárias",
         "questions": [
             "0s donatários tinham como missão colonizar, proteger e administrar o território e por outro lado tinham o direito de explorar os recursos naturais.",
             " As clínicas que obtiveram sucesso foram a de São Vicente e a de Pemambuco.",
             " rei de Portugal D. loo Ill dividiu o território brasileiro em grandes faixas de terra e as entregou a particulares.",
-            "Sou hereditaria, intransferive, indivisivel e inaliendvd,",
+            "Sou hereditária, intransferível, indivisível e inalienável,",
             "A pequena nobreza de Portugal foi beneficiada,",
             "Aqui no Brasil tivemos 15.",
             "A primeira foi Fernando de Noronha, em Pernambuco."
@@ -488,7 +488,7 @@
     },
     {
         "type": "produto,",
-        "answer": "Cana - de - acucar",
+        "answer": "Cana - de - açúcar",
         "questions": [
             " Por mais de três séculos foi o principal produto exportado pela colônia portuguesa na América.",
             "Fui escolhida, pois Portugal já tinha experiência com a minha produzido e contava com ¢ financiamento de banqueiros e comerciantes.",
@@ -504,7 +504,7 @@
         "type": "Pessoa",
         "answer": "Senhor de Engenho",
         "questions": [
-            " Sou dono de grandes latifundios.",
+            " Sou dono de grandes latifúndios.",
             "Uso escravos para trabalharem nas minhas temas.",
             "Sou proprietário da unidade de produção do açúcar no nordeste colonial",
             "Meu objetivo é vender aplicar para o mercado europeu.",
@@ -523,7 +523,7 @@
             "Viemos para desempenhar todas as funções possíveis: dos trabalhos domésticos aos agrícolas, dos serviços leves aos mais pesados.",
             "Quebramos ferramentas de trabalhos e colocamos fogo nas senzalas como forma de resistência 3s condigNas que vivíamos aqui no Brasil.",
             "Influenciamos e enriquecemos a cultura brasileira desde o vocabulário até a alimentação.",
-            "or quase quatrocentos anos fomos considerados propriedade de um outro homem."
+            "Por quase quatrocentos anos fomos considerados propriedade de um outro homem."
         ]
     }
 ]
