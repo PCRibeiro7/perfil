@@ -12,12 +12,22 @@ export default function GuessComponent({
     usedTips,
 }: GuessComponentProps) {
     const [mounted, setMounted] = useState(false);
+    const [shake, setShake] = useState(false);
 
     useEffect(() => {
         setTimeout(() => {
             setMounted(true);
         }, 5000);
     }, []);
+
+    useEffect(() => {
+        if (wrongAnswers > 0) {
+            setShake(true);
+            setTimeout(() => {
+                setShake(false);
+            }, 1000);
+        }
+    }, [wrongAnswers]);
 
     return (
         <div className="self-center bg-white rounded-xl w-full p-3 flex flex-col items-center">
@@ -39,7 +49,11 @@ export default function GuessComponent({
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
                     <div>
-                        <button className="w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600">
+                        <button
+                            className={`w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600 ${
+                                shake ? 'shake' : ''
+                            }`}
+                        >
                             <h1 className="text-xl text-white">
                                 {'Responder'}
                             </h1>

@@ -3,7 +3,6 @@ import GuessComponent from './GuessComponent';
 import GuessOptions from './GuessOptions';
 import TipPanel from './TipPanel';
 import TipTypePanel from './TipTypePanel';
-import FeedbackSnackbar from './FeedbackSnackbar';
 import { Slide } from '@mui/material';
 import { IState } from '../../pages';
 
@@ -131,10 +130,6 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                     </div>
                 </Slide>
             </div>
-            <FeedbackSnackbar
-                snackbar={state.snackbar}
-                handleSnackBar={handleSnackBar}
-            />
         </main>
     );
 }
