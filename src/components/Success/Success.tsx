@@ -1,5 +1,5 @@
 import { Zoom } from '@mui/material';
-import { IState } from '.';
+import { IState } from '../../pages';
 
 interface ISuccessProps {
     setState: React.Dispatch<React.SetStateAction<IState>>;

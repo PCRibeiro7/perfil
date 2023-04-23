@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import cards from '../consts/cards.json';
-import Home from './Home';
-import Card from './Card';
-import Success from './Success';
+import Home from '../components/Home/Home';
+import Card from '../components/Card/Card';
+import Success from '../components/Success/Success';
 import { shuffleArray } from '@/utils/shuffleArray';
 
 const INITIAL_CARD_INDEX = 0;

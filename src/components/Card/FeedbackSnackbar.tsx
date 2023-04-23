@@ -1,5 +1,5 @@
 import { Alert, Snackbar } from '@mui/material';
-import { IState } from '../pages';
+import { IState } from '../../pages';
 
 interface IFeedbackSnackbarProps {
     snackbar: Partial<IState['snackbar']>;

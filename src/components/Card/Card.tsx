@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import stringSimilarity from 'string-similarity';
-import GuessComponent from '../components/GuessComponent';
-import GuessOptions from '../components/GuessOptions';
-import TipPanel from '../components/TipPanel';
-import TipTypePanel from '../components/TipTypePanel';
-import FeedbackSnackbar from '../components/FeedbackSnackbar';
+import GuessComponent from './GuessComponent';
+import GuessOptions from './GuessOptions';
+import TipPanel from './TipPanel';
+import TipTypePanel from './TipTypePanel';
+import FeedbackSnackbar from './FeedbackSnackbar';
 import { Slide, Zoom } from '@mui/material';
-import { IState } from '.';
+import { IState } from '../../pages';
 
 const MINIMUN_SIMILARITY = 0.8;
 
