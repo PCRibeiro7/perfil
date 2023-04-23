@@ -10,7 +10,7 @@ export default function Home({ setState }: IHomeProps): JSX.Element {
     const startGame = () => {
         setState(state => ({
             ...state,
-            // cards: shuffleArray(state.cards),
+            cards: shuffleArray(state.cards),
             gameStarted: true,
             cardSlides: { ...state.cardSlides, first: true },
         }));
