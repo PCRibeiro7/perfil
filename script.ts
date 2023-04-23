@@ -1,5 +1,4 @@
-
-const { readFileSync,writeFileSync } = require('fs')
+const { readFileSync, writeFileSync } = require('fs');
 
 const text = readFileSync('./cartas.txt', 'utf8');
 const lines = text.split('\n').filter((l: string) => l);
@@ -20,8 +19,7 @@ const result: any[] = [];
             lines[12 * i + 9],
             lines[12 * i + 10],
             lines[12 * i + 11],
-        ]
-    })
-})
+        ],
+    });
+});
 writeFileSync('./cartas.json', JSON.stringify(result, null, 4));
-

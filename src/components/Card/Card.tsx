@@ -38,10 +38,10 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                 currentQuestionIndex: 0,
                 snackbar: { type: 'success', open: true, message: 'Acertou!' },
                 showSuccessPage: true,
-                cardSlides:{
+                cardSlides: {
                     first: false,
                     second: false,
-                }
+                },
             }));
         } else {
             setState(state => ({

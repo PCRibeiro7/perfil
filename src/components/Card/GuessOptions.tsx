@@ -19,14 +19,22 @@ export default function GuessOptions({
             setMounted(true);
         }, 1000);
     }, []);
-    
+
     return (
         <div className="rounded-xl p-2">
             <h1 className="text-xl mb-4 text-slate-400">Dicas disponíveis:</h1>
             <div className="grid grid-cols-3 gap-2">
                 {[...Array(currentCard.questions.length).keys()].map(
                     (question, index) => (
-                        <Zoom in={mounted} key={question} style={{ transitionDelay: mounted ? `${300*index}ms` : '0ms' }}>
+                        <Zoom
+                            in={mounted}
+                            key={question}
+                            style={{
+                                transitionDelay: mounted
+                                    ? `${300 * index}ms`
+                                    : '0ms',
+                            }}
+                        >
                             <button
                                 onClick={e => handleClickonGuessOption(index)}
                                 className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-300 hover:bg-slate-600"
