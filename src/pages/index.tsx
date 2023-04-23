@@ -1,12 +1,18 @@
 import { useState } from 'react';
 import cards from '../consts/cards.json';
 import Home from '../components/Home/Home';
-import Card from '../components/Card/Card';
+import Card from '../components/Card';
 import Success from '../components/Success/Success';
 
 const INITIAL_CARD_INDEX = 0;
 
 type SnackbarType = 'success' | 'error';
+
+type ICard = {
+    type: string;
+    answer: string;
+    questions: string[];
+};
 export interface IState {
     gameStarted: boolean;
     showSuccessPage: boolean;
@@ -14,9 +20,10 @@ export interface IState {
         first: boolean;
         second: boolean;
     };
-    cards: any[];
+    cards: ICard[];
     currentCardIndex: number;
     askedQuestions: number[];
+    correctAnswers: string[];
     currentQuestionIndex: number;
     wrongAnswers: number;
     usedTips: number;
@@ -35,6 +42,7 @@ export default function Main(): JSX.Element {
             first: false,
             second: false,
         },
+        correctAnswers: [],
         cards: cards,
         currentCardIndex: INITIAL_CARD_INDEX,
         askedQuestions: [0],
@@ -53,7 +61,7 @@ export default function Main(): JSX.Element {
     }
 
     if (state.showSuccessPage) {
-        return <Success setState={setState} />;
+        return <Success state={state} setState={setState} />;
     }
 
     return <Card state={state} setState={setState} />;

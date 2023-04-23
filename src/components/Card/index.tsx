@@ -1,14 +1,13 @@
-import { useState } from 'react';
 import stringSimilarity from 'string-similarity';
 import GuessComponent from './GuessComponent';
 import GuessOptions from './GuessOptions';
 import TipPanel from './TipPanel';
 import TipTypePanel from './TipTypePanel';
 import FeedbackSnackbar from './FeedbackSnackbar';
-import { Slide, Zoom } from '@mui/material';
+import { Slide } from '@mui/material';
 import { IState } from '../../pages';
 
-const MINIMUN_SIMILARITY = 0.8;
+const MINIMUN_SIMILARITY = 0.6;
 
 export interface ICardProps {
     state: IState;
@@ -42,6 +41,7 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                     first: false,
                     second: false,
                 },
+                correctAnswers: [...state.correctAnswers, currentCard.answer],
             }));
         } else {
             setState(state => ({
