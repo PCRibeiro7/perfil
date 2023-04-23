@@ -1,4 +1,5 @@
 import { IState } from '@/pages';
+import { shuffleArray } from '@/utils/shuffleArray';
 import { Zoom } from '@mui/material';
 import { Dispatch, SetStateAction } from 'react';
 
