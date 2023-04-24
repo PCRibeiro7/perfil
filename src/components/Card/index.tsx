@@ -24,10 +24,12 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
 
     const handleQuestionAnswered = (event: any) => {
         event.preventDefault();
-        const value = event.target.answer.value;
+        const value: string = event.target.answer.value || '';
         if (
-            stringSimilarity.compareTwoStrings(value, currentCard.answer) >
-            MINIMUN_SIMILARITY
+            stringSimilarity.compareTwoStrings(
+                value.toLowerCase(),
+                currentCard.answer.toLowerCase(),
+            ) > MINIMUN_SIMILARITY
         ) {
             setState(state => ({
                 ...state,
@@ -60,13 +62,6 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
             usedTips: state.usedTips + 1,
         }));
     };
-
-    function handleSnackBar(snackbarData: Partial<IState['snackbar']>) {
-        setState(s => ({
-            ...s,
-            snackbar: { ...state.snackbar, ...snackbarData },
-        }));
-    }
 
     const changeTip = (direction: 'back' | 'forward') => {
         const askedQuestionsIndex = state.askedQuestions.indexOf(
