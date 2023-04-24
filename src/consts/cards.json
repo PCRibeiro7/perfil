@@ -1,529 +1,743 @@
 [
     {
         "type": "Pessoa",
-        "answer": "Monalisa",
+        "answer": "Michael Jackson",
         "questions": [
-            "Também sou conhecida como Gioconda.",
-            " Fui feita por um dos pintores mais conhecidos do renascimento italiana, Leonardo da Vinci,",
-            "Atualmente estou exposta no Museu do Louvre, em Paris.",
-            "Eu retrato a figura de uma mulher com um sorriso enigmático.",
-            "Fui avaliada, na década de 1960, em cerca de 100 milhões de dólares.",
-            "Sou um dos quadros mais famosos do mundo.",
-            "Minha pintura foi iniciada no ano de 1503."
+            "Cantor e compositor",
+            "Nasceu em 1958 em Indiana, nos Estados Unidos",
+            "Conhecido por sua habilidade de dançar",
+            "Vendeu mais de 750 milhões de álbuns em todo o mundo",
+            "Ganhou diversos prêmios ao longo de sua carreira, incluindo 13 Grammys",
+            "Seu estilo musical é uma mistura de pop, funk e soul",
+            "Participou de filmes como 'The Wiz' e 'Moonwalker'",
+            "Foi alvo de controvérsias durante sua vida, incluindo acusações de abuso infantil",
+            "Lançou o álbum 'Thriller' em 1982, que se tornou o mais vendido da história",
+            "Foi um grande influenciador da música e da moda"
         ]
     },
     {
         "type": "Pessoa",
-        "answer": "Mecenas",
+        "answer": "Abraham Lincoln",
         "questions": [
-            "Minha função é financiar as atividades intelectuais e artísticas dos artistas do Renascimento.",
-            "OS mais conhecidos foram Lourenço de Médici, banqueiro italiano, Come de Médici, político banqueira italiano e Francisca |, rei da Franga.",
-            "A Meu ver a patrocínio das obras do renascimento era uma forma de obter status social.",
-            "Eu patrocino e invisto na produção cultural dos artistas do Renascimento.",
-            "Artistas como Leonardo Da Vinci, Sandro Botticelli, Michelangelo Buonarroti, Rafael Sanzio, entre outros, foram financiados por mim.",
-            "Essa palavra tem origem na Roma Antiga. Caio Mecenas Patrocinou a prodígio de vários artistas e poetas desta época.",
-            " Como eram chamados os comerciantes, príncipes, condes, bispos e banqueiros que financiavam as obras de arte no Renascimento."
+            "Nasceu em 1809 em Kentucky, nos Estados Unidos",
+            "Foi o 16º presidente dos Estados Unidos",
+            "Assinou a Proclamação de Emancipação, que libertou os escravos nos Estados Confederados da América",
+            "Era conhecido por sua eloquência em discursos e debates políticos",
+            "Foi assassinado em 1865, enquanto assistia a uma peça de teatro em Washington, D.C.",
+            "Liderou o país durante a Guerra Civil, que durou de 1861 a 1865",
+            "É considerado um dos maiores presidentes dos Estados Unidos",
+            "Foi um defensor da abolição da escravidão",
+            "Seu rosto está estampado na nota de cinco dólares americana",
+            "Tem um memorial em sua homenagem em Washington, D.C."
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Telefone",
+        "questions": [
+            "Foi inventado por Alexander Graham Bell em 1876",
+            "Utiliza sinais elétricos para transmitir informações de voz",
+            "É um dos meios de comunicação mais utilizados em todo o mundo",
+            "Existem diversos tipos de telefones, incluindo telefones fixos e celulares",
+            "Permite a realização de chamadas de voz e vídeo",
+            "É um meio de comunicação muito utilizado em negócios e empresas",
+            "Pode ser utilizado para enviar mensagens de texto e e-mails",
+            "Está presente na maioria dos lares e empresas",
+            "A tecnologia do telefone evoluiu ao longo dos anos, com a introdução de telefones sem fio e smartphones",
+            "Permite a comunicação instantânea e em tempo real"
+        ]
+    },
+    {
+        "type": "Animal",
+        "answer": "Tigre",
+        "questions": [
+            "É um felino de grande porte",
+            "Habitat natural inclui regiões da Ásia e da Rússia",
+            "Possui pelagem listrada em tons de laranja e preto",
+            "É um predador topo de cadeia alimentar",
+            "É capaz de correr a uma velocidade de até 80 km/h",
+            "É um animal solitário e territorial",
+            "Sua alimentação inclui presas como veados e búfalos",
+            "É um dos animais mais populares em zoológicos e parques de vida selvagem",
+            "Está ameaçado de extinção devido à caça ilegal e à perda de habitat",
+            "É um símbolo de força e poder em diversas culturas"
+        ]
+    },
+    {
+        "type": "Filme",
+        "answer": "Forrest Gump",
+        "questions": [
+            "Lançado em 1994 e dirigido por Robert Zemeckis",
+            "É baseado no livro de mesmo nome de Winston Groom",
+            "Estrelado por Tom Hanks no papel principal",
+            "Conta a história de um homem simples com baixo QI que vive uma série de aventuras ao longo de sua vida",
+            "Ganhou seis prêmios Oscar, incluindo Melhor Filme, Melhor Diretor e Melhor Ator",
+            "Tem uma trilha sonora memorável, com músicas de artistas como Elvis Presley, The Doors e Bob Dylan",
+            "Inclui cenas icônicas, como a de Forrest correndo pela estrada e a de ele sentado em um banco esperando o ônibus",
+            "É um dos filmes mais populares e amados da história do cinema",
+            "Tem uma mensagem poderosa sobre o valor da amizade, da família e da perseverança",
+            "É um filme emocionante e inspirador que é sempre lembrado com carinho pelo público"
+        ]
+    },
+    {
+        "type": "Comida",
+        "answer": "Sushi",
+        "questions": [
+            "É um prato da culinária japonesa",
+            "É composto por arroz temperado com vinagre, peixe cru e legumes",
+            "Pode ser servido em rolos (maki), bolinhos (niguiri) ou outros formatos",
+            "É considerado um alimento saudável e nutritivo",
+            "É popular em todo o mundo, e existem muitos restaurantes especializados em sushi",
+            "Pode ser acompanhado de molho de soja, gengibre em conserva e wasabi",
+            "Existem muitas variedades de sushi, incluindo o California roll, o tempura roll e o sashimi",
+            "É uma comida que exige habilidade e precisão na preparação",
+            "É uma das comidas mais representativas do Japão",
+            "É uma opção deliciosa e elegante para uma refeição especial ou uma noite fora"
+        ]
+    },
+    {
+        "type": "Personagem",
+        "answer": "Harry Potter",
+        "questions": [
+            "Personagem principal da série de livros 'Harry Potter' de J.K. Rowling",
+            "É um bruxo órfão criado pelos tios trouxas na Inglaterra",
+            "Famoso por sobreviver à maldição da morte de Lord Voldemort quando era bebê",
+            "Estuda na escola de magia e bruxaria de Hogwarts",
+            "É membro da casa Gryffindor",
+            "Possui uma cicatriz em forma de raio na testa",
+            "É conhecido por ser um grande amigo de Ron Weasley e Hermione Granger",
+            "Tem habilidades em voo de vassoura e no jogo de quadribol",
+            "Participa de diversas batalhas contra os Comensais da Morte e Lord Voldemort",
+            "É um dos personagens mais icônicos e amados da cultura pop"
+        ]
+    },
+    {
+        "type": "Filme",
+        "answer": "O Poderoso Chefão",
+        "questions": [
+            "Filme de Francis Ford Coppola lançado em 1972",
+            "Baseado em um romance de Mario Puzo",
+            "Conta a história da família mafiosa Corleone nos Estados Unidos",
+            "Protagonizado por Marlon Brando, Al Pacino e James Caan",
+            "Ganhou três prêmios Oscar, incluindo Melhor Filme",
+            "É considerado um dos maiores clássicos do cinema americano",
+            "Inclui cenas icônicas, como a cabeça de cavalo na cama",
+            "Ganhou duas sequências, 'O Poderoso Chefão - Parte II' e 'O Poderoso Chefão - Parte III'",
+            "Tem uma das trilhas sonoras mais memoráveis do cinema, composta por Nino Rota"
+        ]
+    },
+    {
+        "type": "Banda",
+        "answer": "The Beatles",
+        "questions": [
+            "Banda de rock formada em Liverpool, Inglaterra, em 1960",
+            "É composta por John Lennon, Paul McCartney, George Harrison e Ringo Starr",
+            "É considerada uma das mais influentes e bem-sucedidas da história da música",
+            "Tem uma discografia icônica, que inclui álbuns como 'Sgt. Pepper's Lonely Hearts Club Band' e 'Abbey Road'",
+            "Lançou hits como 'Hey Jude', 'Let It Be', 'Yesterday' e 'Come Together'",
+            "Foi responsável por influenciar muitos outros artistas e bandas ao longo dos anos",
+            "Separou-se em 1970, mas seu legado continua vivo até hoje",
+            "Foi introduzida ao Rock and Roll Hall of Fame em 1988",
+            "Tem uma legião de fãs espalhados pelo mundo todo"
+        ]
+    },
+    {
+        "type": "País",
+        "answer": "Brasil",
+        "questions": [
+            "País localizado na América do Sul",
+            "Tem como capital Brasília e como língua oficial o português",
+            "Tem uma das maiores extensões territoriais do mundo",
+            "Possui uma grande diversidade cultural, com influências indígenas, africanas e europeias",
+            "Tem um clima tropical em grande parte do seu território",
+            "É conhecido por sua música, dança e culinária vibrantes",
+            "Tem uma economia diversificada, com destaque para a produção de commodities como soja, café e carne",
+            "Tem uma população de mais de 200 milhões de habitantes",
+            "É um país com muitos desafios, mas também muitas belezas e riquezas"
+        ]
+    },
+    {
+        "type": "Personagem Fictício",
+        "answer": "Sherlock Holmes",
+        "questions": [
+            "Personagem criado pelo escritor britânico Arthur Conan Doyle",
+            "Detetive famoso por sua inteligência, habilidade de observação e raciocínio dedutivo",
+            "Morava na rua Baker, em Londres, e tinha como companheiro o Dr. Watson",
+            "Resolveu casos complexos como 'Um Estudo em Vermelho', 'O Cão dos Baskervilles' e 'O Problema Final'",
+            "Foi interpretado por atores como Basil Rathbone, Jeremy Brett, Benedict Cumberbatch e Robert Downey Jr.",
+            "Influenciou muitos outros detetives fictícios, tanto no cinema quanto na literatura",
+            "É considerado um dos personagens mais icônicos da literatura inglesa",
+            "Doyle escreveu 56 contos e 4 romances estrelados por este personagem"
+        ]
+    },
+    {
+        "type": "Alimento",
+        "answer": "Pizza",
+        "questions": [
+            "Comida de origem italiana, mas popular em todo o mundo",
+            "Consiste em uma massa assada com molho de tomate e ingredientes variados",
+            "Pode ser salgada ou doce, e as opções de recheio são praticamente infinitas",
+            "Pode ser encontrada em diversos tamanhos e formatos, desde as redondas até as quadradas ou retangulares",
+            "É um prato muito versátil e que agrada a muitas pessoas",
+            "Tem como ingredientes clássicos o queijo mussarela, o molho de tomate e o orégano",
+            "Pode ser feita em casa ou comprada em pizzarias ou supermercados",
+            "É uma das comidas mais consumidas no mundo, e existe até mesmo um Dia da Pizza, comemorado em 10 de julho"
+        ]
+    },
+    {
+        "type": "Esporte",
+        "answer": "Futebol",
+        "questions": [
+            "Esporte coletivo mais popular do mundo",
+            "Jogado em um campo retangular, com duas equipes de 11 jogadores cada",
+            "O objetivo é marcar gols no gol adversário, utilizando os pés ou outras partes do corpo, exceto as mãos",
+            "É um esporte que exige habilidade, velocidade, coordenação e trabalho em equipe",
+            "Tem como principais competições a Copa do Mundo, a Liga dos Campeões, a Libertadores e os campeonatos nacionais",
+            "Jogadores famosos incluem Pelé, Maradona, Messi, Cristiano Ronaldo e Neymar",
+            "Futebol é um esporte que tem uma grande paixão em todo o mundo, com torcedores que acompanham seus times com muito entusiasmo",
+            "Tem raízes históricas na Inglaterra, onde foi criado no século XIX",
+            "É um esporte que pode ser jogado por pessoas de todas as idades, e que traz muitos benefícios para a saúde e para a socialização"
+        ]
+    },
+    {
+        "type": "Escritor",
+        "answer": "Gabriel García Márquez",
+        "questions": [
+            "Escritor colombiano, nascido em 1927",
+            "Ganhou o Prêmio Nobel de Literatura em 1982",
+            "Ficou famoso por seus livros que combinam realismo mágico, história e política",
+            "Sua obra mais conhecida é Cem Anos de Solidão, considerado um dos melhores livros do século XX",
+            "Também escreveu outros romances famosos, como O Amor nos Tempos do Cólera e Crônica de uma Morte Anunciada",
+            "Seu estilo literário influenciou muitos outros escritores latino-americanos",
+            "Além de escritor, García Márquez foi jornalista e ativista político",
+            "Morreu em 2014, deixando um legado literário impressionante",
+            "Sua obra retrata a cultura, as tradições e a história da América Latina, e é considerada um tesouro da literatura mundial"
+        ]
+    },
+    {
+        "type": "Pintor",
+        "answer": "Vincent van Gogh",
+        "questions": [
+            "Pintor holandês, nascido em 1853 e morto em 1890",
+            "Um dos artistas mais famosos da história da arte",
+            "Pintou cerca de 900 quadros em sua vida, incluindo alguns dos mais conhecidos do mundo",
+            "Sua obra é caracterizada por pinceladas fortes e cores intensas",
+            "Van Gogh lutou contra problemas mentais e emocionais durante sua vida",
+            "Morreu aos 37 anos, depois de se cortar com uma faca",
+            "Sua obra póstuma teve um grande impacto na arte moderna, influenciando artistas como Pablo Picasso e Jackson Pollock",
+            "Sua pintura mais famosa é A Noite Estrelada, que retrata o céu noturno com um turbilhão de estrelas",
+            "Van Gogh é um dos artistas mais queridos e estudados da história da arte, e sua obra continua a fascinar e inspirar pessoas em todo o mundo"
+        ]
+    },
+    {
+        "type": "Ator/Atriz",
+        "answer": "Meryl Streep",
+        "questions": [
+            "Atriz americana nascida em 1949",
+            "Considerada uma das melhores atrizes de todos os tempos",
+            "Ganhou três Oscars e foi indicada a mais de 20",
+            "Atuou em mais de 70 filmes, incluindo clássicos como Kramer vs. Kramer, A Escolha de Sofia e O Diabo Veste Prada",
+            "Também é conhecida por suas atuações em filmes políticos, como A Dama de Ferro e The Post: A Guerra Secreta",
+            "Streep é conhecida por sua versatilidade e habilidade em interpretar uma ampla gama de personagens",
+            "Além de atriz, é ativista social e política, e tem defendido causas como a igualdade de gênero e a proteção do meio ambiente",
+            "É uma das personalidades mais respeitadas e admiradas de Hollywood",
+            "Sua carreira de sucesso inspirou muitas outras mulheres a perseguirem seus sonhos no cinema"
+        ]
+    },
+    {
+        "type": "Atleta",
+        "answer": "Usain Bolt",
+        "questions": [
+            "Conhecido como o homem mais rápido do mundo",
+            "Nasceu em 1986 na Jamaica",
+            "É um velocista especializado em corridas de 100m e 200m",
+            "Possui o recorde mundial nessas duas provas",
+            "Ganhou 8 medalhas de ouro olímpicas e 11 títulos mundiais",
+            "Se aposentou das competições em 2017",
+            "Tem o apelido de 'Relâmpago Bolt'",
+            "Além da carreira no atletismo, já fez participações em filmes e programas de TV",
+            "É um grande ícone do esporte mundial e da Jamaica"
+        ]
+    },
+    {
+        "type": "Escritor",
+        "answer": "J. K. Rowling",
+        "questions": [
+            "Autora da famosa série de livros Harry Potter",
+            "Nasceu em 1965 em Yate, na Inglaterra",
+            "Antes de se dedicar à escrita, trabalhou como professora de inglês",
+            "Teve a ideia de Harry Potter durante uma viagem de trem",
+            "Publicou o primeiro livro da série em 1997, que se tornou um grande sucesso",
+            "Escreveu sete livros da série Harry Potter, vendendo mais de 500 milhões de cópias em todo o mundo",
+            "Além de Harry Potter, escreveu outros livros, como Morte Súbita e Animais Fantásticos e Onde Habitam",
+            "Fundou a instituição de caridade Lumos, que ajuda crianças em situação de risco",
+            "É uma das autoras mais bem-sucedidas e conhecidas do mundo"
+        ]
+    },
+    {
+        "type": "Escritor",
+        "answer": "Machado de Assis",
+        "questions": [
+            "Escritor brasileiro, nascido em 1839 e morto em 1908",
+            "Considerado um dos maiores escritores da literatura brasileira",
+            "Foi o primeiro presidente da Academia Brasileira de Letras",
+            "Escreveu romances como Dom Casmurro e Memórias Póstumas de Brás Cubas",
+            "Também escreveu contos e poesias",
+            "Sua obra é marcada pelo realismo e pela ironia",
+            "Foi um dos fundadores da Revista Brasileira",
+            "Trabalhou como funcionário público durante boa parte de sua vida",
+            "Sua obra é estudada e admirada até hoje"
+        ]
+    },
+    {
+        "type": "Músico",
+        "answer": "David Bowie",
+        "questions": [
+            "Cantor, compositor e ator britânico, nascido em 1947 e morto em 2016",
+            "Conhecido por sua personalidade excêntrica e por suas reinvenções musicais",
+            "Lançou álbuns como Ziggy Stardust, Heroes e Blackstar",
+            "Influenciou diversos artistas da música, do cinema e da moda",
+            "Participou de filmes como Labirinto e O Homem que Caiu na Terra",
+            "Foi introduzido no Rock and Roll Hall of Fame em 1996",
+            "Vendeu mais de 140 milhões de discos em todo o mundo",
+            "Teve sucessos como Space Oddity, Changes e Let's Dance",
+            "Foi um ícone da cultura pop"
+        ]
+    },
+    {
+        "type": "Cantor(a)",
+        "answer": "Adele",
+        "questions": [
+            "Cantora britânica, nascida em 1988",
+            "Seu álbum de estreia, '19', foi lançado em 2008 e incluía hits como 'Chasing Pavements' e 'Hometown Glory'",
+            "Seu segundo álbum, '21', foi lançado em 2011 e se tornou um sucesso mundial, incluindo hits como 'Rolling in the Deep' e 'Someone Like You'",
+            "Vencedora de 15 prêmios Grammy",
+            "Seu estilo musical é uma mistura de pop, soul e R&B",
+            "Já vendeu mais de 100 milhões de discos em todo o mundo",
+            "Mãe de um filho chamado Angelo",
+            "Retornou aos holofotes em 2021 com seu novo álbum '30'"
+        ]
+    },
+    {
+        "type": "Ator",
+        "answer": "Tom Hanks",
+        "questions": [
+            "Ator americano, nascido em 1956",
+            "Ganhou dois prêmios Oscar de Melhor Ator, por suas atuações em 'Filadélfia' e 'Forrest Gump'",
+            "Também é conhecido por seus papéis em filmes como 'Apollo 13', 'Náufrago' e 'O Código Da Vinci'",
+            "Já foi indicado ao Globo de Ouro diversas vezes, ganhando quatro vezes",
+            "Começou sua carreira como ator na década de 1980, atuando em séries de TV como 'Bosom Buddies'",
+            "Além de ator, já atuou como produtor, diretor e roteirista em alguns filmes",
+            "É um grande apoiador de causas ambientais e humanitárias",
+            "É casado com a atriz Rita Wilson desde 1988"
+        ]
+    },
+    {
+        "type": "Filme",
+        "answer": "O Senhor dos Anéis: O Retorno do Rei",
+        "questions": [
+            "Ganhador de 11 Oscars, incluindo Melhor Filme, Melhor Diretor e Melhores Efeitos Especiais",
+            "Terceiro filme da trilogia baseada nos livros de J.R.R. Tolkien",
+            "Lançado em 2003, dirigido por Peter Jackson",
+            "Estrelado por Elijah Wood, Ian McKellen e Viggo Mortensen, entre outros",
+            "Teve um orçamento de cerca de 94 milhões de dólares",
+            "Arrecadou mais de 1 bilhão de dólares em bilheteria em todo o mundo",
+            "Foi aclamado pela crítica e pelo público, considerado uma das melhores adaptações cinematográficas de livros já feitas",
+            "A trilogia foi filmada na Nova Zelândia, com paisagens incríveis e um trabalho de efeitos visuais impressionante",
+            "A trilha sonora, composta por Howard Shore, é considerada uma das melhores da história do cinema",
+            "A trama gira em torno de Frodo Bolseiro e sua jornada para destruir o Um Anel e acabar com a ameaça de Sauron"
+        ]
+    },
+    {
+        "type": "Filósofo",
+        "answer": "Friedrich Nietzsche",
+        "questions": [
+            "Nasceu em 1844 em Röcken, Alemanha",
+            "Autor de obras como 'Assim Falou Zaratustra' e 'Além do Bem e do Mal'",
+            "Desenvolveu a filosofia do niilismo, que rejeita todas as formas de moralidade e significado",
+            "Teve uma saúde frágil durante a maior parte de sua vida, sofrendo de dores de cabeça e problemas de visão",
+            "Foi professor de filologia na Universidade de Basel, mas abandonou o cargo por motivos de saúde",
+            "Morreu em 1900 aos 55 anos, após sofrer uma série de colapsos mentais e físicos",
+            "Sua obra teve um grande impacto na filosofia, literatura e cultura ocidental"
+        ]
+    },
+    {
+        "type": "Cantor",
+        "answer": "Aretha Franklin",
+        "questions": [
+            "Nasceu em 1942 em Memphis, Tennessee, nos Estados Unidos",
+            "Conhecida como 'A Rainha do Soul'",
+            "Ganhou 18 Grammys ao longo de sua carreira",
+            "É considerada uma das maiores cantoras de todos os tempos",
+            "Suas músicas mais famosas incluem 'Respect', 'Chain of Fools' e 'Think'",
+            "Começou a cantar na igreja de seu pai quando criança",
+            "Atuou em filmes como 'Os Irmãos Cara de Pau' e 'Mudança de Hábito'",
+            "Morreu em 2018 aos 76 anos, deixando um legado musical duradouro"
+        ]
+    },
+    {
+        "type": "Escritor",
+        "answer": "Jorge Luis Borges",
+        "questions": [
+            "Nasceu em 1899 em Buenos Aires, Argentina",
+            "Autor de obras como 'Ficções' e 'O Aleph'",
+            "Foi diretor da Biblioteca Nacional da Argentina",
+            "Sua obra é conhecida por explorar temas como a filosofia, a metafísica e a literatura",
+            "Foi um grande defensor do uso da imaginação e da fantasia na literatura",
+            "Foi cego durante os últimos anos de sua vida",
+            "Morreu em 1986 aos 86 anos, deixando um legado literário influente e duradouro",
+            "Sua obra teve um grande impacto na literatura latino-americana e mundial"
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Cadeira",
+        "questions": [
+            "É um objeto comum encontrado em lares e escritórios",
+            "Foi inventada há mais de 5.000 anos",
+            "Geralmente é feita de madeira, metal ou plástico",
+            "Tem uma superfície plana para acomodar uma pessoa",
+            "Pode ter um encosto para apoio das costas",
+            "É um dos móveis mais utilizados no mundo"
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Máquina de Lavar",
+        "questions": [
+            "É um objeto comum encontrado em lares",
+            "Foi inventada em 1908 por Alva J. Fisher",
+            "É utilizada para lavar roupas",
+            "Geralmente possui uma porta frontal ou superior para colocar a roupa",
+            "Pode ter diferentes ciclos de lavagem para diferentes tipos de tecidos",
+            "Geralmente utiliza água e sabão para limpar a roupa",
+            "É um dos eletrodomésticos mais utilizados em todo o mundo"
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Relógio",
+        "questions": [
+            "É um objeto comum encontrado em lares e escritórios",
+            "Foi inventado há mais de 500 anos",
+            "É utilizado para medir o tempo",
+            "Geralmente é feito de metal ou plástico",
+            "Possui um mostrador com números ou marcações para indicar as horas, minutos e segundos",
+            "Pode ser analógico ou digital",
+            "É um dos acessórios mais utilizados no mundo"
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Relógio de Parede",
+        "questions": [
+            "É um objeto decorativo que pode ser encontrado em muitas casas",
+            "É geralmente fixado na parede",
+            "Tem como função indicar as horas",
+            "Pode ter um design moderno ou tradicional",
+            "Pode ser feito de diferentes materiais, como madeira, metal ou plástico",
+            "É movido por um mecanismo interno que pode ser analógico ou digital",
+            "Pode ter diferentes tamanhos, desde pequenos relógios de mesa até grandes relógios de parede"
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Cafeteira",
+        "questions": [
+            "É um objeto usado na cozinha",
+            "É usado para fazer café",
+            "Pode ser elétrico ou manual",
+            "Pode ter diferentes capacidades, desde cafeteiras individuais até cafeteiras grandes para várias xícaras",
+            "Pode ser feito de diferentes materiais, como vidro, plástico ou metal",
+            "Pode ter diferentes designs e cores",
+            "Algumas cafeteiras têm funções adicionais, como moer grãos de café ou preparar outros tipos de bebidas quentes",
+            "É um item comum em muitas cozinhas em todo o mundo"
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Binóculos",
+        "questions": [
+            "É um objeto usado para ampliar a visão",
+            "É composto por duas lentes que permitem visualizar objetos distantes",
+            "Pode ser usado para observação de aves, paisagens, esportes, entre outros",
+            "Pode ser feito de diferentes materiais, como plástico, metal ou vidro",
+            "Pode ter diferentes tamanhos e designs, desde binóculos pequenos e portáteis até modelos maiores e mais avançados",
+            "Algumas características importantes a serem consideradas ao escolher binóculos incluem o diâmetro da lente, o campo de visão e a ampliação",
+            "É um item comum para entusiastas de atividades ao ar livre e esportes",
+            "Os primeiros binóculos foram inventados no século XVIII"
+        ]
+    },
+    {
+        "type": "Filme",
+        "answer": "Cidade de Deus",
+        "questions": [
+            "Filme brasileiro lançado em 2002",
+            "Dirigido por Fernando Meirelles e Kátia Lund",
+            "Baseado no livro de Paulo Lins",
+            "Conta a história de jovens que crescem em uma favela no Rio de Janeiro",
+            "Ganhou vários prêmios internacionais, incluindo um BAFTA e um Independent Spirit Award",
+            "Foi indicado a quatro categorias do Oscar em 2004"
+        ]
+    },
+    {
+        "type": "País",
+        "answer": "Austrália",
+        "questions": [
+            "País localizado na Oceania",
+            "Possui a sexta maior área territorial do mundo",
+            "A capital é Canberra, mas a maior cidade é Sydney",
+            "A língua oficial é o inglês",
+            "O país é conhecido por sua fauna diversificada, incluindo animais como cangurus, koalas e dingos",
+            "Foi uma colônia britânica até 1901, quando se tornou uma federação de seis estados",
+            "A Austrália é um dos países mais desenvolvidos do mundo, com uma economia forte e uma alta qualidade de vida"
+        ]
+    },
+    {
+        "type": "Cientista",
+        "answer": "Albert Einstein",
+        "questions": [
+            "Físico teórico nascido em Ulm, Alemanha, em 1879",
+            "Desenvolveu a teoria da relatividade e a equação E=mc²",
+            "Ganhou o Prêmio Nobel de Física em 1921",
+            "Fugiu da Alemanha nazista em 1933 e se tornou cidadão americano em 1940",
+            "Fez contribuições significativas para a física quântica, a teoria do campo unificado e a cosmologia",
+            "Defensor de ideias pacifistas e humanitárias",
+            "Foi um dos cientistas mais famosos e influentes do século XX, tendo um impacto duradouro na ciência e na cultura popular",
+            "Faleceu em Princeton, Nova Jersey, em 1955, aos 76 anos",
+            "Sua célebre fórmula, E=mc², significa que a massa é uma forma de energia, e que uma pequena quantidade de massa pode ser convertida em uma grande quantidade de energia",
+            "Einstein também é conhecido por sua frase 'Deus não joga dados com o universo', expressando sua crença em uma ordem e lógica subjacentes à natureza"
+        ]
+    },
+    {
+        "type": "Jogo",
+        "answer": "Zelda Ocarina of Time",
+        "questions": [
+            "Jogo de ação e aventura lançado em 1998 para o console Nintendo 64",
+            "Desenvolvido pela Nintendo EAD e dirigido por Shigeru Miyamoto",
+            "É considerado um dos melhores jogos de todos os tempos, tendo recebido diversos prêmios e elogios da crítica",
+            "Segue o jovem herói Link em sua jornada para salvar o reino de Hyrule do vilão Ganondorf",
+            "O jogo é famoso por sua jogabilidade inovadora, que inclui o uso da ocarina para resolver quebra-cabeças e viajar no tempo",
+            "Apresenta uma variedade de personagens memoráveis, como a princesa Zelda, o cavaleiro Link e o mago Impa"
+        ]
+    },
+    {
+        "type": "Cidade",
+        "answer": "Paris",
+        "questions": [
+            "Capital da França",
+            "Conhecida como a Cidade do Amor",
+            "Um dos principais destinos turísticos do mundo",
+            "Casa da Torre Eiffel, um dos ícones mais famosos da cidade",
+            "Famosa por sua culinária refinada e seus vinhos finos",
+            "Berço da arte impressionista, com o Museu d'Orsay abrigando uma das maiores coleções do mundo",
+            "Localizada às margens do rio Sena, que corta a cidade ao meio"
+        ]
+    },
+    {
+        "type": "Animal",
+        "answer": "Girafa",
+        "questions": [
+            "Animal alto e elegante, conhecido por seu pescoço longo",
+            "É o animal mais alto do mundo, podendo chegar a 5,5 metros de altura",
+            "Habitante das savanas da África, onde se alimenta de folhas de árvores",
+            "Possui manchas em sua pele, que ajudam a camuflar o animal em meio à vegetação",
+            "Apesar de seu pescoço longo, possui apenas sete vértebras cervicais, como a maioria dos mamíferos",
+            "Sua língua é extremamente comprida, podendo chegar a 45 centímetros de comprimento",
+            "É um animal social, vivendo em grupos que podem chegar a 20 indivíduos",
+            "É uma das principais atrações de zoológicos e parques de safári ao redor do mundo",
+            "Acredita-se que o nome 'girafa' tenha vindo do árabe 'zirafah', que significa 'a que caminha elegantemente'"
+        ]
+    },
+    {
+        "type": "Livro",
+        "answer": "1984",
+        "questions": [
+            "Obra distópica escrita por George Orwell e publicada em 1949",
+            "Retrata um futuro sombrio e totalitário em que o Estado controla todos os aspectos da vida dos cidadãos",
+            "Criou conceitos e termos como 'Big Brother', 'duplipensar' e 'novilíngua'",
+            "Influenciou profundamente a cultura popular e o debate político, sendo considerado um clássico da literatura",
+            "Foi proibido em alguns países e criticado por governos autoritários devido a suas críticas ao poder e à opressão",
+            "Ainda hoje é amplamente lido e estudado em todo o mundo, e muitas de suas previsões sobre a sociedade moderna continuam a ser discutidas e analisadas"
+        ]
+    },
+    {
+        "type": "Animal",
+        "answer": "Leão",
+        "questions": [
+            "Espécie de mamífero da família Felidae",
+            "Encontrado em várias partes da África",
+            "Macho pode chegar a pesar mais de 250 kg",
+            "Carnívoro e predador de topo",
+            "Conhecido por sua juba, que é uma característica dos machos",
+            "Caça em grupo para capturar suas presas",
+            "Passa a maior parte do dia descansando e dormindo",
+            "São considerados o 'rei da selva'",
+            "São animais sociais e vivem em grupos chamados de 'coalizões'"
+        ]
+    },
+    {
+        "type": "País",
+        "answer": "Japão",
+        "questions": [
+            "País localizado na Ásia Oriental",
+            "Arquipélago composto por quatro ilhas principais e outras menores",
+            "Capital é Tóquio",
+            "Língua oficial é o japonês",
+            "Moeda oficial é o iene",
+            "Maior cidade do país é Tóquio",
+            "Famoso por sua cultura tradicional, incluindo a cerimônia do chá e o teatro Kabuki",
+            "Também é conhecido por suas tecnologias avançadas e a indústria de jogos eletrônicos",
+            "O Japão é um país insular, sendo cercado pelo Oceano Pacífico a leste e pelo Mar do Japão a oeste"
         ]
     },
     {
         "type": "Pessoa",
-        "answer": "Michelangelo",
+        "answer": "Lionel Messi",
         "questions": [
-            "Atuei na pintura, na escultura e na arquitetura,",
-            " Pintei 0 teto da Capela Sistina situada no Vaticano.",
-            "Esculpi Piet, Davi e Moisés.",
-            "Fui um pintor, escultor e arquiteto italiano.",
-            "Meu nome em portugués é “Miguel   ngelo",
-            "Tenho 0 mesmo nome de um dos personagens do desenho “Tartarugas Ninja",
-            "Nasci em 1475 em Caprese, nas vizinhanças de Florença na Itália."
+            "Nasceu em 1987 na Argentina",
+            "Começou a jogar profissionalmente pelo Barcelona em 2004",
+            "Considerado um dos melhores jogadores de futebol da história",
+            "Ganhou seis vezes a Bola de Ouro da FIFA, premiação dada ao melhor jogador do mundo",
+            "É o maior artilheiro da história do Barcelona e da Liga Espanhola",
+            "Já venceu a Liga dos Campeões da UEFA quatro vezes",
+            "Foi capitão da Seleção Argentina durante a Copa do Mundo de 2018",
+            "Além de seu talento no futebol, é conhecido por ser um filantropo e apoiar diversas causas sociais"
         ]
     },
     {
-        "type": "objeto.",
-        "answer": "Bíblia",
+        "type": "Pintor",
+        "answer": "Salvador Dalí",
         "questions": [
-            "Bíblia.",
-            " Padre.",
-            "Papa.",
-            "Poder econômico durante a Idade Moderna.",
-            "Santos.",
-            "Catequese.",
-            " Local de adoração."
+            "Nasceu em 1904 na Espanha e faleceu em 1989",
+            "Foi um dos principais representantes do movimento surrealista",
+            "Conhecido por suas pinturas enigmáticas e simbólicas, que frequentemente apresentam relógios derretidos",
+            "Também trabalhou como escultor, escritor e cineasta",
+            "Trabalhou com importantes artistas e cineastas, como Luis Buñuel e Walt Disney",
+            "Seu quadro A Persistência da Memória é um dos mais famosos da história da arte",
+            "Dalí também é conhecido por sua excentricidade e comportamento extravagante",
+            "Foi casado com a também artista Gala Éluard e os dois tiveram uma relação conturbada e polêmica",
+            "Continua sendo um dos artistas mais influentes e populares da história da arte"
         ]
     },
     {
-        "type": "local,",
-        "answer": "Burgo",
+        "type": "Lugar",
+        "answer": "Nova Iorque",
         "questions": [
-            " As pessoas que me habitavam eram chamadas de burgueses.",
-            "Fui feito no final da Idade Média para servir de proteção aos comerciantes.",
-            "Escolha alguém para voltar uma casa",
-            "Venho do latim burguês que quer dizer 'pequena fortaleza, fortificado'",
-            "Eu era cercada por altos muros a fim de evitar invasões e saques.",
-            "De surgimento as cidades.",
-            "Concentrava trabalhadores livres e comerciantes durante o final da Idade Média,",
-            " Uma cidade da Espanha é um bairro da Zona Leste de São Paulo que tem o mesmo nome que o meu."
+            "É a cidade mais populosa dos Estados Unidos",
+            "Foi fundada pelos holandeses em 1624",
+            "Localizada no estado de Nova Iorque, é o centro da área metropolitana de Nova Iorque",
+            "Tem uma população de mais de 8 milhões de habitantes",
+            "Famosa por seus arranha-céus e pela Estátua da Liberdade",
+            "É o principal centro financeiro e cultural dos Estados Unidos",
+            "Abriga alguns dos museus mais importantes do mundo, como o Metropolitan Museum of Art e o Museu de Arte Moderna",
+            "Tem um clima temperado continental, com verões quentes e úmidos e invernos frios e secos",
+            "Também é conhecida como 'Big Apple'"
         ]
     },
     {
-        "type": "teoria,",
-        "answer": "Heliocentrismo",
+        "type": "Filme",
+        "answer": "Clube da Luta",
         "questions": [
-            "Nicolau Copérnico (1453-1543) é considerado o fundador da astronomia moderna e meu pa.",
-            "\"Galle Galle (1564-1642) contribuiu para reforçar essa teoria de que a terra giraria em torno do sol",
-            "Contrario a teoria defendida por Aristóteles e Ptolomeu De que a terra seria o centro do universo.",
-            " oposto da minha teoria é 0 geocentrismo.",
-            "Perea sua vez,",
-            "Sou uma teoria do sistema solar.",
-            "Fu aperfeiçoada por cientistas e astrônomas como Johannes Kepler & Isaac Newton, e, atualmente, $0a mais aceita pela comunidade científica,",
-            " A igreja Católica, por sua vez, 6 aceitou esse modelo de Sistema Solar em 1922"
+            "Filme lançado em 1999, dirigido por David Fincher e estrelado por Brad Pitt e Edward Norton",
+            "Baseado no romance homônimo de Chuck Palahniuk",
+            "Conta a história de um homem que forma um clube de luta clandestino como uma forma de lidar com sua insônia e frustração com a vida",
+            "Tornou-se um clássico cult, ganhando fãs em todo o mundo",
+            "Foi elogiado por sua cinematografia, trilha sonora e performances dos atores principais",
+            "Também gerou polêmica por sua violência e temas controversos",
+            "Foi indicado a diversos prêmios, incluindo o Oscar de Melhor Ator Coadjuvante para Brad Pitt",
+            "Também é conhecido por suas reviravoltas surpreendentes e diálogos memoráveis",
+            "Tornou-se um filme influente, inspirando outras obras de cinema, televisão e literatura"
         ]
     },
     {
-        "type": "Pessoa",
-        "answer": "Vasco da Gama",
+        "type": "Jogo",
+        "answer": "Minecraft",
         "questions": [
-            " Sou um navegador e explorador portuguds.",
-            "Sai de Portugal e avancei até as Índias contornando o continente africano.",
-            "Um clube de futebol brasileiro tem o mesmo nome que eu.",
-            "Sal de Lisboa em 1497 e cheguei a Calicute no ano seguinte, em 1498.",
-            "Fui o comandante dos primeiros navios a navegar da Europa para a Índia.",
-            "Nasci por volta do ano de 1460 em uma cidade de Portugal e morre inicia no ano de 1524,",
-            " No ano de 1497 minha frota saiu de Portugal rum 3s Índias com 170 homens que ocupavam 4 navies,"
+            "Lançado em 2011",
+            "Desenvolvido pelo estúdio Mojang",
+            "Permite ao jogador construir e explorar um mundo de blocos",
+            "Jogo eletrônico de aventura e sobrevivência",
+            "Vendeu mais de 200 milhões de cópias em todo o mundo",
+            "Disponível para diversas plataformas, como PC, consoles e dispositivos móveis",
+            "Modos de jogo incluem Sobrevivência, Criativo e Aventura",
+            "Possui uma comunidade ativa de jogadores e criadores de conteúdo",
+            "Atualizações frequentes adicionam novos recursos e funcionalidades ao jogo"
         ]
     },
     {
-        "type": "Pessoa",
-        "answer": "Senhor feudal",
+        "type": "Banda",
+        "answer": "Queen",
         "questions": [
-            "Dono de terras.",
-            " Moro em castelos.",
-            "Dou protege¢do aos servos.",
-            "Sou nobre.",
-            "Empresto minha terra aos servos.",
-            "Cobrar impostos.",
-            "Feudalismo."
+            "Formada em Londres em 1970",
+            "Composta por Freddie Mercury, Brian May, John Deacon e Roger Taylor",
+            "Vendeu mais de 150 milhões de discos em todo o mundo",
+            "Conhecidos por hits como \"Bohemian Rhapsody\", \"We Will Rock You\" e \"Somebody to Love\"",
+            "Ganharam diversos prêmios ao longo de sua carreira, incluindo um Oscar",
+            "Incluídos no Rock and Roll Hall of Fame em 2001",
+            "Freddie Mercury faleceu em 1991, mas a banda continua ativa com shows e lançamentos de música",
+            "Conhecidos por sua mistura de rock, pop e elementos operísticos",
+            "Inspiraram diversas gerações de músicos e fãs"
         ]
     },
     {
-        "type": "lugar",
-        "answer": "Portugal",
+        "type": "Filme",
+        "answer": "Matrix",
         "questions": [
-            "Fui 0 pioneiro na expansão marítima durante a idade Moderna(Xv-xviii)",
-            " Ocupei diferentes regiões do continente fricano, como o Congo, Moçambique, Angola, Guiné- Bissau e Cabo Verde.",
-            "Na gastronomia do meu país  possível perceber a presença de diversas regiões do mundo: do Brasil level o milho e a mandioca, das terras africanas o consumo de quiabo e da Índia, alguns pratos como o sarapatel.",
-            " jogador de futebol Cristiano Ronaldo nasceu aqui.",
-            "Estou localizado na península Ibérica.",
-            "0s clubes de futebol “Sport Lisboa e Benfica” e 0 “Futebol Clube do Porto” est3 localizados em mim",
-            " famoso pelo pastel de belém"
+            "Lançado em 1999",
+            "Dirigido pelos irmãos Wachowski",
+            "Estrelado por Keanu Reeves, Laurence Fishburne e Carrie-Anne Moss",
+            "Considerado um marco na história do cinema de ficção científica",
+            "Explora temas como realidade virtual, inteligência artificial e filosofia",
+            "Ganhou quatro Oscars, incluindo Melhores Efeitos Visuais",
+            "Inspirou diversos filmes, séries e obras de arte subsequentes",
+            "Possui duas sequências, Matrix Reloaded e Matrix Revolutions",
+            "A frase \"There is no spoon\" tornou-se um ícone cultural"
         ]
     },
     {
-        "type": "coisa",
-        "answer": "Carruagem",
+        "type": "Animal",
+        "answer": "Elefante",
         "questions": [
-            "Sou feita de ferro.",
-            " Sou um tipo de arado.",
-            "Foi utilizada no campo durante o final da Idade Média.",
-            "Full responsável por deixar a terra mais fofa e mais apropriada para o plantio.",
-            "Nos dias atuais sou puxada por um trator.",
-            "Proporcionei 0 aumento da produção agrícola durante a idade Média.",
-            "Eu era puxada por bois e hoje posso ser puxada por grandes máquinas.",
-            " sou puxada por animais"
+            "Mamífero terrestre de grande porte",
+            "É encontrado na África e na Ásia",
+            "Possui uma tromba longa e flexível que é usada para respirar, beber e pegar alimentos",
+            "Seus dentes são os maiores dentes de qualquer animal terrestre",
+            "Os elefantes vivem em grupos liderados por uma fêmea mais velha chamada de matriarca",
+            "São animais herbívoros e consomem cerca de 200 kg de alimentos por dia",
+            "Os elefantes são inteligentes e têm uma memória excepcional",
+            "São frequentemente retratados em filmes, livros e outras formas de mídia",
+            "Infelizmente, os elefantes são frequentemente caçados por causa de seus dentes de marfim, o que coloca a espécie em risco de extinção"
         ]
     },
     {
-        "type": "Pessoa",
-        "answer": "Pedro Álvares Cabral",
+        "type": "Lugar",
+        "answer": "Nova York",
         "questions": [
-            "A Lagoa do Taquaral em Campinas possui uma réplica da Caravela Anunciação utilizada por mim no ano de 1500 para realizar minhas viagens marítimas.",
-            "Sai de Lisboa em 9 de março de 1500 em direção às Índias.",
-            "Junto comigo veio o cronista Pero Vaz de Caminha que escreveu suas impressÕes sobre a terra recém-descoberta.",
-            "Eu e minha frota chegamos no dia 22 de abril de 1500, na costa do atual estado da Bahia.",
-            "Fui nomeado comandante de uma frota de 13 navios que partiram em Margo de 1500 rumo às Índias.",
-            "No Museu Paulista da Universidade de S30 Paulo encontra se uma pintura de Oscar Pereira da Silva que retrata a minha chegada em Porto Seguro no ano de 1500.",
-            " Recebi 10 mil cruzados pela viagem. Além disso, eu poderia ainda comprar 30 toneladas de pimenta & transport-Jas gratuitamente no navig,"
+            "Localizada na costa leste dos Estados Unidos",
+            "É a cidade mais populosa do país",
+            "Conhecida como a cidade que nunca dorme",
+            "Possui uma grande variedade de atrações turísticas, como a Estátua da Liberdade, o Central Park e a Times Square",
+            "Nova York é um importante centro cultural, financeiro e de mídia",
+            "A cidade abriga algumas das mais prestigiadas universidades, museus e teatros do mundo",
+            "Foi fundada em 1624 pelos holandeses e originalmente chamada de Nova Amsterdã",
+            "Nova York é uma cidade global e um importante centro de comércio internacional",
+            "Sua economia é uma das mais poderosas do mundo"
         ]
     },
     {
-        "type": "coisa",
-        "answer": "Igreja Católica",
+        "type": "Coisa",
+        "answer": "Xadrez",
         "questions": [
-            "Igreja",
-            " Livro Sagrado.",
-            "Tenho versículos.",
-            "Tenho mais de 1500 tradugdes.",
-            "Lutero foi a primeira pessoa em me traduzir para o além do.",
-            "Fui principal fonte de conhecimento durante a Idade Média.",
-            " Lutero defendeu a minha livre interpretação da população."
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Fernando de Magalhães",
-        "questions": [
-            "Serviço do rei da Espanha planejei e executei em 1519 a expedição marítima que completou a primeira volta 20 mundo, comprovando a esfericidade da terra.",
-            " Percorri toda a parte Sul do oceano Atl ntico em busca de uma passagem para o oceano Pacifico.",
-            "No cheguei a completar a primeira volta a0 mundo por via marítima pois fui morto por um nativo quando a expedi 3o prosseguia em direção 4s ilhas Filipinas.",
-            "Meu primeiro nome em portugués é “Fernando”.",
-            "Na (última viagem que fiz, dos 200 tripulantes apenas 18 deles foram encontrados nas embarca gbes.",
-            "Eu e mais de 200 homens estavamos 4 bordo dos cinco navios que saíram da Espanha rumo &s dias.",
-            " A minha expedição comprovou no ano de 1522 que a terra era redonda."
-        ]
-    },
-    {
-        "type": "econômica.",
-        "answer": "Mercantilismo",
-        "questions": [
-            "Sou um conjunto de práticas econômicas realizadas na Europa durante a ldade Moderna entre os séculos XV e XVIII",
-            " Possuo algumas características como balança comercial favorável, metalismo e protecionismo. ",
-            "Meu nome foi criado por Adam Smith no ano de 176.",
-            "Meu nome serve para explicar como funcionava a economia durante a ldade Moderna na Europa.",
-            "Um palpite a qualquer hora",
-            "Nome dado para demonstrar o “jeito que o rei lida com a economia”",
-            ". metais preciosos"
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Jacques Bossuet",
-        "questions": [
-            "Escrevi o livro 'Política tirada da Sagrada Escritura'.",
-            "Sou um bispo e teólogo francês.",
-            "Sou autor da 'Teoria do direito divino dos rei'.",
-            "Sou um dos teóricos do absolutismo.",
-            "Fui um dos teóricos mais próximos do rei francês Luís XIV",
-            "bispo e teólogo francês",
-            " Nasci no ano de 1627 e morri em 1704."
-        ]
-    },
-    {
-        "type": "cidade.",
-        "answer": "Florença",
-        "questions": [
-            "Sou a cidade berço do Renascimento.",
-            "Aqui só encontramos a famosa estátua de Davi, de Michelangelo e o quadro O nascimento de Vênus de Botticelli.",
-            "No museu de Zoologia e História Natural hd uma exposição de modelos de corpos humanos feitos de cera durante o século XVIII para mostrar aos alunos diversas enfermidades e doenças.",
-            "Em italiano sou chamada de “Firenze”",
-            "Em latim sou chamada de “Florentia”",
-            "A Fiorentina” é o principal clube de futebol da cidade.",
-            "Fui muito tempo considerada a capital da moda."
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Servo",
-        "questions": [
-            "Trabalho para o senhor feudal.",
-            "Trabalho em troca de seguranca.",
-            "Pago impostos como a talha, banalidades, corveia e mão morta.",
-            " senhor feudal determinava as regras e leis que minha família deveria seguir.",
-            "Ndo tinha a posse de terra na ldade Média.",
-            "Na sociedade feudal eu representava o grupo daqueles que “trabalhavam”",
-            " Eu devia ao senhor feudal o trabalho sério remunerado e o pagamento de taxas diversas."
-        ]
-    },
-    {
-        "type": "objeto,",
-        "answer": "sou caravela",
-        "questions": [
-            "Os portugueses estavam me ‘procurando’ quando chegaram na América Portuguesa.",
-            " Durante a idade Moderna os reis acreditavam que o estímulo do meu material iria desenvolver a economia do pafs.",
-            "A Espanha explorou toneladas do meu material nas sociedades indígenas da América,como por exemplo, os Maias, Astecas e Incas.",
-            "Ouro e prata me representam.",
-            "Somos usados em jóias e também nas indústrias.",
-            "Somos um elemento químico de alto valor econômico,",
-            " 6 fomos descobertos pelos portugueses no Brasil no final do século XVII na região onde hoje é"
-        ]
-    },
-    {
-        "type": "Teoria Econômica",
-        "answer": "Balança comercial favorável",
-        "questions": [
-            "Para que a economia de um país crescesse o governo se esforçava para exportar mais e importar menos mercadorias.",
-            " Sou uma das características do mercantilismo.",
-            "Apresentar muitas vantagens para a economia de um país, pois ataio moeda estrangeira além de ‘gerar empregos dentro do país exportador.",
-            "Meu primeiro nome refere-se a um instrumento de medida utilizado em supermercados para pesar alimentos.",
-            "Sou composta por três palavras.",
-            "Meu desenho representa um país que vender mais e importar menos mercadorias.",
-            "Um palpite a qualquer hora."
-        ]
-    },
-    {
-        "type": "governo,",
-        "answer": "Absolutismo ",
-        "questions": [
-            "Sistema de governo que vigorou durante a idade Moderna na Europa.",
-            " Esse sistema de governo era justificado pela razão e pela fé para que as pessoas considerassem legítimo o rei concentrar em suas mãos todos os poderes.",
-            "Nesse sistema de governo o rei é o centro de todos os poderes,",
-            "0 Rei Sol Luís XIV foi o principal representante desse sistema de govemo.",
-            "Esse sistema de governo serviu para defender os interesses da burguesia e da nobreza,",
-            "Nesse sistema de governo o monarca tem o poder absoluto sobre a política, economia as decisões da sociedade.",
-            " Fique uma rodada sem jogar."
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Cristovao Colombo",
-        "questions": [
-            " Minha viagem marítima foi financiada pela Coroa Portuguesa no ano de 1492,",
-            "Quando era adolescente eu j3 tinha conhecimento de geometria, aritmética, geografia e astrologia.",
-            "Por acreditar que a terra era esférica propus chegar 3s Índias navegar sempre em direio Oeste.",
-            "Meu sobrenome inspirou 0 nome de um país da América do Sul",
-            "vance uma casa",
-            "Recebi da rainha da Espanha três caravelas: Santa Maria, Pinta e Nina,",
-            "No dia 11 de outubro de 1492 avistei terra firme e aportei na ilha que chamei de São Salvador,",
-            " Nasci em Génova, cidade da telha por volta do ano de 1450."
-        ]
-    },
-    {
-        "type": "local.",
-        "answer": "Câmaras Municipais",
-        "questions": [
-            "Representa o poder local das vilas no período colonial do Brasil.",
-            "Local onde se reuniam os \"homens bons”",
-            "Somente grandes proprietários, donos de escravos e católicos poderiam frequentar esse local.",
-            "Eu era dirigida por um juiz ordinário que era escolhido pelos integrantes da elite da cidade.",
-            "Eu possuía várias fontes, como por exemplo, resolver problemas de ordem econômica,administrativa e política das cidades.",
-            "No século XVII a denominatio “homens bons” foi substituída por vereador.",
-            "A primeira foi estabelecida no Brasil no ano de 1532."
-        ]
-    },
-    {
-        "type": "local.",
-        "answer": "São Vicente",
-        "questions": [
-            "Progredi debido a producto de canadá-aplicar.",
-            " Fui fundada em 22 de janeiro de 1532 pelo portugugs Martim Afonso de Souza.",
-            "Ful uma capitania hereditária.",
-            "Sou considerada uma das primeiras cidades do Brasil.",
-            "Ficou próxima de outras povoadores do período como Santos, S3c Paulo e Sant’ana de Mogi.",
-            "No Museu Paulista da USP está exposta uma pintura de Benedito Calixto feita em 1900 que representa a minha fundag 3o.",
-            "Meu nome é uma homenagem a um padre espanhol que hoje é o santo padroeiro de Lisboa."
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Criollo",
-        "questions": [
-            "Muitos filhos iam estudar na Espanha e ao voltar exerciam a carreira de médico e advogado.",
-            " Filhos de espanhóis nascidos na América.",
-            "Atuava no comércio",
-            "Possuía grandes propriedades na América Espanhola.",
-            "Possui poder económico, mas no tinha participado política na América Espanhola.",
-            "Fomos importantes na independência da América Espanhola.",
-            " Participava do cabildo."
-        ]
-    },
-    {
-        "type": "obleto.",
-        "answer": "Abacate",
-        "questions": [
-            "Sou o alimento principal do guacamole.",
-            "Sou um alimento muito utilizado na culinária astecae maia.",
-            "Posso ser consumido doce ou salgado.",
-            "Começou a ser cultivado hd cerca de 8.000 anos, na regido do México.",
-            "Ao chegar 3 Europa permaneci até o início do século 20, um alimento reservado à aristocracia e alta burguesia.",
-            "Atualmente, o Brasil é um dos maiores produtores mundiais grupo que inclui o México, a República Dominicana, a Colômbia e os estados da Califórnia e da Flórida, nos Estados Unidos.",
-            " Sou um alimento nativo da América Central e do México."
-        ]
-    },
-    {
-        "type": "produto.",
-        "answer": "Especiarias",
-        "questions": [
-            " Era Um produto muito valioso durante a Idade Modema,",
-            "Sou utilizada como tempero ou na conservação de alimentos.",
-            "As principais seo: pimenta do reino, noz moscada, cravo da índia, canela, gengibre.",
-            "ra encontrada no Oriente",
-            "Portugueses ¢ espanhóis tragaram rotas marítimas alternativas para me encontrar nas Índias.",
-            "Somos utilizadas na gastronomia desde a Antiguidade, pelo menos hd 2.000 anos antes de Cristo.",
-            " Fui responsável pela intensificação do comércio entre Oriente e Ocidente."
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Homens-bons",
-        "questions": [
-            "Componho a Câmara Municipal.",
-            "Sou latifundiário, dono de escravos  catélico.",
-            "Nome utilizado para determinar as pessoas que poderiam ocupar cargos políticos.",
-            "Preciso ter mais de 25 anos para me tomar um.",
-            "No século XVIii minha denominação foi substituída por “vereador”",
-            "Participo da lista de eleitores que escolhiam os membros das Câmaras Municipais.",
-            "Escravos, mulheres e judeus não poderiam se tornar um."
-        ]
-    },
-    {
-        "type": "lugar.",
-        "answer": "Mesoamérica ",
-        "questions": [
-            " Sou um termo utilizado para fazer referência a uma grande área geográfica e cultural do continente americano.",
-            "Localização das civilizações pré colombianas.",
-            "As civilizações Olmeca, Asteca e Maia se desenvolveram aqui.",
-            "05 Olmecas formaram a primeira grande civilizado dessa regido.",
-            "Incluo o sul do México até os territórios da Guatemala, El Salvador, Belize Nicarágua, Honduras e Costa Rica,",
-            "Em grego o significado aproximado é “América Intermédia®",
-            "Também sou conhecida como América Central.",
-            " Trata-se de uma região de clima tropical, com actividade sísmica"
-        ]
-    },
-    {
-        "type": "coisa",
-        "answer": "Milho",
-        "questions": [
-            "sou amarelo",
-            "Passo ser consumido assado ou cozido,",
-            "Sou o ingrediente mais importante da culinária asteca,",
-            "Surgiu há cerca de 7.000 anos onde hoje é o México e a Guatemala. Sou cultivado hd 4.000 anos.",
-            "Desempenhou um papel central na mitologia grega.",
-            "Posso ser acompanhado com fed, amaranto e chia.",
-            "pode ser feito em receitas doces ou salgadas"
-        ]
-    },
-    {
-        "type": "",
-        "answer": "Holanda",
-        "questions": [
-            "Grande financiador da construção dos engenhos no Brasil Colonial.",
-            " Invadiu o Brasil em duas oportunidades. Na Bahia e Pernambuco no século XVII.",
-            "A camisa da seleção de futebol é laranja.",
-            "No século XVI a Espanha proibiu 0 nosso comércio com suas colônias.",
-            "Invadimos Salvador entre os anos de 1624 e 1625 mas fomos expulsos pelos portugueses e espanhóis.",
-            "Em 1630 invadiram Pernambuco e 56 saímos de 13 em 1654.",
-            " Sou chamada também de 'Países Baixos'"
-        ]
-    },
-    {
-        "type": "local",
-        "answer": "Calicute",
-        "questions": [
-            "Estou localizada na costa ocidental da Índia.",
-            " Aqui aportaram navegadores como Pedro Álvares Cabral e Vasco da Gama.",
-            "Fui Um centro de comércio muito importante durante a ldade Moderna.",
-            "Possuía muitas especiarias.",
-            "Fiquei famosa por ser o principal porto comercial da Índia no século XV.",
-            "Na minha cidade havia vários armazéns, mesquitas e templos.",
-            "Apesar de ser o centro das relações comerciais entre o Oriente e Ocidente eu não me encontrava fortificada e 0 meu porto era bastante inóspito."
-        ]
-    },
-    {
-        "type": "objeto.",
-        "answer": "Pau-brasil",
-        "questions": [
-            "Meu segundo nome é Ibirapitanga",
-            " Fui o primeiro produto a ser extraído pelos portugueses na América.",
-            "Os índios me utilizavam na construção de arcos e flechas.",
-            " corante extraído de mim & utilizado no tingimento de tecidos.",
-            "Recebi esse nome em fungo da madeira cortada lembrar uma brasa.",
-            "De 1500 a 1600, calcula-se que 2 milhões vieram abaixo. Hoje, está quase extinto.",
-            "Serve para construir instrumentos de corda."
-        ]
-    },
-    {
-        "type": "objeto.",
-        "answer": "Calendário Azteca",
-        "questions": [
-            " Também sou conhecido como Pedra do Sol.",
-            "Possui 365 dias.",
-            "Tenho cinco dias especiais dedicados aos sacrifícios",
-            "Cada mês é representado por um símbolo: crocodilo, vento, casa, lagarto, serpente cérebro...",
-            "Cada mês tem 20 dias.",
-            "Estou dividido em 18 meses,",
-            " Sirvo para contar o tempo"
-        ]
-    },
-    {
-        "type": "coisa",
-        "answer": "Cacau/Chocolate",
-        "questions": [
-            "Sou um item raro ¢ de luxo consumido no Império Asteca.",
-            " significado do meu nome é “3gua amarga”.",
-            " povo asteca foi uma das primeiras a consumir uma mistura salgada e ardida, feita a base do seu produto, por volta do ano de 1300 DC. A bebida era considerada sagrada.",
-            "Na Suíça, cada cidadão consome em média 10 quilos do meu produto por ano. O Brasil fica em sexto lugar na lista, com apenas 2 quilos por pessoa.",
-            "Sou conhecido como a bebida dos guerreiros e nobres.",
-            "0s griôs possuem substâncias antioxidantes chamadas flavonóides, que ajudam a fortalecer a sadde vascular e a prevenir certos tipos de câncer.",
-            " Imigrantes europeus ajudaram a monitorar as primeiras fábricas aqui no Brasil somente no início do século XX,"
-        ]
-    },
-    {
-        "type": "um lugar.",
-        "answer": "Senzala",
-        "questions": [
-            "Moradia dos escravos.",
-            "Existiu durante todo o período da escraviddo no Brasil",
-            "Construídas dentro da unidade de produto engenho mina de ouro e fazenda de café)",
-            "Costumavam ser rísticas, abafadas possuíam poucas janelas e desconfortáveis",
-            "Muitas vezes, os escravos eram acorrentados dentro dela para evitar as fugas.",
-            "Costuma haver na frente dela um pelourinho.",
-            "Os escravos dormiam no chão duro de terra batida ou sobre palha",
-            " Escolha um participante para voltar a um espaço."
-        ]
-    },
-    {
-        "type": "umlocal,",
-        "answer": "Capitanias Hereditárias",
-        "questions": [
-            "0s donatários tinham como missão colonizar, proteger e administrar o território e por outro lado tinham o direito de explorar os recursos naturais.",
-            " As clínicas que obtiveram sucesso foram a de São Vicente e a de Pemambuco.",
-            " rei de Portugal D. loo Ill dividiu o território brasileiro em grandes faixas de terra e as entregou a particulares.",
-            "Sou hereditária, intransferível, indivisível e inalienável,",
-            "A pequena nobreza de Portugal foi beneficiada,",
-            "Aqui no Brasil tivemos 15.",
-            "A primeira foi Fernando de Noronha, em Pernambuco."
-        ]
-    },
-    {
-        "type": "objeto.",
-        "answer": "Tratado de Tordesilhas",
-        "questions": [
-            "Fui assinado em 7 de junho de 1494",
-            " Servir para dividir as terras 'descobertas e por descobrir'",
-            "Fui um acordo entre Espanha e Portugal.",
-            "Eu passava por Belém (Pará) até Laguna Santa catarina",
-            "Dividir os territórios a leste para Portugal e a Oeste para a Espanha.",
-            "No fui totalmente respeitado.",
-            "Deixei de vigorar apenas em 1750 com a assinatura do Tratado de Madri."
-        ]
-    },
-    {
-        "type": "produto,",
-        "answer": "Cana - de - açúcar",
-        "questions": [
-            " Por mais de três séculos foi o principal produto exportado pela colônia portuguesa na América.",
-            "Fui escolhida, pois Portugal já tinha experiência com a minha produzido e contava com ¢ financiamento de banqueiros e comerciantes.",
-            "Minha produzido ocorria nos engenhos.",
-            "A principal mão-de-obra utilizada na minha produzido era a escrava.",
-            "As capitanias de $30 Vicente e Pernambuco obtiveram sucesso devido ao meu cultivo.",
-            "Posso ter vários tipos: mascavo, cristal, vanille, organic, liquid.",
-            "0 solo de massapé e o clima Gemido foram essenciais para 0 meu cultivo.",
-            " acompanho um pastel com meu caldo"
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Senhor de Engenho",
-        "questions": [
-            " Sou dono de grandes latifúndios.",
-            "Uso escravos para trabalharem nas minhas temas.",
-            "Sou proprietário da unidade de produção do açúcar no nordeste colonial",
-            "Meu objetivo é vender aplicar para o mercado europeu.",
-            "Moro na casa-grande",
-            "Minha riqueza era demonstrada através de luxuosas roupas e do grande número de escravos",
-            " Tenho dívidas históricas com a humanidade"
-        ]
-    },
-    {
-        "type": "Pessoa",
-        "answer": "Escravo",
-        "questions": [
-            "Moro na senzala",
-            " Chegaram ao Brasil entre 1550 e 1850 3,5 milhões de nds.",
-            "Ao completar 7 anos já éramos considerados aptos para realizar alguns serviços.",
-            "Viemos para desempenhar todas as funções possíveis: dos trabalhos domésticos aos agrícolas, dos serviços leves aos mais pesados.",
-            "Quebramos ferramentas de trabalhos e colocamos fogo nas senzalas como forma de resistência 3s condigNas que vivíamos aqui no Brasil.",
-            "Influenciamos e enriquecemos a cultura brasileira desde o vocabulário até a alimentação.",
-            "Por quase quatrocentos anos fomos considerados propriedade de um outro homem."
+            "Jogo de estratégia para dois jogadores",
+            "Cada jogador começa com dezesseis peças: um rei, uma rainha, dois cavalos, dois bispos, duas torres e oito peões",
+            "O objetivo é dar um xeque-mate ao rei do oponente",
+            "O jogo é jogado em um tabuleiro de 64 casas",
+            "O xadrez é considerado um esporte mental",
+            "Acredita-se que o jogo tenha se originado na Índia no século VI",
+            "O xadrez é jogado em todo o mundo e é um esporte popular em muitos países",
+            "Existem torneios de xadrez internacionais com jogadores profissionais",
+            "O xadrez é frequentemente usado como uma metáfora para a estratégia e planejamento em outras áreas da vida"
         ]
     }
 ]
