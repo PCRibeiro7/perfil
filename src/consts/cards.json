@@ -48,7 +48,7 @@
         ]
     },
     {
-        "type": "Animal",
+        "type": "Coisa",
         "answer": "Tigre",
         "questions": [
             "É um felino de grande porte",
@@ -80,7 +80,7 @@
         ]
     },
     {
-        "type": "Comida",
+        "type": "Coisa",
         "answer": "Sushi",
         "questions": [
             "É um prato da culinária japonesa",
@@ -96,7 +96,7 @@
         ]
     },
     {
-        "type": "Personagem",
+        "type": "Pessoa",
         "answer": "Harry Potter",
         "questions": [
             "Personagem principal da série de livros 'Harry Potter' de J.K. Rowling",
@@ -142,7 +142,7 @@
         ]
     },
     {
-        "type": "País",
+        "type": "Lugar",
         "answer": "Brasil",
         "questions": [
             "País localizado na América do Sul",
@@ -157,7 +157,7 @@
         ]
     },
     {
-        "type": "Personagem Fictício",
+        "type": "Pessoa",
         "answer": "Sherlock Holmes",
         "questions": [
             "Personagem criado pelo escritor britânico Arthur Conan Doyle",
@@ -171,7 +171,7 @@
         ]
     },
     {
-        "type": "Alimento",
+        "type": "Coisa",
         "answer": "Pizza",
         "questions": [
             "Comida de origem italiana, mas popular em todo o mundo",
@@ -185,7 +185,7 @@
         ]
     },
     {
-        "type": "Esporte",
+        "type": "Coisa",
         "answer": "Futebol",
         "questions": [
             "Esporte coletivo mais popular do mundo",
@@ -200,7 +200,7 @@
         ]
     },
     {
-        "type": "Escritor",
+        "type": "Pessoa",
         "answer": "Gabriel García Márquez",
         "questions": [
             "Escritor colombiano, nascido em 1927",
@@ -215,7 +215,7 @@
         ]
     },
     {
-        "type": "Pintor",
+        "type": "Pessoa",
         "answer": "Vincent van Gogh",
         "questions": [
             "Pintor holandês, nascido em 1853 e morto em 1890",
@@ -230,7 +230,7 @@
         ]
     },
     {
-        "type": "Ator/Atriz",
+        "type": "Pessoa",
         "answer": "Meryl Streep",
         "questions": [
             "Atriz americana nascida em 1949",
@@ -245,7 +245,7 @@
         ]
     },
     {
-        "type": "Atleta",
+        "type": "Pessoa",
         "answer": "Usain Bolt",
         "questions": [
             "Conhecido como o homem mais rápido do mundo",
@@ -260,7 +260,7 @@
         ]
     },
     {
-        "type": "Escritor",
+        "type": "Pessoa",
         "answer": "J. K. Rowling",
         "questions": [
             "Autora da famosa série de livros Harry Potter",
@@ -275,7 +275,7 @@
         ]
     },
     {
-        "type": "Escritor",
+        "type": "Pessoa",
         "answer": "Machado de Assis",
         "questions": [
             "Escritor brasileiro, nascido em 1839 e morto em 1908",
@@ -290,7 +290,7 @@
         ]
     },
     {
-        "type": "Músico",
+        "type": "Pessoa",
         "answer": "David Bowie",
         "questions": [
             "Cantor, compositor e ator britânico, nascido em 1947 e morto em 2016",
@@ -305,7 +305,7 @@
         ]
     },
     {
-        "type": "Cantor(a)",
+        "type": "Pessoa",
         "answer": "Adele",
         "questions": [
             "Cantora britânica, nascida em 1988",
@@ -319,7 +319,7 @@
         ]
     },
     {
-        "type": "Ator",
+        "type": "Pessoa",
         "answer": "Tom Hanks",
         "questions": [
             "Ator americano, nascido em 1956",
@@ -349,7 +349,7 @@
         ]
     },
     {
-        "type": "Filósofo",
+        "type": "Pessoa",
         "answer": "Friedrich Nietzsche",
         "questions": [
             "Nasceu em 1844 em Röcken, Alemanha",
@@ -362,7 +362,7 @@
         ]
     },
     {
-        "type": "Cantor",
+        "type": "Pessoa",
         "answer": "Aretha Franklin",
         "questions": [
             "Nasceu em 1942 em Memphis, Tennessee, nos Estados Unidos",
@@ -376,7 +376,7 @@
         ]
     },
     {
-        "type": "Escritor",
+        "type": "Pessoa",
         "answer": "Jorge Luis Borges",
         "questions": [
             "Nasceu em 1899 em Buenos Aires, Argentina",
@@ -481,7 +481,7 @@
         ]
     },
     {
-        "type": "País",
+        "type": "Lugar",
         "answer": "Austrália",
         "questions": [
             "País localizado na Oceania",
@@ -494,7 +494,7 @@
         ]
     },
     {
-        "type": "Cientista",
+        "type": "Pessoa",
         "answer": "Albert Einstein",
         "questions": [
             "Físico teórico nascido em Ulm, Alemanha, em 1879",
@@ -510,7 +510,7 @@
         ]
     },
     {
-        "type": "Jogo",
+        "type": "Coisa",
         "answer": "Zelda Ocarina of Time",
         "questions": [
             "Jogo de ação e aventura lançado em 1998 para o console Nintendo 64",
@@ -522,7 +522,7 @@
         ]
     },
     {
-        "type": "Cidade",
+        "type": "Lugar",
         "answer": "Paris",
         "questions": [
             "Capital da França",
@@ -535,7 +535,7 @@
         ]
     },
     {
-        "type": "Animal",
+        "type": "Coisa",
         "answer": "Girafa",
         "questions": [
             "Animal alto e elegante, conhecido por seu pescoço longo",
@@ -550,7 +550,7 @@
         ]
     },
     {
-        "type": "Livro",
+        "type": "Coisa",
         "answer": "1984",
         "questions": [
             "Obra distópica escrita por George Orwell e publicada em 1949",
@@ -562,7 +562,7 @@
         ]
     },
     {
-        "type": "Animal",
+        "type": "Coisa",
         "answer": "Leão",
         "questions": [
             "Espécie de mamífero da família Felidae",
@@ -577,7 +577,7 @@
         ]
     },
     {
-        "type": "País",
+        "type": "Lugar",
         "answer": "Japão",
         "questions": [
             "País localizado na Ásia Oriental",
@@ -606,7 +606,7 @@
         ]
     },
     {
-        "type": "Pintor",
+        "type": "Pessoa",
         "answer": "Salvador Dalí",
         "questions": [
             "Nasceu em 1904 na Espanha e faleceu em 1989",
@@ -636,7 +636,7 @@
         ]
     },
     {
-        "type": "Filme",
+        "type": "Coisa",
         "answer": "Clube da Luta",
         "questions": [
             "Filme lançado em 1999, dirigido por David Fincher e estrelado por Brad Pitt e Edward Norton",
@@ -651,7 +651,7 @@
         ]
     },
     {
-        "type": "Jogo",
+        "type": "Coisa",
         "answer": "Minecraft",
         "questions": [
             "Lançado em 2011",
@@ -681,7 +681,7 @@
         ]
     },
     {
-        "type": "Filme",
+        "type": "Coisa",
         "answer": "Matrix",
         "questions": [
             "Lançado em 1999",
@@ -696,7 +696,7 @@
         ]
     },
     {
-        "type": "Animal",
+        "type": "Coisa",
         "answer": "Elefante",
         "questions": [
             "Mamífero terrestre de grande porte",
