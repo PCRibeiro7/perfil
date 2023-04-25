@@ -22,8 +22,8 @@ export default function GuessComponent({
     useEffect(() => {
         setTimeout(() => {
             setMounted(true);
-        }, 5000);
-    }, []);
+        }, 1500 + currentCard.tips.length * 300);
+    }, [currentCard.tips.length]);
 
     useEffect(() => {
         if (wrongAnswers > 0) {
