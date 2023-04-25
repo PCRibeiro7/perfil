@@ -61,7 +61,7 @@ export default function GuessComponent({
                         type="text"
                         name="answer"
                         placeholder="Digite seu palpite aqui..."
-                        className="text-center w-full h-10 text-xl border-slate-600 rounded-xl mb-2 placeholder:text-slate-500"
+                        className="text-center w-full h-10 text-xl border-slate-600 rounded-xl mb-2 placeholder:text-slate-500 bg-slate-200"
                     />
                 </Zoom>
                 <Zoom
@@ -89,10 +89,10 @@ export default function GuessComponent({
                 }}
             >
                 <button
-                    className={`w-full h-10 bg-white rounded-xl hover:bg-slate-200 mt-2 border-slate-300 border-2 hover:border-0`}
+                    className={`w-full h-10 bg-white rounded-xl hover:bg-slate-200 mt-2 border-slate-500 border-2 `}
                     onClick={skipQuestion}
                 >
-                    <h1 className="text-xl text-slate-800">{'Pular'}</h1>
+                    <h1 className="text-xl text-slate-500">{'Pular'}</h1>
                 </button>
             </Zoom>
             <Zoom
