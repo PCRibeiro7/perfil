@@ -1,3 +1,4 @@
+import { ICard, IState } from '@/pages';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
 
@@ -5,11 +6,15 @@ interface GuessComponentProps {
     handleQuestionAnswered: (event: any) => void;
     wrongAnswers: number;
     usedTips: number;
+    currentCard: ICard;
+    setState: React.Dispatch<React.SetStateAction<IState>>;
 }
 export default function GuessComponent({
     handleQuestionAnswered,
     wrongAnswers,
     usedTips,
+    currentCard,
+    setState,
 }: GuessComponentProps) {
     const [mounted, setMounted] = useState(false);
     const [shake, setShake] = useState(false);
@@ -28,6 +33,21 @@ export default function GuessComponent({
             }, 1000);
         }
     }, [wrongAnswers]);
+
+    const skipQuestion = () => {
+        setState(state => ({
+            ...state,
+            currentCardIndex: state.currentCardIndex + 1,
+            askedQuestions: [0],
+            currentQuestionIndex: 0,
+            showFailurePage: true,
+            cardSlides: {
+                first: false,
+                second: false,
+            },
+            correctAnswers: [...state.correctAnswers, currentCard.answer],
+        }));
+    };
 
     return (
         <div className="self-center bg-white rounded-xl w-full p-3 flex flex-col items-center">
@@ -61,6 +81,20 @@ export default function GuessComponent({
                     </div>
                 </Zoom>
             </form>
+            <Zoom
+                in={currentCard.tips.length === usedTips}
+                style={{
+                    transitionDelay:
+                        currentCard.tips.length === usedTips ? `500ms` : '0ms',
+                }}
+            >
+                <button
+                    className={`w-full h-10 bg-white rounded-xl hover:bg-slate-200 mt-2 border-slate-300 border-2 hover:border-0`}
+                    onClick={skipQuestion}
+                >
+                    <h1 className="text-xl text-slate-800">{'Pular'}</h1>
+                </button>
+            </Zoom>
             <Zoom
                 in={mounted}
                 style={{ transitionDelay: mounted ? `1500ms` : '0ms' }}

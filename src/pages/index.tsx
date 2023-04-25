@@ -3,19 +3,19 @@ import cards from '../consts/cards.json';
 import Home from '../components/Home/Home';
 import Card from '../components/Card';
 import Success from '../components/Success/Success';
+import Failure from '@/components/Failure';
 
 const INITIAL_CARD_INDEX = 0;
 
-type SnackbarType = 'success' | 'error';
-
-type ICard = {
+export type ICard = {
     type: string;
     answer: string;
-    questions: string[];
+    tips: string[];
 };
 export interface IState {
     gameStarted: boolean;
     showSuccessPage: boolean;
+    showFailurePage: boolean;
     cardSlides: {
         first: boolean;
         second: boolean;
@@ -27,17 +27,13 @@ export interface IState {
     currentQuestionIndex: number;
     wrongAnswers: number;
     usedTips: number;
-    snackbar: {
-        open: boolean;
-        type: SnackbarType;
-        message: string;
-    };
 }
 
 export default function Main(): JSX.Element {
     const [state, setState] = useState<IState>({
         gameStarted: false,
         showSuccessPage: false,
+        showFailurePage: false,
         cardSlides: {
             first: false,
             second: false,
@@ -48,12 +44,7 @@ export default function Main(): JSX.Element {
         askedQuestions: [0],
         currentQuestionIndex: 0,
         wrongAnswers: 0,
-        usedTips: 0,
-        snackbar: {
-            open: false,
-            type: 'success',
-            message: '',
-        },
+        usedTips: 1,
     });
 
     if (!state.gameStarted) {
@@ -62,6 +53,10 @@ export default function Main(): JSX.Element {
 
     if (state.showSuccessPage) {
         return <Success state={state} setState={setState} />;
+    }
+
+    if (state.showFailurePage) {
+        return <Failure state={state} setState={setState} />;
     }
 
     return <Card state={state} setState={setState} />;

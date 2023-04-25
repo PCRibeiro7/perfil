@@ -2,7 +2,7 @@
     {
         "type": "Pessoa",
         "answer": "Michael Jackson",
-        "questions": [
+        "tips": [
             "Cantor e compositor",
             "Nasceu em 1958 em Indiana, nos Estados Unidos",
             "Conhecido por sua habilidade de dançar",
@@ -18,7 +18,7 @@
     {
         "type": "Pessoa",
         "answer": "Abraham Lincoln",
-        "questions": [
+        "tips": [
             "Nasceu em 1809 em Kentucky, nos Estados Unidos",
             "Foi o 16º presidente dos Estados Unidos",
             "Assinou a Proclamação de Emancipação, que libertou os escravos nos Estados Confederados da América",
@@ -34,7 +34,7 @@
     {
         "type": "Objeto",
         "answer": "Telefone",
-        "questions": [
+        "tips": [
             "Foi inventado por Alexander Graham Bell em 1876",
             "Utiliza sinais elétricos para transmitir informações de voz",
             "É um dos meios de comunicação mais utilizados em todo o mundo",
@@ -50,7 +50,7 @@
     {
         "type": "Coisa",
         "answer": "Tigre",
-        "questions": [
+        "tips": [
             "É um felino de grande porte",
             "Habitat natural inclui regiões da Ásia e da Rússia",
             "Possui pelagem listrada em tons de laranja e preto",
@@ -66,7 +66,7 @@
     {
         "type": "Filme",
         "answer": "Forrest Gump",
-        "questions": [
+        "tips": [
             "Lançado em 1994 e dirigido por Robert Zemeckis",
             "É baseado no livro de mesmo nome de Winston Groom",
             "Estrelado por Tom Hanks no papel principal",
@@ -82,7 +82,7 @@
     {
         "type": "Coisa",
         "answer": "Sushi",
-        "questions": [
+        "tips": [
             "É um prato da culinária japonesa",
             "É composto por arroz temperado com vinagre, peixe cru e legumes",
             "Pode ser servido em rolos (maki), bolinhos (niguiri) ou outros formatos",
@@ -98,7 +98,7 @@
     {
         "type": "Pessoa",
         "answer": "Harry Potter",
-        "questions": [
+        "tips": [
             "Personagem principal da série de livros 'Harry Potter' de J.K. Rowling",
             "É um bruxo órfão criado pelos tios trouxas na Inglaterra",
             "Famoso por sobreviver à maldição da morte de Lord Voldemort quando era bebê",
@@ -114,7 +114,7 @@
     {
         "type": "Filme",
         "answer": "O Poderoso Chefão",
-        "questions": [
+        "tips": [
             "Filme de Francis Ford Coppola lançado em 1972",
             "Baseado em um romance de Mario Puzo",
             "Conta a história da família mafiosa Corleone nos Estados Unidos",
@@ -129,7 +129,7 @@
     {
         "type": "Banda",
         "answer": "The Beatles",
-        "questions": [
+        "tips": [
             "Banda de rock formada em Liverpool, Inglaterra, em 1960",
             "É composta por John Lennon, Paul McCartney, George Harrison e Ringo Starr",
             "É considerada uma das mais influentes e bem-sucedidas da história da música",
@@ -144,7 +144,7 @@
     {
         "type": "Lugar",
         "answer": "Brasil",
-        "questions": [
+        "tips": [
             "País localizado na América do Sul",
             "Tem como capital Brasília e como língua oficial o português",
             "Tem uma das maiores extensões territoriais do mundo",
@@ -159,7 +159,7 @@
     {
         "type": "Pessoa",
         "answer": "Sherlock Holmes",
-        "questions": [
+        "tips": [
             "Personagem criado pelo escritor britânico Arthur Conan Doyle",
             "Detetive famoso por sua inteligência, habilidade de observação e raciocínio dedutivo",
             "Morava na rua Baker, em Londres, e tinha como companheiro o Dr. Watson",
@@ -173,7 +173,7 @@
     {
         "type": "Coisa",
         "answer": "Pizza",
-        "questions": [
+        "tips": [
             "Comida de origem italiana, mas popular em todo o mundo",
             "Consiste em uma massa assada com molho de tomate e ingredientes variados",
             "Pode ser salgada ou doce, e as opções de recheio são praticamente infinitas",
@@ -187,7 +187,7 @@
     {
         "type": "Coisa",
         "answer": "Futebol",
-        "questions": [
+        "tips": [
             "Esporte coletivo mais popular do mundo",
             "Jogado em um campo retangular, com duas equipes de 11 jogadores cada",
             "O objetivo é marcar gols no gol adversário, utilizando os pés ou outras partes do corpo, exceto as mãos",
@@ -202,7 +202,7 @@
     {
         "type": "Pessoa",
         "answer": "Gabriel García Márquez",
-        "questions": [
+        "tips": [
             "Escritor colombiano, nascido em 1927",
             "Ganhou o Prêmio Nobel de Literatura em 1982",
             "Ficou famoso por seus livros que combinam realismo mágico, história e política",
@@ -217,7 +217,7 @@
     {
         "type": "Pessoa",
         "answer": "Vincent van Gogh",
-        "questions": [
+        "tips": [
             "Pintor holandês, nascido em 1853 e morto em 1890",
             "Um dos artistas mais famosos da história da arte",
             "Pintou cerca de 900 quadros em sua vida, incluindo alguns dos mais conhecidos do mundo",
@@ -232,7 +232,7 @@
     {
         "type": "Pessoa",
         "answer": "Meryl Streep",
-        "questions": [
+        "tips": [
             "Atriz americana nascida em 1949",
             "Considerada uma das melhores atrizes de todos os tempos",
             "Ganhou três Oscars e foi indicada a mais de 20",
@@ -247,7 +247,7 @@
     {
         "type": "Pessoa",
         "answer": "Usain Bolt",
-        "questions": [
+        "tips": [
             "Conhecido como o homem mais rápido do mundo",
             "Nasceu em 1986 na Jamaica",
             "É um velocista especializado em corridas de 100m e 200m",
@@ -262,7 +262,7 @@
     {
         "type": "Pessoa",
         "answer": "J. K. Rowling",
-        "questions": [
+        "tips": [
             "Autora da famosa série de livros Harry Potter",
             "Nasceu em 1965 em Yate, na Inglaterra",
             "Antes de se dedicar à escrita, trabalhou como professora de inglês",
@@ -277,7 +277,7 @@
     {
         "type": "Pessoa",
         "answer": "Machado de Assis",
-        "questions": [
+        "tips": [
             "Escritor brasileiro, nascido em 1839 e morto em 1908",
             "Considerado um dos maiores escritores da literatura brasileira",
             "Foi o primeiro presidente da Academia Brasileira de Letras",
@@ -292,7 +292,7 @@
     {
         "type": "Pessoa",
         "answer": "David Bowie",
-        "questions": [
+        "tips": [
             "Cantor, compositor e ator britânico, nascido em 1947 e morto em 2016",
             "Conhecido por sua personalidade excêntrica e por suas reinvenções musicais",
             "Lançou álbuns como Ziggy Stardust, Heroes e Blackstar",
@@ -307,7 +307,7 @@
     {
         "type": "Pessoa",
         "answer": "Adele",
-        "questions": [
+        "tips": [
             "Cantora britânica, nascida em 1988",
             "Seu álbum de estreia, '19', foi lançado em 2008 e incluía hits como 'Chasing Pavements' e 'Hometown Glory'",
             "Seu segundo álbum, '21', foi lançado em 2011 e se tornou um sucesso mundial, incluindo hits como 'Rolling in the Deep' e 'Someone Like You'",
@@ -321,7 +321,7 @@
     {
         "type": "Pessoa",
         "answer": "Tom Hanks",
-        "questions": [
+        "tips": [
             "Ator americano, nascido em 1956",
             "Ganhou dois prêmios Oscar de Melhor Ator, por suas atuações em 'Filadélfia' e 'Forrest Gump'",
             "Também é conhecido por seus papéis em filmes como 'Apollo 13', 'Náufrago' e 'O Código Da Vinci'",
@@ -335,7 +335,7 @@
     {
         "type": "Filme",
         "answer": "O Senhor dos Anéis: O Retorno do Rei",
-        "questions": [
+        "tips": [
             "Ganhador de 11 Oscars, incluindo Melhor Filme, Melhor Diretor e Melhores Efeitos Especiais",
             "Terceiro filme da trilogia baseada nos livros de J.R.R. Tolkien",
             "Lançado em 2003, dirigido por Peter Jackson",
@@ -351,7 +351,7 @@
     {
         "type": "Pessoa",
         "answer": "Friedrich Nietzsche",
-        "questions": [
+        "tips": [
             "Nasceu em 1844 em Röcken, Alemanha",
             "Autor de obras como 'Assim Falou Zaratustra' e 'Além do Bem e do Mal'",
             "Desenvolveu a filosofia do niilismo, que rejeita todas as formas de moralidade e significado",
@@ -364,7 +364,7 @@
     {
         "type": "Pessoa",
         "answer": "Aretha Franklin",
-        "questions": [
+        "tips": [
             "Nasceu em 1942 em Memphis, Tennessee, nos Estados Unidos",
             "Conhecida como 'A Rainha do Soul'",
             "Ganhou 18 Grammys ao longo de sua carreira",
@@ -378,7 +378,7 @@
     {
         "type": "Pessoa",
         "answer": "Jorge Luis Borges",
-        "questions": [
+        "tips": [
             "Nasceu em 1899 em Buenos Aires, Argentina",
             "Autor de obras como 'Ficções' e 'O Aleph'",
             "Foi diretor da Biblioteca Nacional da Argentina",
@@ -392,7 +392,7 @@
     {
         "type": "Objeto",
         "answer": "Cadeira",
-        "questions": [
+        "tips": [
             "É um objeto comum encontrado em lares e escritórios",
             "Foi inventada há mais de 5.000 anos",
             "Geralmente é feita de madeira, metal ou plástico",
@@ -404,7 +404,7 @@
     {
         "type": "Objeto",
         "answer": "Máquina de Lavar",
-        "questions": [
+        "tips": [
             "É um objeto comum encontrado em lares",
             "Foi inventada em 1908 por Alva J. Fisher",
             "É utilizada para lavar roupas",
@@ -417,7 +417,7 @@
     {
         "type": "Objeto",
         "answer": "Relógio",
-        "questions": [
+        "tips": [
             "É um objeto comum encontrado em lares e escritórios",
             "Foi inventado há mais de 500 anos",
             "É utilizado para medir o tempo",
@@ -430,7 +430,7 @@
     {
         "type": "Objeto",
         "answer": "Relógio de Parede",
-        "questions": [
+        "tips": [
             "É um objeto decorativo que pode ser encontrado em muitas casas",
             "É geralmente fixado na parede",
             "Tem como função indicar as horas",
@@ -443,7 +443,7 @@
     {
         "type": "Objeto",
         "answer": "Cafeteira",
-        "questions": [
+        "tips": [
             "É um objeto usado na cozinha",
             "É usado para fazer café",
             "Pode ser elétrico ou manual",
@@ -457,7 +457,7 @@
     {
         "type": "Objeto",
         "answer": "Binóculos",
-        "questions": [
+        "tips": [
             "É um objeto usado para ampliar a visão",
             "É composto por duas lentes que permitem visualizar objetos distantes",
             "Pode ser usado para observação de aves, paisagens, esportes, entre outros",
@@ -471,7 +471,7 @@
     {
         "type": "Filme",
         "answer": "Cidade de Deus",
-        "questions": [
+        "tips": [
             "Filme brasileiro lançado em 2002",
             "Dirigido por Fernando Meirelles e Kátia Lund",
             "Baseado no livro de Paulo Lins",
@@ -483,7 +483,7 @@
     {
         "type": "Lugar",
         "answer": "Austrália",
-        "questions": [
+        "tips": [
             "País localizado na Oceania",
             "Possui a sexta maior área territorial do mundo",
             "A capital é Canberra, mas a maior cidade é Sydney",
@@ -496,7 +496,7 @@
     {
         "type": "Pessoa",
         "answer": "Albert Einstein",
-        "questions": [
+        "tips": [
             "Físico teórico nascido em Ulm, Alemanha, em 1879",
             "Desenvolveu a teoria da relatividade e a equação E=mc²",
             "Ganhou o Prêmio Nobel de Física em 1921",
@@ -512,7 +512,7 @@
     {
         "type": "Coisa",
         "answer": "Zelda Ocarina of Time",
-        "questions": [
+        "tips": [
             "Jogo de ação e aventura lançado em 1998 para o console Nintendo 64",
             "Desenvolvido pela Nintendo EAD e dirigido por Shigeru Miyamoto",
             "É considerado um dos melhores jogos de todos os tempos, tendo recebido diversos prêmios e elogios da crítica",
@@ -524,7 +524,7 @@
     {
         "type": "Lugar",
         "answer": "Paris",
-        "questions": [
+        "tips": [
             "Capital da França",
             "Conhecida como a Cidade do Amor",
             "Um dos principais destinos turísticos do mundo",
@@ -537,7 +537,7 @@
     {
         "type": "Coisa",
         "answer": "Girafa",
-        "questions": [
+        "tips": [
             "Animal alto e elegante, conhecido por seu pescoço longo",
             "É o animal mais alto do mundo, podendo chegar a 5,5 metros de altura",
             "Habitante das savanas da África, onde se alimenta de folhas de árvores",
@@ -552,7 +552,7 @@
     {
         "type": "Coisa",
         "answer": "1984",
-        "questions": [
+        "tips": [
             "Obra distópica escrita por George Orwell e publicada em 1949",
             "Retrata um futuro sombrio e totalitário em que o Estado controla todos os aspectos da vida dos cidadãos",
             "Criou conceitos e termos como 'Big Brother', 'duplipensar' e 'novilíngua'",
@@ -564,7 +564,7 @@
     {
         "type": "Coisa",
         "answer": "Leão",
-        "questions": [
+        "tips": [
             "Espécie de mamífero da família Felidae",
             "Encontrado em várias partes da África",
             "Macho pode chegar a pesar mais de 250 kg",
@@ -579,7 +579,7 @@
     {
         "type": "Lugar",
         "answer": "Japão",
-        "questions": [
+        "tips": [
             "País localizado na Ásia Oriental",
             "Arquipélago composto por quatro ilhas principais e outras menores",
             "Capital é Tóquio",
@@ -594,7 +594,7 @@
     {
         "type": "Pessoa",
         "answer": "Lionel Messi",
-        "questions": [
+        "tips": [
             "Nasceu em 1987 na Argentina",
             "Começou a jogar profissionalmente pelo Barcelona em 2004",
             "Considerado um dos melhores jogadores de futebol da história",
@@ -608,7 +608,7 @@
     {
         "type": "Pessoa",
         "answer": "Salvador Dalí",
-        "questions": [
+        "tips": [
             "Nasceu em 1904 na Espanha e faleceu em 1989",
             "Foi um dos principais representantes do movimento surrealista",
             "Conhecido por suas pinturas enigmáticas e simbólicas, que frequentemente apresentam relógios derretidos",
@@ -623,7 +623,7 @@
     {
         "type": "Lugar",
         "answer": "Nova Iorque",
-        "questions": [
+        "tips": [
             "É a cidade mais populosa dos Estados Unidos",
             "Foi fundada pelos holandeses em 1624",
             "Localizada no estado de Nova Iorque, é o centro da área metropolitana de Nova Iorque",
@@ -638,7 +638,7 @@
     {
         "type": "Coisa",
         "answer": "Clube da Luta",
-        "questions": [
+        "tips": [
             "Filme lançado em 1999, dirigido por David Fincher e estrelado por Brad Pitt e Edward Norton",
             "Baseado no romance homônimo de Chuck Palahniuk",
             "Conta a história de um homem que forma um clube de luta clandestino como uma forma de lidar com sua insônia e frustração com a vida",
@@ -653,7 +653,7 @@
     {
         "type": "Coisa",
         "answer": "Minecraft",
-        "questions": [
+        "tips": [
             "Lançado em 2011",
             "Desenvolvido pelo estúdio Mojang",
             "Permite ao jogador construir e explorar um mundo de blocos",
@@ -668,7 +668,7 @@
     {
         "type": "Banda",
         "answer": "Queen",
-        "questions": [
+        "tips": [
             "Formada em Londres em 1970",
             "Composta por Freddie Mercury, Brian May, John Deacon e Roger Taylor",
             "Vendeu mais de 150 milhões de discos em todo o mundo",
@@ -683,7 +683,7 @@
     {
         "type": "Coisa",
         "answer": "Matrix",
-        "questions": [
+        "tips": [
             "Lançado em 1999",
             "Dirigido pelos irmãos Wachowski",
             "Estrelado por Keanu Reeves, Laurence Fishburne e Carrie-Anne Moss",
@@ -698,7 +698,7 @@
     {
         "type": "Coisa",
         "answer": "Elefante",
-        "questions": [
+        "tips": [
             "Mamífero terrestre de grande porte",
             "É encontrado na África e na Ásia",
             "Possui uma tromba longa e flexível que é usada para respirar, beber e pegar alimentos",
@@ -713,7 +713,7 @@
     {
         "type": "Lugar",
         "answer": "Nova York",
-        "questions": [
+        "tips": [
             "Localizada na costa leste dos Estados Unidos",
             "É a cidade mais populosa do país",
             "Conhecida como a cidade que nunca dorme",
@@ -728,7 +728,7 @@
     {
         "type": "Coisa",
         "answer": "Xadrez",
-        "questions": [
+        "tips": [
             "Jogo de estratégia para dois jogadores",
             "Cada jogador começa com dezesseis peças: um rei, uma rainha, dois cavalos, dois bispos, duas torres e oito peões",
             "O objetivo é dar um xeque-mate ao rei do oponente",
@@ -738,6 +738,135 @@
             "O xadrez é jogado em todo o mundo e é um esporte popular em muitos países",
             "Existem torneios de xadrez internacionais com jogadores profissionais",
             "O xadrez é frequentemente usado como uma metáfora para a estratégia e planejamento em outras áreas da vida"
+        ]
+    },
+    {
+        "type": "Pessoa",
+        "answer": "Serena Williams",
+        "tips": [
+            "Tenista profissional",
+            "Nasceu em 1981 em Michigan, nos Estados Unidos",
+            "Considerada uma das maiores tenistas de todos os tempos",
+            "Ganhou 23 títulos de Grand Slam em simples",
+            "Também tem vários títulos de duplas e mistas",
+            "Conquistou quatro medalhas de ouro olímpicas",
+            "É conhecida por seu estilo agressivo e atlético de jogo",
+            "Já enfrentou algumas controvérsias relacionadas a seu comportamento em quadra",
+            "Lançou sua própria linha de roupas de tênis",
+            "Tem sido uma voz ativa na luta contra a desigualdade racial e de gênero no esporte",
+            "Também é mãe de uma filha e tem sido uma defensora da maternidade e do apoio às mães no esporte"
+        ]
+    },
+    {
+        "type": "Pessoa",
+        "answer": "Stephen Hawking",
+        "tips": [
+            "Físico teórico e cosmólogo",
+            "Nasceu em 1942 em Oxford, no Reino Unido",
+            "Diagnosticado com doença do neurônio motor aos 21 anos",
+            "Desenvolveu teorias sobre buracos negros e a origem do universo",
+            "Escreveu vários livros populares de ciência, incluindo 'Uma Breve História do Tempo'",
+            "Recebeu muitos prêmios e honrarias ao longo de sua carreira, incluindo a Ordem do Império Britânico",
+            "Foi professor de matemática na Universidade de Cambridge por mais de 30 anos",
+            "Comunicava-se usando um sintetizador de voz eletrônico",
+            "Defendeu o direito de pessoas com deficiência e a importância da exploração espacial",
+            "Seu trabalho influenciou a física, a filosofia e a cultura popular"
+        ]
+    },
+    {
+        "type": "Líder Político",
+        "answer": "Nelson Mandela",
+        "tips": [
+            "Lutou contra o apartheid na África do Sul",
+            "Passou 27 anos na prisão por suas crenças políticas",
+            "Foi o primeiro presidente negro da África do Sul",
+            "Recebeu o Prêmio Nobel da Paz em 1993",
+            "Fundou o Congresso Nacional Africano em 1912",
+            "Foi considerado um herói e um símbolo de resistência contra a opressão",
+            "Lutou pela igualdade de direitos e pela reconciliação racial",
+            "Tornou-se um líder mundialmente conhecido e admirado",
+            "Faleceu em 2013, aos 95 anos de idade",
+            "Deixou um legado duradouro de coragem e determinação"
+        ]
+    },
+    {
+        "type": "Objeto",
+        "answer": "Câmera Fotográfica",
+        "tips": [
+            "Instrumento usado para registrar imagens",
+            "Existem diversos tipos, desde as analógicas até as digitais",
+            "A primeira câmera fotográfica foi inventada em 1816",
+            "As câmeras mais modernas possuem recursos como Wi-Fi e GPS",
+            "Muito utilizada em profissões como a de fotógrafo e jornalista",
+            "Permite a captura de imagens em diferentes formatos e resoluções",
+            "Existem lentes intercambiáveis para se adequar a diferentes necessidades",
+            "A câmera polaroid permite a impressão instantânea das fotos",
+            "A popularização das câmeras de celulares mudou a forma como as pessoas registram suas vidas",
+            "A arte de fotografar é uma expressão artística que vem sendo desenvolvida há séculos"
+        ]
+    },
+    {
+        "type": "Pessoa",
+        "answer": "Malala Yousafzai",
+        "tips": [
+            "Ativista pelos direitos das mulheres e da educação",
+            "Nasceu em 1997 em Mingora, no Paquistão",
+            "Foi baleada na cabeça pelo Talibã em 2012 por defender a educação feminina",
+            "Ganhou o Prêmio Nobel da Paz em 2014, se tornando a pessoa mais jovem a ganhar esse prêmio",
+            "Fundou a Malala Fund, uma organização que defende o direito à educação para meninas",
+            "Publicou o livro 'Eu sou Malala' em 2013",
+            "Estudou na Universidade de Oxford",
+            "Se tornou um símbolo global da luta pelos direitos das mulheres e da educação",
+            "Recebeu diversas homenagens e títulos honorários por seu trabalho, incluindo cidadania honorária do Canadá",
+            "Continua a lutar pelos direitos das mulheres e da educação em todo o mundo"
+        ]
+    },
+    {
+        "type": "Animal",
+        "answer": "Orangotango",
+        "tips": [
+            "Um dos três grandes primatas da Ásia, juntamente com os gorilas e chimpanzés",
+            "Habitat natural é nas florestas tropicais da ilha de Bornéu e Sumatra",
+            "Podem pesar até 90kg e medir até 1,5m de altura",
+            "São animais muito inteligentes e têm uma alta capacidade de aprendizado",
+            "São principalmente frugívoros, mas também comem folhas, flores e insetos",
+            "São solitários e reservados, mas podem viver em grupos pequenos",
+            "São ameaçados de extinção devido à perda de habitat e caça ilegal",
+            "Têm uma aparência distinta, com braços longos e um rosto largo e peludo",
+            "Podem viver até 40 anos em cativeiro",
+            "São conhecidos por sua capacidade de imitar sons, incluindo a fala humana"
+        ]
+    },
+    {
+        "type": "Pessoa",
+        "answer": "Leonardo da Vinci",
+        "tips": [
+            "Artista renascentista italiano",
+            "Nasceu em 1452 na cidade de Vinci",
+            "Foi um pintor, escultor, arquiteto, engenheiro, cientista e escritor",
+            "É conhecido por obras-primas como a Mona Lisa e A Última Ceia",
+            "Também foi um inventor prolífico e projetou máquinas voadoras, tanques e pontes",
+            "Era um grande estudioso da anatomia humana e fez numerosas dissecções",
+            "Tinha um intelecto prodigioso e é frequentemente descrito como um gênio universal",
+            "Criou uma série de trabalhos que influenciaram a arte, a ciência e a cultura em geral",
+            "Foi um dos artistas mais importantes da Renascença e sua obra teve um impacto duradouro na arte ocidental",
+            "Faleceu em 1519 na cidade francesa de Amboise"
+        ]
+    },
+    {
+        "type": "Lugar",
+        "answer": "Machu Picchu",
+        "tips": [
+            "Sítio arqueológico localizado no Peru",
+            "Foi construído no século XV pelos incas",
+            "Fica a cerca de 2.430 metros acima do nível do mar",
+            "É considerado Patrimônio Mundial da UNESCO desde 1983",
+            "É um dos destinos turísticos mais populares da América do Sul",
+            "Foi redescoberto em 1911 pelo arqueólogo americano Hiram Bingham",
+            "Acredita-se que tenha sido construído como uma residência para o imperador inca Pachacuti",
+            "Possui uma série de terraços agrícolas e sistemas de irrigação complexos",
+            "A construção não utilizou argamassa, e as pedras foram encaixadas perfeitamente umas nas outras",
+            "O nome da cidade perdida significa 'montanha velha' em quéchua, a língua dos incas"
         ]
     }
 ]

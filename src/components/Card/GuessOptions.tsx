@@ -24,7 +24,7 @@ export default function GuessOptions({
         <div className="rounded-xl p-2">
             <h1 className="text-xl mb-4 text-slate-400">Dicas disponíveis:</h1>
             <div className="grid grid-cols-3 gap-2">
-                {[...Array(currentCard.questions.length).keys()].map(
+                {[...Array(currentCard.tips.length).keys()].map(
                     (question, index) => (
                         <Zoom
                             in={mounted}

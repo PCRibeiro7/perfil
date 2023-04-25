@@ -8,7 +8,7 @@ const result: any[] = [];
     result.push({
         type: lines[12 * i].split(' ')[lines[12 * i].split(' ').length - 1],
         answer: lines[12 * i + 1],
-        questions: [
+        tips: [
             lines[12 * i + 2],
             lines[12 * i + 3],
             lines[12 * i + 4],

@@ -34,8 +34,8 @@ export default function TipPanel({
                     in={mounted}
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
-                    <h1 className="text-2xl max-w-md">
-                        {currentCard.questions[currentQuestionIndex]}
+                    <h1 className="text-xl max-w-md">
+                        {currentCard.tips[currentQuestionIndex]}
                     </h1>
                 </Zoom>
             </div>

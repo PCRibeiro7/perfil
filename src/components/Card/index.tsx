@@ -36,7 +36,6 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                 currentCardIndex: state.currentCardIndex + 1,
                 askedQuestions: [0],
                 currentQuestionIndex: 0,
-                snackbar: { type: 'success', open: true, message: 'Acertou!' },
                 showSuccessPage: true,
                 cardSlides: {
                     first: false,
@@ -48,7 +47,6 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
             setState(state => ({
                 ...state,
                 wrongAnswers: state.wrongAnswers + 1,
-                snackbar: { type: 'error', open: true, message: 'Errou!' },
             }));
         }
         event.target.reset();
@@ -83,7 +81,7 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
     };
 
     return (
-        <main className="pt-12 pb-12 flex justify-center min-h-screen bg-slate-100 sm:pt-0 sm:pb-0">
+        <main className="pt-1 pb-1 flex justify-center min-h-screen bg-slate-100 sm:pt-0 sm:pb-0">
             <div className="justify-between flex flex-col p-6 w-[30rem] sm:p-2">
                 <Slide
                     direction="up"
@@ -103,7 +101,6 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                         />
                     </div>
                 </Slide>
-
                 <Slide
                     direction="up"
                     in={state.cardSlides.second}
@@ -121,6 +118,8 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                             handleQuestionAnswered={handleQuestionAnswered}
                             wrongAnswers={state.wrongAnswers}
                             usedTips={state.usedTips}
+                            currentCard={currentCard}
+                            setState={setState}
                         />
                     </div>
                 </Slide>
