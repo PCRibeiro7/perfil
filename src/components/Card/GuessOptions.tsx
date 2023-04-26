@@ -23,7 +23,7 @@ export default function GuessOptions({
     return (
         <div className="rounded-xl p-2">
             <h1 className="text-xl mb-4 text-slate-400">Dicas disponíveis:</h1>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 gap-2 sm:block sm:overflow-auto sm:whitespace-nowrap">
                 {[...Array(currentCard.tips.length).keys()].map(
                     (question, index) => (
                         <Zoom
@@ -37,7 +37,7 @@ export default function GuessOptions({
                         >
                             <button
                                 onClick={e => handleClickonGuessOption(index)}
-                                className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600"
+                                className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600 sm:rounded-full sm:w-12 sm:mx-1"
                                 disabled={askedQuestions.includes(index)}
                             >
                                 <h1 className="text-xl text-white">

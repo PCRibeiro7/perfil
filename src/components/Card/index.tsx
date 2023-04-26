@@ -81,8 +81,8 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
     };
 
     return (
-        <main className="pt-1 pb-1 flex justify-center min-h-screen bg-slate-200 sm:pt-0 sm:pb-0">
-            <div className="justify-between flex flex-col p-6 w-[30rem] sm:p-2">
+        <main className="flex justify-center min-h-screen bg-slate-200">
+            <div className="justify-between flex flex-col p-3 w-[30rem] max-w-full sm:p-2">
                 <Slide
                     direction="up"
                     in={state.cardSlides.first}
