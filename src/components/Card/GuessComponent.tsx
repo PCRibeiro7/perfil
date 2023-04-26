@@ -8,6 +8,7 @@ interface GuessComponentProps {
     usedTips: number;
     currentCard: ICard;
     setState: React.Dispatch<React.SetStateAction<IState>>;
+    askedQuestions: number[];
 }
 export default function GuessComponent({
     handleQuestionAnswered,
@@ -15,6 +16,7 @@ export default function GuessComponent({
     usedTips,
     currentCard,
     setState,
+    askedQuestions,
 }: GuessComponentProps) {
     const [mounted, setMounted] = useState(false);
     const [shake, setShake] = useState(false);
@@ -61,7 +63,7 @@ export default function GuessComponent({
                         type="text"
                         name="answer"
                         placeholder="Digite seu palpite aqui..."
-                        className="text-center w-full h-10 text-xl border-slate-600 rounded-xl mb-2 placeholder:text-slate-400 bg-slate-100"
+                        className="text-center w-full h-10 text-xl border-2 border-slate-200 rounded-xl mb-2 placeholder:text-slate-400"
                     />
                 </Zoom>
                 <Zoom
@@ -82,17 +84,19 @@ export default function GuessComponent({
                 </Zoom>
             </form>
             <Zoom
-                in={currentCard.tips.length === usedTips}
+                in={currentCard.tips.length === askedQuestions.length}
                 style={{
                     transitionDelay:
-                        currentCard.tips.length === usedTips ? `500ms` : '0ms',
+                        currentCard.tips.length === askedQuestions.length
+                            ? `500ms`
+                            : '0ms',
                 }}
             >
                 <button
-                    className={`w-full h-10 bg-white rounded-xl hover:bg-slate-200 mt-2 border-slate-500 border-2 `}
+                    className={`w-full h-10 bg-slate-300 rounded-xl hover:bg-slate-200 mt-2`}
                     onClick={skipQuestion}
                 >
-                    <h1 className="text-xl">{'Pular'}</h1>
+                    <h1 className="text-xl text-black">{'Pular'}</h1>
                 </button>
             </Zoom>
             <Zoom

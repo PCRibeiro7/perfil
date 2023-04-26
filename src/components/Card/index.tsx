@@ -120,6 +120,7 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                             usedTips={state.usedTips}
                             currentCard={currentCard}
                             setState={setState}
+                            askedQuestions={state.askedQuestions}
                         />
                     </div>
                 </Slide>
