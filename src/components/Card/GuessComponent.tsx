@@ -91,6 +91,8 @@ export default function GuessComponent({
                             ? `500ms`
                             : '0ms',
                 }}
+                mountOnEnter
+                unmountOnExit
             >
                 <button
                     className={`w-full h-10 bg-slate-300 rounded-xl hover:bg-slate-200 mt-2`}
