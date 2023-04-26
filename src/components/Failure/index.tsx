@@ -11,7 +11,7 @@ export default function Failure({
     setState,
 }: ISuccessProps): JSX.Element {
     return (
-        <div className="h-screen bg-slate-100">
+        <div className="h-screen bg-slate-200">
             <Zoom in={true} timeout={1000}>
                 <div className="flex flex-col justify-center items-center h-screen">
                     <div>

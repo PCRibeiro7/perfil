@@ -37,10 +37,10 @@ export default function GuessOptions({
                         >
                             <button
                                 onClick={e => handleClickonGuessOption(index)}
-                                className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-300 hover:bg-slate-600"
+                                className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600"
                                 disabled={askedQuestions.includes(index)}
                             >
-                                <h1 className="text-xl text-slate-100">
+                                <h1 className="text-xl text-white">
                                     {index + 1}
                                 </h1>
                             </button>

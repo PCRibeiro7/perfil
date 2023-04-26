@@ -23,7 +23,7 @@ export default function Home({ setState }: IHomeProps): JSX.Element {
         }, 4000);
     };
     return (
-        <main className="flex justify-center items-center h-screen bg-slate-100">
+        <main className="flex justify-center items-center h-screen bg-slate-200">
             <Zoom in={true} timeout={1000}>
                 <button
                     onClick={startGame}
