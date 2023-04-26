@@ -90,7 +90,7 @@ export default function Card({ state, setState }: ICardProps): JSX.Element {
                     mountOnEnter
                     unmountOnExit
                 >
-                    <div className="bg-white flex flex-col   p-6 rounded-lg">
+                    <div className="bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200">
                         <TipTypePanel currentCard={currentCard} />
                         <TipPanel
                             currentCard={currentCard}
