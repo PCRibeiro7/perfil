@@ -1,14 +1,15 @@
 import { IGameActions } from '@/models/IGameActions';
 import { IGameState } from '@/models/IGameState';
 
-export interface IGameReducer {
-    (
-        state: IGameState,
-        action: { type: IGameActions; payload?: any },
-    ): IGameState;
+export interface IGameReducerActions {
+    type: IGameActions;
+    payload?: any;
 }
 
-export const gameReducer: IGameReducer = (state, { type, payload }) => {
+export const gameReducer = (
+    state: IGameState,
+    { type, payload }: IGameReducerActions,
+): IGameState => {
     switch (type) {
         case IGameActions.CHANGE_PAGE:
             return {
