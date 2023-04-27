@@ -16,48 +16,31 @@ export const gameReducer: IGameReducer = (state, { type, payload }) => {
             return {
                 ...state,
                 cards: shuffleArray(state.cards),
-                currentPage: ICurrentPage.GAME,
-                cardSlides: { ...state.cardSlides, first: true },
             };
         case IGameActions.SLIDE_SECOND_CARD:
             return {
                 ...state,
                 cardSlides: { ...state.cardSlides, second: true },
             };
-        case IGameActions.HANDLE_SUCCESS_PAGE_CLICK:
-            return {
-                ...state,
-                currentPage: ICurrentPage.GAME,
-                cardSlides: {
-                    ...state.cardSlides,
-                    first: true,
-                },
-            };
-        case IGameActions.HANDLE_FAILURE_PAGE_CLICK:
-            return {
-                ...state,
-                currentPage: ICurrentPage.GAME,
-                cardSlides: {
-                    ...state.cardSlides,
-                    first: true,
-                },
-            };
-        case IGameActions.HANDLE_QUESTION_ANSWERED_CORRECTLY:
-            return {
-                ...state,
-                currentPage: ICurrentPage.SUCCESS,
-            };
-        case IGameActions.SKIP_QUESTION:
-            return {
-                ...state,
-                currentPage: ICurrentPage.FAILURE,
-            };
+        case IGameActions.CHANGE_PAGE:
+            switch (payload.page) {
+                case ICurrentPage.GAME:
+                    return {
+                        ...state,
+                        currentPage: payload.page,
+                        cardSlides: { ...state.cardSlides, first: true },
+                    };
+                default:
+                    return {
+                        ...state,
+                        currentPage: payload.page,
+                    };
+            }
         case IGameActions.HANDLE_QUESTION_ANSWERED_WRONG:
             return {
                 ...state,
                 wrongAnswers: state.wrongAnswers + 1,
             };
-
         case IGameActions.CHANGE_ACTIVE_TIP:
             return {
                 ...state,

@@ -1,3 +1,4 @@
+import ICurrentPage from '@/models/ICurrentPage';
 import { IGameActions } from '@/models/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
@@ -29,11 +30,12 @@ export default function GuessComponent() {
 
     const skipQuestion = () => {
         gameSlice.dispatch({
-            type: IGameActions.SKIP_QUESTION,
-        });
-        gameSlice.dispatch({
             type: IGameActions.SETUP_NEXT_CARD,
             payload: { currentCard },
+        });
+        gameSlice.dispatch({
+            type: IGameActions.CHANGE_PAGE,
+            payload: { page: ICurrentPage.FAILURE },
         });
     };
 
@@ -47,11 +49,12 @@ export default function GuessComponent() {
             ) > MINIMUN_SIMILARITY
         ) {
             gameSlice.dispatch({
-                type: IGameActions.HANDLE_QUESTION_ANSWERED_CORRECTLY,
-            });
-            gameSlice.dispatch({
                 type: IGameActions.SETUP_NEXT_CARD,
                 payload: { currentCard },
+            });
+            gameSlice.dispatch({
+                type: IGameActions.CHANGE_PAGE,
+                payload: { page: ICurrentPage.SUCCESS },
             });
         } else {
             gameSlice.dispatch({

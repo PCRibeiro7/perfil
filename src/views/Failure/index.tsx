@@ -1,3 +1,4 @@
+import ICurrentPage from '@/models/ICurrentPage';
 import { IGameActions } from '@/models/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
@@ -24,7 +25,8 @@ export default function Failure(): JSX.Element {
                     <button
                         onClick={() => {
                             gameSlice.dispatch({
-                                type: IGameActions.HANDLE_FAILURE_PAGE_CLICK,
+                                type: IGameActions.CHANGE_PAGE,
+                                payload: { page: ICurrentPage.GAME },
                             });
                             setTimeout(() => {
                                 gameSlice.dispatch({

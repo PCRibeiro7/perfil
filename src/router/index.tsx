@@ -1,5 +1,5 @@
 import Home from '../views/Home';
-import Card from '../views/Card';
+import Game from '../views/Game';
 import Success from '../views/Success';
 import Failure from '@/views/Failure';
 import ICurrentPage from '@/models/ICurrentPage';
@@ -12,7 +12,7 @@ export default function Router(): JSX.Element {
         case ICurrentPage.HOME:
             return <Home />;
         case ICurrentPage.GAME:
-            return <Card />;
+            return <Game />;
         case ICurrentPage.SUCCESS:
             return <Success />;
         case ICurrentPage.FAILURE:

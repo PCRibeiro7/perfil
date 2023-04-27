@@ -1,6 +1,7 @@
 import { Zoom } from '@mui/material';
 import { gameSlice } from '@/slices/game';
 import { IGameActions } from '@/models/IGameActions';
+import ICurrentPage from '@/models/ICurrentPage';
 
 export default function Sucess(): JSX.Element {
     const state = gameSlice.use();
@@ -24,7 +25,8 @@ export default function Sucess(): JSX.Element {
                     <button
                         onClick={() => {
                             gameSlice.dispatch({
-                                type: IGameActions.HANDLE_SUCCESS_PAGE_CLICK,
+                                type: IGameActions.CHANGE_PAGE,
+                                payload: { page: ICurrentPage.GAME },
                             });
                             setTimeout(() => {
                                 gameSlice.dispatch({
