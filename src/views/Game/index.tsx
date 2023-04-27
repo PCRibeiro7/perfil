@@ -1,7 +1,7 @@
-import GuessComponent from './components/GuessComponent';
-import GuessOptions from './components/GuessOptions';
-import TipPanel from './components/TipPanel';
-import TipTypePanel from './components/TipTypePanel';
+import GuessComponent from './components/BottomCard/GuessComponent';
+import GuessOptions from './components/BottomCard/GuessOptions';
+import TipPanel from './components/TopCard/TipPanel';
+import TipTypePanel from './components/TopCard/TipTypePanel';
 import { Slide } from '@mui/material';
 import { useEffect, useState } from 'react';
 
