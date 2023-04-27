@@ -1,7 +1,7 @@
-import GuessComponent from './GuessComponent';
-import GuessOptions from './GuessOptions';
-import TipPanel from './TipPanel';
-import TipTypePanel from './TipTypePanel';
+import GuessComponent from './components/GuessComponent';
+import GuessOptions from './components/GuessOptions';
+import TipPanel from './components/TipPanel';
+import TipTypePanel from './components/TipTypePanel';
 import { Slide } from '@mui/material';
 import { gameSlice } from '@/slices/game';
 

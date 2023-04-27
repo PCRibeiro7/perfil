@@ -1,7 +1,7 @@
-import Home from '../components/Home/Home';
-import Card from '../components/Card';
-import Success from '../components/Success/Success';
-import Failure from '@/components/Failure';
+import Home from '../views/Home';
+import Card from '../views/Card';
+import Success from '../views/Success';
+import Failure from '@/views/Failure';
 import { gameSlice } from '@/slices/game';
 
 export default function Main(): JSX.Element {
