@@ -7,6 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
+        "lint-fix": "eslint --fix",
         "build-cards-json": "ts-node script.ts",
         "prettier-format": "prettier --config .prettierrc src/**/*.{ts,tsx,js,css,md,html,json} --write",
         "prepare": "husky install"
@@ -41,7 +42,7 @@
         "prettier": "^2.8.7"
     },
     "lint-staged": {
-        "*.{ts,tsx}": "eslint --fix",
+        "*.{ts,tsx}": "npm run lint-fix",
         "*.{ts,tsx,js,css,md,html,json}": "npm run prettier-format"
     }
 }

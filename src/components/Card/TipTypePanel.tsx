@@ -1,4 +1,4 @@
-import { gameSlice } from '@/slices/gameSlice';
+import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
 

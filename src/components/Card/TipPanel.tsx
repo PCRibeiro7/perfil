@@ -1,4 +1,5 @@
-import { gameSlice } from '@/slices/gameSlice';
+import { gameSlice } from '@/slices/game';
+import { IGameActions } from '@/slices/game/models';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -37,7 +38,7 @@ export default function TipPanel() {
                 ? askedQuestionsIndex - 1
                 : askedQuestionsIndex + 1;
         gameSlice.dispatch({
-            type: 'changeActiveTip',
+            type: IGameActions.CHANGE_ACTIVE_TIP,
             payload: { newAskedQuestionsIndex },
         });
     };

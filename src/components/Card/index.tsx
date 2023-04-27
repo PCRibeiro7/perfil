@@ -3,7 +3,7 @@ import GuessOptions from './GuessOptions';
 import TipPanel from './TipPanel';
 import TipTypePanel from './TipTypePanel';
 import { Slide } from '@mui/material';
-import { gameSlice } from '@/slices/gameSlice';
+import { gameSlice } from '@/slices/game';
 
 export default function Card(): JSX.Element {
     const state = gameSlice.use();

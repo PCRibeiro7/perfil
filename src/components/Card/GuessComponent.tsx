@@ -1,4 +1,5 @@
-import { gameSlice } from '@/slices/gameSlice';
+import { gameSlice } from '@/slices/game';
+import { IGameActions } from '@/slices/game/models';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
@@ -28,7 +29,7 @@ export default function GuessComponent() {
 
     const skipQuestion = () => {
         gameSlice.dispatch({
-            type: 'skipQuestion',
+            type: IGameActions.SKIP_QUESTION,
             payload: currentCard,
         });
     };
@@ -43,12 +44,12 @@ export default function GuessComponent() {
             ) > MINIMUN_SIMILARITY
         ) {
             gameSlice.dispatch({
-                type: 'handleQuestionAnsweredCorrectly',
+                type: IGameActions.HANDLE_QUESTION_ANSWERED_CORRECTLY,
                 payload: { currentCard },
             });
         } else {
             gameSlice.dispatch({
-                type: 'handleQuestionAnsweredWrongly',
+                type: IGameActions.HANDLE_QUESTION_ANSWERED_WRONG,
             });
         }
         event.target.reset();

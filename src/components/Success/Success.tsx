@@ -1,5 +1,6 @@
 import { Zoom } from '@mui/material';
-import { gameSlice } from '@/slices/gameSlice';
+import { gameSlice } from '@/slices/game';
+import { IGameActions } from '@/slices/game/models';
 
 export default function Sucess(): JSX.Element {
     const state = gameSlice.use();
@@ -23,11 +24,11 @@ export default function Sucess(): JSX.Element {
                     <button
                         onClick={() => {
                             gameSlice.dispatch({
-                                type: 'handleSuccessPageClick',
+                                type: IGameActions.HANDLE_SUCCESS_PAGE_CLICK,
                             });
                             setTimeout(() => {
                                 gameSlice.dispatch({
-                                    type: 'slideSecondCard',
+                                    type: IGameActions.SLIDE_SECOND_CARD,
                                 });
                             }, 4000);
                         }}

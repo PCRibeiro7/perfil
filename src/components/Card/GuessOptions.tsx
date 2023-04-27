@@ -1,6 +1,7 @@
-import { gameSlice } from '@/slices/gameSlice';
-import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { gameSlice } from '@/slices/game';
+import { IGameActions } from '@/slices/game/models';
+import { Zoom } from '@mui/material';
 
 type GuessOptionsProps = {
     askedQuestions: number[];
@@ -21,7 +22,7 @@ export default function GuessOptions() {
 
     const handleClickonGuessOption = (index: number) => {
         gameSlice.dispatch({
-            type: 'handleClickonGuessOption',
+            type: IGameActions.HANDLE_CLICK_ON_GUESS_OPTION,
             payload: { index },
         });
     };

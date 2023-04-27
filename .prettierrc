@@ -4,5 +4,6 @@
     "arrowParens": "avoid",
     "tabWidth": 4,
     "semi": true,
-    "printWidth": 80
+    "printWidth": 80,
+    "endOfLine": "auto"
 }

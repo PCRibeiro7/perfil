@@ -1,8 +1,10 @@
+import { IGameActions } from '@/slices/game/models';
+import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
-import { gameSlice } from '@/slices/gameSlice';
 
 export default function Failure(): JSX.Element {
     const state = gameSlice.use();
+
     return (
         <div className="h-screen bg-slate-200">
             <Zoom in={true} timeout={1000}>
@@ -22,11 +24,11 @@ export default function Failure(): JSX.Element {
                     <button
                         onClick={() => {
                             gameSlice.dispatch({
-                                type: 'handleFailurePageClick',
+                                type: IGameActions.HANDLE_FAILURE_PAGE_CLICK,
                             });
                             setTimeout(() => {
                                 gameSlice.dispatch({
-                                    type: 'slideSecondCard',
+                                    type: IGameActions.SLIDE_SECOND_CARD,
                                 });
                             }, 4000);
                         }}

@@ -1,5 +1,5 @@
-import { IState } from '@/pages';
-import { gameSlice } from '@/slices/gameSlice';
+import { gameSlice } from '@/slices/game';
+import { IGameActions } from '@/slices/game/models';
 import { shuffleArray } from '@/utils/shuffleArray';
 import { Zoom } from '@mui/material';
 
@@ -7,10 +7,10 @@ export default function Home(): JSX.Element {
     const state = gameSlice.use();
 
     const startGame = () => {
-        gameSlice.dispatch({ type: 'startGame' });
+        gameSlice.dispatch({ type: IGameActions.START_GAME });
 
         setTimeout(() => {
-            gameSlice.dispatch({ type: 'slideSecondCard' });
+            gameSlice.dispatch({ type: IGameActions.SLIDE_SECOND_CARD });
         }, 4000);
     };
     return (
