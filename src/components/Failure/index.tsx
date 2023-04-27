@@ -1,15 +1,8 @@
 import { Zoom } from '@mui/material';
-import { IState } from '../../pages';
+import { gameSlice } from '@/slices/gameSlice';
 
-interface ISuccessProps {
-    state: IState;
-    setState: React.Dispatch<React.SetStateAction<IState>>;
-}
-
-export default function Failure({
-    state,
-    setState,
-}: ISuccessProps): JSX.Element {
+export default function Failure(): JSX.Element {
+    const state = gameSlice.use();
     return (
         <div className="h-screen bg-slate-200">
             <Zoom in={true} timeout={1000}>
@@ -28,22 +21,13 @@ export default function Failure({
                     </div>
                     <button
                         onClick={() => {
-                            setState(state => ({
-                                ...state,
-                                showFailurePage: false,
-                                cardSlides: {
-                                    ...state.cardSlides,
-                                    first: true,
-                                },
-                            }));
+                            gameSlice.dispatch({
+                                type: 'handleFailurePageClick',
+                            });
                             setTimeout(() => {
-                                setState(state => ({
-                                    ...state,
-                                    cardSlides: {
-                                        ...state.cardSlides,
-                                        second: true,
-                                    },
-                                }));
+                                gameSlice.dispatch({
+                                    type: 'slideSecondCard',
+                                });
                             }, 4000);
                         }}
                         className="bg-white p-2 rounded-xl w-40"

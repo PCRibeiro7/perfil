@@ -1,25 +1,16 @@
 import { IState } from '@/pages';
+import { gameSlice } from '@/slices/gameSlice';
 import { shuffleArray } from '@/utils/shuffleArray';
 import { Zoom } from '@mui/material';
-import { Dispatch, SetStateAction } from 'react';
 
-interface IHomeProps {
-    setState: Dispatch<SetStateAction<IState>>;
-}
+export default function Home(): JSX.Element {
+    const state = gameSlice.use();
 
-export default function Home({ setState }: IHomeProps): JSX.Element {
     const startGame = () => {
-        setState(state => ({
-            ...state,
-            cards: shuffleArray(state.cards),
-            gameStarted: true,
-            cardSlides: { ...state.cardSlides, first: true },
-        }));
+        gameSlice.dispatch({ type: 'startGame' });
+
         setTimeout(() => {
-            setState(state => ({
-                ...state,
-                cardSlides: { ...state.cardSlides, second: true },
-            }));
+            gameSlice.dispatch({ type: 'slideSecondCard' });
         }, 4000);
     };
     return (

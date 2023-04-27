@@ -4,6 +4,7 @@ import Home from '../components/Home/Home';
 import Card from '../components/Card';
 import Success from '../components/Success/Success';
 import Failure from '@/components/Failure';
+import { gameSlice } from '@/slices/gameSlice';
 
 const INITIAL_CARD_INDEX = 0;
 
@@ -30,34 +31,35 @@ export interface IState {
 }
 
 export default function Main(): JSX.Element {
-    const [state, setState] = useState<IState>({
-        gameStarted: false,
-        showSuccessPage: false,
-        showFailurePage: false,
-        cardSlides: {
-            first: false,
-            second: false,
-        },
-        correctAnswers: [],
-        cards: cards,
-        currentCardIndex: INITIAL_CARD_INDEX,
-        askedQuestions: [0],
-        currentQuestionIndex: 0,
-        wrongAnswers: 0,
-        usedTips: 1,
-    });
+    const state = gameSlice.use();
+    // const [state, setState] = useState<IState>({
+    //     gameStarted: false,
+    //     showSuccessPage: false,
+    //     showFailurePage: false,
+    //     cardSlides: {
+    //         first: false,
+    //         second: false,
+    //     },
+    //     correctAnswers: [],
+    //     cards: cards,
+    //     currentCardIndex: INITIAL_CARD_INDEX,
+    //     askedQuestions: [0],
+    //     currentQuestionIndex: 0,
+    //     wrongAnswers: 0,
+    //     usedTips: 1,
+    // });
 
     if (!state.gameStarted) {
-        return <Home setState={setState} />;
+        return <Home />;
     }
 
     if (state.showSuccessPage) {
-        return <Success state={state} setState={setState} />;
+        return <Success />;
     }
 
     if (state.showFailurePage) {
-        return <Failure state={state} setState={setState} />;
+        return <Failure />;
     }
 
-    return <Card state={state} setState={setState} />;
+    return <Card />;
 }

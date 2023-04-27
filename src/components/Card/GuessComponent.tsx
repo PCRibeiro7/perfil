@@ -1,25 +1,15 @@
-import { ICard, IState } from '@/pages';
+import { gameSlice } from '@/slices/gameSlice';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
+import stringSimilarity from 'string-similarity';
 
-interface GuessComponentProps {
-    handleQuestionAnswered: (event: any) => void;
-    wrongAnswers: number;
-    usedTips: number;
-    currentCard: ICard;
-    setState: React.Dispatch<React.SetStateAction<IState>>;
-    askedQuestions: number[];
-}
-export default function GuessComponent({
-    handleQuestionAnswered,
-    wrongAnswers,
-    usedTips,
-    currentCard,
-    setState,
-    askedQuestions,
-}: GuessComponentProps) {
+const MINIMUN_SIMILARITY = 0.6;
+
+export default function GuessComponent() {
     const [mounted, setMounted] = useState(false);
     const [shake, setShake] = useState(false);
+    const state = gameSlice.use();
+    const currentCard = state.cards[state.currentCardIndex];
 
     useEffect(() => {
         setTimeout(() => {
@@ -28,27 +18,40 @@ export default function GuessComponent({
     }, [currentCard.tips.length]);
 
     useEffect(() => {
-        if (wrongAnswers > 0) {
+        if (state.wrongAnswers > 0) {
             setShake(true);
             setTimeout(() => {
                 setShake(false);
             }, 1000);
         }
-    }, [wrongAnswers]);
+    }, [state.wrongAnswers]);
 
     const skipQuestion = () => {
-        setState(state => ({
-            ...state,
-            currentCardIndex: state.currentCardIndex + 1,
-            askedQuestions: [0],
-            currentQuestionIndex: 0,
-            showFailurePage: true,
-            cardSlides: {
-                first: false,
-                second: false,
-            },
-            correctAnswers: [...state.correctAnswers, currentCard.answer],
-        }));
+        gameSlice.dispatch({
+            type: 'skipQuestion',
+            payload: currentCard,
+        });
+    };
+
+    const handleQuestionAnswered = (event: any) => {
+        event.preventDefault();
+        const value: string = event.target.answer.value || '';
+        if (
+            stringSimilarity.compareTwoStrings(
+                value.toLowerCase(),
+                currentCard.answer.toLowerCase(),
+            ) > MINIMUN_SIMILARITY
+        ) {
+            gameSlice.dispatch({
+                type: 'handleQuestionAnsweredCorrectly',
+                payload: { currentCard },
+            });
+        } else {
+            gameSlice.dispatch({
+                type: 'handleQuestionAnsweredWrongly',
+            });
+        }
+        event.target.reset();
     };
 
     return (
@@ -84,10 +87,10 @@ export default function GuessComponent({
                 </Zoom>
             </form>
             <Zoom
-                in={currentCard.tips.length === askedQuestions.length}
+                in={currentCard.tips.length === state.askedQuestions.length}
                 style={{
                     transitionDelay:
-                        currentCard.tips.length === askedQuestions.length
+                        currentCard.tips.length === state.askedQuestions.length
                             ? `500ms`
                             : '0ms',
                 }}
@@ -108,11 +111,11 @@ export default function GuessComponent({
                 <div className="mt-4">
                     <h1 className="text-slate-400">
                         {' '}
-                        Palpites Errados: {wrongAnswers}
+                        Palpites Errados: {state.wrongAnswers}
                     </h1>
                     <h1 className="text-slate-400">
                         {' '}
-                        Dicas Usadas: {usedTips}
+                        Dicas Usadas: {state.usedTips}
                     </h1>
                 </div>
             </Zoom>

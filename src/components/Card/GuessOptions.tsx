@@ -1,3 +1,4 @@
+import { gameSlice } from '@/slices/gameSlice';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
 
@@ -7,18 +8,23 @@ type GuessOptionsProps = {
     currentCard: any;
 };
 
-export default function GuessOptions({
-    askedQuestions,
-    handleClickonGuessOption,
-    currentCard,
-}: GuessOptionsProps) {
+export default function GuessOptions() {
     const [mounted, setMounted] = useState(false);
+    const state = gameSlice.use();
+    const currentCard = state.cards[state.currentCardIndex];
 
     useEffect(() => {
         setTimeout(() => {
             setMounted(true);
         }, 1000);
     }, []);
+
+    const handleClickonGuessOption = (index: number) => {
+        gameSlice.dispatch({
+            type: 'handleClickonGuessOption',
+            payload: { index },
+        });
+    };
 
     return (
         <div className="rounded-xl p-2">
@@ -38,7 +44,7 @@ export default function GuessOptions({
                             <button
                                 onClick={e => handleClickonGuessOption(index)}
                                 className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600 sm:rounded-full sm:w-12 sm:mx-1"
-                                disabled={askedQuestions.includes(index)}
+                                disabled={state.askedQuestions.includes(index)}
                             >
                                 <h1 className="text-xl text-white">
                                     {index + 1}

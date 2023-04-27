@@ -1,11 +1,11 @@
+import { gameSlice } from '@/slices/gameSlice';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
 
-type TipTypePanelProps = {
-    currentCard: any;
-};
-export default function TipTypePanel({ currentCard }: TipTypePanelProps) {
+export default function TipTypePanel() {
     const [mounted, setMounted] = useState(false);
+    const state = gameSlice.use();
+    const currentCard = state.cards[state.currentCardIndex];
 
     useEffect(() => {
         setTimeout(() => {

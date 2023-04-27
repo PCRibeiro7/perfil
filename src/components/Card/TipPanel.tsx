@@ -1,3 +1,4 @@
+import { gameSlice } from '@/slices/gameSlice';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
@@ -9,20 +10,37 @@ type TipPanelProps = {
     canGoBack: boolean;
     canGoForward: boolean;
 };
-export default function TipPanel({
-    currentCard,
-    currentQuestionIndex,
-    changeTip,
-    canGoBack,
-    canGoForward,
-}: TipPanelProps) {
+export default function TipPanel() {
     const [mounted, setMounted] = useState(false);
+    const state = gameSlice.use();
+    const currentCard = state.cards[state.currentCardIndex];
+    const askedQuestionsIndex = state.askedQuestions.indexOf(
+        state.currentQuestionIndex,
+    );
+    const canGoForward =
+        state.askedQuestions[askedQuestionsIndex + 1] !== undefined;
+    const canGoBack =
+        state.askedQuestions[askedQuestionsIndex - 1] !== undefined;
 
     useEffect(() => {
         setTimeout(() => {
             setMounted(true);
         }, 2000);
     }, []);
+
+    const changeTip = (direction: 'back' | 'forward') => {
+        const askedQuestionsIndex = state.askedQuestions.indexOf(
+            state.currentQuestionIndex,
+        );
+        const newAskedQuestionsIndex =
+            direction === 'back'
+                ? askedQuestionsIndex - 1
+                : askedQuestionsIndex + 1;
+        gameSlice.dispatch({
+            type: 'changeActiveTip',
+            payload: { newAskedQuestionsIndex },
+        });
+    };
 
     return (
         <div className="h-fit bg-white rounded-xl p-2 relative">
@@ -35,7 +53,7 @@ export default function TipPanel({
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
                     <h1 className="text-xl max-w-md">
-                        {currentCard.tips[currentQuestionIndex]}
+                        {currentCard.tips[state.currentQuestionIndex]}
                     </h1>
                 </Zoom>
             </div>
