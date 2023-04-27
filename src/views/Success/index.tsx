@@ -28,11 +28,6 @@ export default function Sucess(): JSX.Element {
                                 type: IGameActions.CHANGE_PAGE,
                                 payload: { page: ICurrentPage.GAME },
                             });
-                            setTimeout(() => {
-                                gameSlice.dispatch({
-                                    type: IGameActions.SLIDE_SECOND_CARD,
-                                });
-                            }, 4000);
                         }}
                         className="bg-white p-2 rounded-xl w-40"
                     >

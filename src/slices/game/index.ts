@@ -3,16 +3,12 @@ import cards from '../../assets/cards.json';
 import { IGameState } from '@/models/IGameState';
 import { gameReducer } from './reducer';
 import ICurrentPage from '@/models/ICurrentPage';
+import { shuffleArray } from '@/utils/shuffleArray';
 
 const initialGameState: IGameState = {
-    gameStarted: false,
     currentPage: ICurrentPage.HOME,
-    cardSlides: {
-        first: false,
-        second: false,
-    },
     correctAnswers: [],
-    cards: cards,
+    cards: shuffleArray(cards),
     currentCardIndex: 0,
     askedQuestions: [0],
     currentQuestionIndex: 0,
