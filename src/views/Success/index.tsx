@@ -1,6 +1,6 @@
 import { Zoom } from '@mui/material';
 import { gameSlice } from '@/slices/game';
-import { IGameActions } from '@/slices/game/models';
+import { IGameActions } from '@/models/IGameActions';
 
 export default function Sucess(): JSX.Element {
     const state = gameSlice.use();

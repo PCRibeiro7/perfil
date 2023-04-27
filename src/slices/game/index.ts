@@ -1,12 +1,12 @@
 import { createSlice } from 'react-slice';
-import cards from '../../consts/cards.json';
-import { IGameState } from './models';
+import cards from '../../assets/cards.json';
+import { IGameState } from '@/models/IGameState';
 import { gameReducer } from './reducer';
+import ICurrentPage from '@/models/ICurrentPage';
 
 const initialGameState: IGameState = {
     gameStarted: false,
-    showSuccessPage: false,
-    showFailurePage: false,
+    currentPage: ICurrentPage.HOME,
     cardSlides: {
         first: false,
         second: false,

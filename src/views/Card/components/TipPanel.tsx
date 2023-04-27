@@ -1,5 +1,5 @@
+import { IGameActions } from '@/models/IGameActions';
 import { gameSlice } from '@/slices/game';
-import { IGameActions } from '@/slices/game/models';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';

@@ -1,4 +1,4 @@
-import { IGameActions } from '@/slices/game/models';
+import { IGameActions } from '@/models/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
 

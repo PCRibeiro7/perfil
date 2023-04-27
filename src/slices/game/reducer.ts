@@ -1,5 +1,7 @@
+import ICurrentPage from '@/models/ICurrentPage';
+import { IGameActions } from '@/models/IGameActions';
+import { IGameState } from '@/models/IGameState';
 import { shuffleArray } from '@/utils/shuffleArray';
-import { IGameActions, IGameState } from './models';
 
 export interface IGameReducer {
     (
@@ -14,7 +16,7 @@ export const gameReducer: IGameReducer = (state, { type, payload }) => {
             return {
                 ...state,
                 cards: shuffleArray(state.cards),
-                gameStarted: true,
+                currentPage: ICurrentPage.GAME,
                 cardSlides: { ...state.cardSlides, first: true },
             };
         case IGameActions.SLIDE_SECOND_CARD:
@@ -25,7 +27,7 @@ export const gameReducer: IGameReducer = (state, { type, payload }) => {
         case IGameActions.HANDLE_SUCCESS_PAGE_CLICK:
             return {
                 ...state,
-                showSuccessPage: false,
+                currentPage: ICurrentPage.GAME,
                 cardSlides: {
                     ...state.cardSlides,
                     first: true,
@@ -34,7 +36,7 @@ export const gameReducer: IGameReducer = (state, { type, payload }) => {
         case IGameActions.HANDLE_FAILURE_PAGE_CLICK:
             return {
                 ...state,
-                showFailurePage: false,
+                currentPage: ICurrentPage.GAME,
                 cardSlides: {
                     ...state.cardSlides,
                     first: true,
@@ -43,18 +45,12 @@ export const gameReducer: IGameReducer = (state, { type, payload }) => {
         case IGameActions.HANDLE_QUESTION_ANSWERED_CORRECTLY:
             return {
                 ...state,
-                currentCardIndex: state.currentCardIndex + 1,
-                askedQuestions: [0],
-                currentQuestionIndex: 0,
-                showSuccessPage: true,
-                cardSlides: {
-                    first: false,
-                    second: false,
-                },
-                correctAnswers: [
-                    ...state.correctAnswers,
-                    payload.currentCard.answer,
-                ],
+                currentPage: ICurrentPage.SUCCESS,
+            };
+        case IGameActions.SKIP_QUESTION:
+            return {
+                ...state,
+                currentPage: ICurrentPage.FAILURE,
             };
         case IGameActions.HANDLE_QUESTION_ANSWERED_WRONG:
             return {
@@ -75,18 +71,20 @@ export const gameReducer: IGameReducer = (state, { type, payload }) => {
                 currentQuestionIndex: payload.index,
                 usedTips: state.usedTips + 1,
             };
-        case IGameActions.SKIP_QUESTION:
+        case IGameActions.SETUP_NEXT_CARD:
             return {
                 ...state,
                 currentCardIndex: state.currentCardIndex + 1,
                 askedQuestions: [0],
                 currentQuestionIndex: 0,
-                showFailurePage: true,
                 cardSlides: {
                     first: false,
                     second: false,
                 },
-                correctAnswers: [...state.correctAnswers, payload.currentCard],
+                correctAnswers: [
+                    ...state.correctAnswers,
+                    payload.currentCard.answer,
+                ],
             };
         default:
             throw new Error('Invalid action type');

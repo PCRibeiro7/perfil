@@ -15,8 +15,6 @@ export default function Card(): JSX.Element {
                     direction="up"
                     in={state.cardSlides.first}
                     timeout={1000}
-                    mountOnEnter
-                    unmountOnExit
                 >
                     <div className="bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200">
                         <TipTypePanel />
@@ -27,8 +25,6 @@ export default function Card(): JSX.Element {
                     direction="up"
                     in={state.cardSlides.second}
                     timeout={1000}
-                    mountOnEnter
-                    unmountOnExit
                 >
                     <div className="bg-white flex flex-col   p-6 rounded-lg">
                         <GuessOptions />
