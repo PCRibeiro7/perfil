@@ -1,15 +1,14 @@
 import { IGameActions } from '@/models/IGameActions';
 import { IGameState } from '@/models/IGameState';
-
 export interface IGameReducerActions {
     type: IGameActions;
     payload?: any;
 }
 
-export const gameReducer = (
+export function gameReducer(
     state: IGameState,
     { type, payload }: IGameReducerActions,
-): IGameState => {
+): IGameState {
     switch (type) {
         case IGameActions.CHANGE_PAGE:
             return {
@@ -48,4 +47,4 @@ export const gameReducer = (
         default:
             throw new Error(`Invalid action type: ${type}`);
     }
-};
+}
