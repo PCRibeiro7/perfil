@@ -10,6 +10,9 @@
         "lint-fix": "eslint --fix",
         "build-cards-json": "ts-node script.ts",
         "prettier-format": "prettier --config .prettierrc src/**/*.{ts,tsx,js,css,md,html,json} --write",
+        "prisma-push": "npx prisma db push",
+        "prisma-format": "npx prisma format",
+        "pscale-dev": "pscale connect perfil main --port 3309",
         "prepare": "husky install"
     },
     "dependencies": {
@@ -18,12 +21,15 @@
         "@fontsource/roboto": "^4.5.8",
         "@mui/icons-material": "^5.11.16",
         "@mui/material": "^5.12.1",
+        "@prisma/client": "^4.13.0",
         "@types/node": "18.15.13",
         "@types/react": "18.0.37",
         "@types/react-dom": "18.0.11",
         "autoprefixer": "10.4.14",
+        "axios": "^1.4.0",
         "eslint-config-next": "13.3.0",
         "next": "13.3.0",
+        "planetscale": "^2.1.0",
         "postcss": "8.4.23",
         "react": "18.2.0",
         "react-dom": "18.2.0",
@@ -39,7 +45,8 @@
         "eslint-plugin-prettier": "^4.2.1",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.1",
-        "prettier": "^2.8.7"
+        "prettier": "^2.8.7",
+        "prisma": "^4.13.0"
     },
     "lint-staged": {
         "*.{ts,tsx}": "npm run lint-fix",

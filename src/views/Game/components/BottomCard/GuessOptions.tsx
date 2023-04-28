@@ -22,7 +22,7 @@ export default function GuessOptions() {
 
     const handleClickonGuessOption = (index: number) => {
         gameSlice.dispatch({
-            type: IGameActions.HANDLE_CLICK_ON_GUESS_OPTION,
+            type: IGameActions.HANDLE_CLICK_ON_TIP_OPTION,
             payload: { index },
         });
     };

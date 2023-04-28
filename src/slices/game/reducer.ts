@@ -26,7 +26,7 @@ export function gameReducer(
                 currentQuestionIndex:
                     state.askedQuestions[payload.newAskedQuestionsIndex],
             };
-        case IGameActions.HANDLE_CLICK_ON_GUESS_OPTION:
+        case IGameActions.HANDLE_CLICK_ON_TIP_OPTION:
             return {
                 ...state,
                 askedQuestions: [...state.askedQuestions, payload.index],

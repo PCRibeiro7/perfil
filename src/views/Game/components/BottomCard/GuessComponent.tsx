@@ -118,7 +118,7 @@ export default function GuessComponent() {
                 in={mounted}
                 style={{ transitionDelay: mounted ? `1500ms` : '0ms' }}
             >
-                <div className="mt-4">
+                <div className="mt-4 text-center">
                     <h1 className="text-slate-400">
                         {' '}
                         Palpites Errados: {state.wrongAnswers}

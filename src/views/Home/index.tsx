@@ -2,8 +2,16 @@ import ICurrentPage from '@/models/ICurrentPage';
 import { IGameActions } from '@/models/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
+import axios from 'axios';
+import { useEffect } from 'react';
+import cards from '../../assets/cards.json';
 
 export default function Home(): JSX.Element {
+    // useEffect(() => {
+    //     axios.post('/api/cards', cards).then(cards => {
+    //         console.log(cards);
+    //     });
+    // }, []);
     const startGame = () => {
         gameSlice.dispatch({
             type: IGameActions.CHANGE_PAGE,
