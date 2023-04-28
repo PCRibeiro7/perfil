@@ -1,7 +1,8 @@
 [
     {
-        "type": "Pessoa",
         "answer": "Michael Jackson",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Cantor e compositor",
             "Nasceu em 1958 em Indiana, nos Estados Unidos",
@@ -13,11 +14,13 @@
             "Foi alvo de controvérsias durante sua vida, incluindo acusações de abuso infantil",
             "Lançou o álbum 'Thriller' em 1982, que se tornou o mais vendido da história",
             "Foi um grande influenciador da música e da moda"
-        ]
+        ],
+        "id": "d9b26f96-5612-4012-80b8-2c9a50058078"
     },
     {
-        "type": "Pessoa",
         "answer": "Abraham Lincoln",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Nasceu em 1809 em Kentucky, nos Estados Unidos",
             "Foi o 16º presidente dos Estados Unidos",
@@ -29,11 +32,13 @@
             "Foi um defensor da abolição da escravidão",
             "Seu rosto está estampado na nota de cinco dólares americana",
             "Tem um memorial em sua homenagem em Washington, D.C."
-        ]
+        ],
+        "id": "18e62532-2582-47a7-a742-bb3106d8c026"
     },
     {
-        "type": "Objeto",
         "answer": "Telefone",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "Foi inventado por Alexander Graham Bell em 1876",
             "Utiliza sinais elétricos para transmitir informações de voz",
@@ -45,11 +50,13 @@
             "Está presente na maioria dos lares e empresas",
             "A tecnologia do telefone evoluiu ao longo dos anos, com a introdução de telefones sem fio e smartphones",
             "Permite a comunicação instantânea e em tempo real"
-        ]
+        ],
+        "id": "e9dede17-3c3d-4892-b791-4c2e6d329664"
     },
     {
-        "type": "Coisa",
         "answer": "Tigre",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "É um felino de grande porte",
             "Habitat natural inclui regiões da Ásia e da Rússia",
@@ -61,11 +68,13 @@
             "É um dos animais mais populares em zoológicos e parques de vida selvagem",
             "Está ameaçado de extinção devido à caça ilegal e à perda de habitat",
             "É um símbolo de força e poder em diversas culturas"
-        ]
+        ],
+        "id": "ce6022a7-cda9-48da-8a7e-7b77c536845c"
     },
     {
-        "type": "Filme",
         "answer": "Forrest Gump",
+        "category": ["Filme"],
+        "type": "Pessoa",
         "tips": [
             "Lançado em 1994 e dirigido por Robert Zemeckis",
             "É baseado no livro de mesmo nome de Winston Groom",
@@ -77,11 +86,13 @@
             "É um dos filmes mais populares e amados da história do cinema",
             "Tem uma mensagem poderosa sobre o valor da amizade, da família e da perseverança",
             "É um filme emocionante e inspirador que é sempre lembrado com carinho pelo público"
-        ]
+        ],
+        "id": "91c094dc-3743-4bed-bb6e-f0eb461598ca"
     },
     {
-        "type": "Coisa",
         "answer": "Sushi",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "É um prato da culinária japonesa",
             "É composto por arroz temperado com vinagre, peixe cru e legumes",
@@ -93,11 +104,13 @@
             "É uma comida que exige habilidade e precisão na preparação",
             "É uma das comidas mais representativas do Japão",
             "É uma opção deliciosa e elegante para uma refeição especial ou uma noite fora"
-        ]
+        ],
+        "id": "6c2f4e43-d8ee-48ca-9e5e-c2ab19c41527"
     },
     {
-        "type": "Pessoa",
         "answer": "Harry Potter",
+        "category": ["Filme"],
+        "type": "Pessoa",
         "tips": [
             "Personagem principal da série de livros 'Harry Potter' de J.K. Rowling",
             "É um bruxo órfão criado pelos tios trouxas na Inglaterra",
@@ -109,11 +122,13 @@
             "Tem habilidades em voo de vassoura e no jogo de quadribol",
             "Participa de diversas batalhas contra os Comensais da Morte e Lord Voldemort",
             "É um dos personagens mais icônicos e amados da cultura pop"
-        ]
+        ],
+        "id": "0e0c22da-1e5c-499c-b97c-64e090cbb231"
     },
     {
-        "type": "Filme",
         "answer": "O Poderoso Chefão",
+        "category": ["Filme"],
+        "type": "Coisa",
         "tips": [
             "Filme de Francis Ford Coppola lançado em 1972",
             "Baseado em um romance de Mario Puzo",
@@ -124,11 +139,13 @@
             "Inclui cenas icônicas, como a cabeça de cavalo na cama",
             "Ganhou duas sequências, 'O Poderoso Chefão - Parte II' e 'O Poderoso Chefão - Parte III'",
             "Tem uma das trilhas sonoras mais memoráveis do cinema, composta por Nino Rota"
-        ]
+        ],
+        "id": "e4f8182d-ac93-4ce4-95ef-b50c4d9a7e68"
     },
     {
-        "type": "Banda",
         "answer": "The Beatles",
+        "category": ["Banda"],
+        "type": "Coisa",
         "tips": [
             "Banda de rock formada em Liverpool, Inglaterra, em 1960",
             "É composta por John Lennon, Paul McCartney, George Harrison e Ringo Starr",
@@ -139,11 +156,13 @@
             "Separou-se em 1970, mas seu legado continua vivo até hoje",
             "Foi introduzida ao Rock and Roll Hall of Fame em 1988",
             "Tem uma legião de fãs espalhados pelo mundo todo"
-        ]
+        ],
+        "id": "e517c09d-ce23-4d73-bf99-a87a2cb7c2e8"
     },
     {
-        "type": "Lugar",
         "answer": "Brasil",
+        "category": ["Lugar"],
+        "type": "Lugar",
         "tips": [
             "País localizado na América do Sul",
             "Tem como capital Brasília e como língua oficial o português",
@@ -154,11 +173,13 @@
             "Tem uma economia diversificada, com destaque para a produção de commodities como soja, café e carne",
             "Tem uma população de mais de 200 milhões de habitantes",
             "É um país com muitos desafios, mas também muitas belezas e riquezas"
-        ]
+        ],
+        "id": "5a0fac2f-c19a-4673-a614-704def0bcdab"
     },
     {
-        "type": "Pessoa",
         "answer": "Sherlock Holmes",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Personagem criado pelo escritor britânico Arthur Conan Doyle",
             "Detetive famoso por sua inteligência, habilidade de observação e raciocínio dedutivo",
@@ -168,11 +189,13 @@
             "Influenciou muitos outros detetives fictícios, tanto no cinema quanto na literatura",
             "É considerado um dos personagens mais icônicos da literatura inglesa",
             "Doyle escreveu 56 contos e 4 romances estrelados por este personagem"
-        ]
+        ],
+        "id": "75224b48-8c86-4361-9f56-afc9aa92f190"
     },
     {
-        "type": "Coisa",
         "answer": "Pizza",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Comida de origem italiana, mas popular em todo o mundo",
             "Consiste em uma massa assada com molho de tomate e ingredientes variados",
@@ -182,11 +205,13 @@
             "Tem como ingredientes clássicos o queijo mussarela, o molho de tomate e o orégano",
             "Pode ser feita em casa ou comprada em pizzarias ou supermercados",
             "É uma das comidas mais consumidas no mundo, e existe até mesmo um Dia da Pizza, comemorado em 10 de julho"
-        ]
+        ],
+        "id": "4d0f5afc-9372-473e-8b24-eb0ead17ec5b"
     },
     {
-        "type": "Coisa",
         "answer": "Futebol",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Esporte coletivo mais popular do mundo",
             "Jogado em um campo retangular, com duas equipes de 11 jogadores cada",
@@ -197,11 +222,13 @@
             "Futebol é um esporte que tem uma grande paixão em todo o mundo, com torcedores que acompanham seus times com muito entusiasmo",
             "Tem raízes históricas na Inglaterra, onde foi criado no século XIX",
             "É um esporte que pode ser jogado por pessoas de todas as idades, e que traz muitos benefícios para a saúde e para a socialização"
-        ]
+        ],
+        "id": "2780ac1e-8731-4565-8d41-0cc528c09c4a"
     },
     {
-        "type": "Pessoa",
         "answer": "Gabriel García Márquez",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Escritor colombiano, nascido em 1927",
             "Ganhou o Prêmio Nobel de Literatura em 1982",
@@ -212,11 +239,13 @@
             "Além de escritor, García Márquez foi jornalista e ativista político",
             "Morreu em 2014, deixando um legado literário impressionante",
             "Sua obra retrata a cultura, as tradições e a história da América Latina, e é considerada um tesouro da literatura mundial"
-        ]
+        ],
+        "id": "b7510a09-bade-4681-9a83-5d51a120059e"
     },
     {
-        "type": "Pessoa",
         "answer": "Vincent van Gogh",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Pintor holandês, nascido em 1853 e morto em 1890",
             "Um dos artistas mais famosos da história da arte",
@@ -227,11 +256,13 @@
             "Sua obra póstuma teve um grande impacto na arte moderna, influenciando artistas como Pablo Picasso e Jackson Pollock",
             "Sua pintura mais famosa é A Noite Estrelada, que retrata o céu noturno com um turbilhão de estrelas",
             "Van Gogh é um dos artistas mais queridos e estudados da história da arte, e sua obra continua a fascinar e inspirar pessoas em todo o mundo"
-        ]
+        ],
+        "id": "eb51ede9-dd1b-4975-9389-975801e83c09"
     },
     {
-        "type": "Pessoa",
         "answer": "Meryl Streep",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Atriz americana nascida em 1949",
             "Considerada uma das melhores atrizes de todos os tempos",
@@ -242,11 +273,13 @@
             "Além de atriz, é ativista social e política, e tem defendido causas como a igualdade de gênero e a proteção do meio ambiente",
             "É uma das personalidades mais respeitadas e admiradas de Hollywood",
             "Sua carreira de sucesso inspirou muitas outras mulheres a perseguirem seus sonhos no cinema"
-        ]
+        ],
+        "id": "050476c5-93fa-46ba-a3b1-16e50af1a8d9"
     },
     {
-        "type": "Pessoa",
         "answer": "Usain Bolt",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Conhecido como o homem mais rápido do mundo",
             "Nasceu em 1986 na Jamaica",
@@ -257,11 +290,13 @@
             "Tem o apelido de 'Relâmpago Bolt'",
             "Além da carreira no atletismo, já fez participações em filmes e programas de TV",
             "É um grande ícone do esporte mundial e da Jamaica"
-        ]
+        ],
+        "id": "eac30561-3c3f-41fc-baaf-2679c071c069"
     },
     {
-        "type": "Pessoa",
         "answer": "J. K. Rowling",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Autora da famosa série de livros Harry Potter",
             "Nasceu em 1965 em Yate, na Inglaterra",
@@ -272,11 +307,13 @@
             "Além de Harry Potter, escreveu outros livros, como Morte Súbita e Animais Fantásticos e Onde Habitam",
             "Fundou a instituição de caridade Lumos, que ajuda crianças em situação de risco",
             "É uma das autoras mais bem-sucedidas e conhecidas do mundo"
-        ]
+        ],
+        "id": "e42f0feb-d4b2-43d8-98e6-fca4cdf4ac2d"
     },
     {
-        "type": "Pessoa",
         "answer": "Machado de Assis",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Escritor brasileiro, nascido em 1839 e morto em 1908",
             "Considerado um dos maiores escritores da literatura brasileira",
@@ -287,11 +324,13 @@
             "Foi um dos fundadores da Revista Brasileira",
             "Trabalhou como funcionário público durante boa parte de sua vida",
             "Sua obra é estudada e admirada até hoje"
-        ]
+        ],
+        "id": "872d1f7e-c8b4-425b-9c7d-38fc29d1e7aa"
     },
     {
-        "type": "Pessoa",
         "answer": "David Bowie",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Cantor, compositor e ator britânico, nascido em 1947 e morto em 2016",
             "Conhecido por sua personalidade excêntrica e por suas reinvenções musicais",
@@ -302,11 +341,13 @@
             "Vendeu mais de 140 milhões de discos em todo o mundo",
             "Teve sucessos como Space Oddity, Changes e Let's Dance",
             "Foi um ícone da cultura pop"
-        ]
+        ],
+        "id": "c47ec8d9-3541-4a5e-a19f-a28d33386edd"
     },
     {
-        "type": "Pessoa",
         "answer": "Adele",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Cantora britânica, nascida em 1988",
             "Seu álbum de estreia, '19', foi lançado em 2008 e incluía hits como 'Chasing Pavements' e 'Hometown Glory'",
@@ -316,11 +357,13 @@
             "Já vendeu mais de 100 milhões de discos em todo o mundo",
             "Mãe de um filho chamado Angelo",
             "Retornou aos holofotes em 2021 com seu novo álbum '30'"
-        ]
+        ],
+        "id": "2afa3a5d-c3b5-4131-983c-5b74c1b484b4"
     },
     {
-        "type": "Pessoa",
         "answer": "Tom Hanks",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Ator americano, nascido em 1956",
             "Ganhou dois prêmios Oscar de Melhor Ator, por suas atuações em 'Filadélfia' e 'Forrest Gump'",
@@ -330,11 +373,13 @@
             "Além de ator, já atuou como produtor, diretor e roteirista em alguns filmes",
             "É um grande apoiador de causas ambientais e humanitárias",
             "É casado com a atriz Rita Wilson desde 1988"
-        ]
+        ],
+        "id": "64242463-d18f-4207-8e67-25dc6dd3af27"
     },
     {
-        "type": "Filme",
         "answer": "O Senhor dos Anéis: O Retorno do Rei",
+        "category": ["Filme"],
+        "type": "Pessoa",
         "tips": [
             "Ganhador de 11 Oscars, incluindo Melhor Filme, Melhor Diretor e Melhores Efeitos Especiais",
             "Terceiro filme da trilogia baseada nos livros de J.R.R. Tolkien",
@@ -346,11 +391,13 @@
             "A trilogia foi filmada na Nova Zelândia, com paisagens incríveis e um trabalho de efeitos visuais impressionante",
             "A trilha sonora, composta por Howard Shore, é considerada uma das melhores da história do cinema",
             "A trama gira em torno de Frodo Bolseiro e sua jornada para destruir o Um Anel e acabar com a ameaça de Sauron"
-        ]
+        ],
+        "id": "f154b566-b813-4ab7-a39f-426bdfb463a4"
     },
     {
-        "type": "Pessoa",
         "answer": "Friedrich Nietzsche",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Nasceu em 1844 em Röcken, Alemanha",
             "Autor de obras como 'Assim Falou Zaratustra' e 'Além do Bem e do Mal'",
@@ -359,11 +406,13 @@
             "Foi professor de filologia na Universidade de Basel, mas abandonou o cargo por motivos de saúde",
             "Morreu em 1900 aos 55 anos, após sofrer uma série de colapsos mentais e físicos",
             "Sua obra teve um grande impacto na filosofia, literatura e cultura ocidental"
-        ]
+        ],
+        "id": "2e09f4e2-e928-4ab6-b6de-31a1cc0200f0"
     },
     {
-        "type": "Pessoa",
         "answer": "Aretha Franklin",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Nasceu em 1942 em Memphis, Tennessee, nos Estados Unidos",
             "Conhecida como 'A Rainha do Soul'",
@@ -373,11 +422,13 @@
             "Começou a cantar na igreja de seu pai quando criança",
             "Atuou em filmes como 'Os Irmãos Cara de Pau' e 'Mudança de Hábito'",
             "Morreu em 2018 aos 76 anos, deixando um legado musical duradouro"
-        ]
+        ],
+        "id": "7e47554f-daab-4461-8257-141c5b38d946"
     },
     {
-        "type": "Pessoa",
         "answer": "Jorge Luis Borges",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Nasceu em 1899 em Buenos Aires, Argentina",
             "Autor de obras como 'Ficções' e 'O Aleph'",
@@ -387,11 +438,13 @@
             "Foi cego durante os últimos anos de sua vida",
             "Morreu em 1986 aos 86 anos, deixando um legado literário influente e duradouro",
             "Sua obra teve um grande impacto na literatura latino-americana e mundial"
-        ]
+        ],
+        "id": "7a17116d-ae8b-4c74-8064-fbff85a605e4"
     },
     {
-        "type": "Objeto",
         "answer": "Cadeira",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "É um objeto comum encontrado em lares e escritórios",
             "Foi inventada há mais de 5.000 anos",
@@ -399,11 +452,13 @@
             "Tem uma superfície plana para acomodar uma pessoa",
             "Pode ter um encosto para apoio das costas",
             "É um dos móveis mais utilizados no mundo"
-        ]
+        ],
+        "id": "7edc2e29-0b84-4246-8b1b-5546c5cf6211"
     },
     {
-        "type": "Objeto",
         "answer": "Máquina de Lavar",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "É um objeto comum encontrado em lares",
             "Foi inventada em 1908 por Alva J. Fisher",
@@ -412,11 +467,13 @@
             "Pode ter diferentes ciclos de lavagem para diferentes tipos de tecidos",
             "Geralmente utiliza água e sabão para limpar a roupa",
             "É um dos eletrodomésticos mais utilizados em todo o mundo"
-        ]
+        ],
+        "id": "4327b30d-2426-4573-b456-98ffd1d6aade"
     },
     {
-        "type": "Objeto",
         "answer": "Relógio",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "É um objeto comum encontrado em lares e escritórios",
             "Foi inventado há mais de 500 anos",
@@ -425,11 +482,13 @@
             "Possui um mostrador com números ou marcações para indicar as horas, minutos e segundos",
             "Pode ser analógico ou digital",
             "É um dos acessórios mais utilizados no mundo"
-        ]
+        ],
+        "id": "e18a5480-36ba-4777-b0d2-079e7b6356a5"
     },
     {
-        "type": "Objeto",
         "answer": "Relógio de Parede",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "É um objeto decorativo que pode ser encontrado em muitas casas",
             "É geralmente fixado na parede",
@@ -438,11 +497,13 @@
             "Pode ser feito de diferentes materiais, como madeira, metal ou plástico",
             "É movido por um mecanismo interno que pode ser analógico ou digital",
             "Pode ter diferentes tamanhos, desde pequenos relógios de mesa até grandes relógios de parede"
-        ]
+        ],
+        "id": "57983e3f-5c1a-45c9-a0e6-781ddc064ba3"
     },
     {
-        "type": "Objeto",
         "answer": "Cafeteira",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "É um objeto usado na cozinha",
             "É usado para fazer café",
@@ -452,11 +513,13 @@
             "Pode ter diferentes designs e cores",
             "Algumas cafeteiras têm funções adicionais, como moer grãos de café ou preparar outros tipos de bebidas quentes",
             "É um item comum em muitas cozinhas em todo o mundo"
-        ]
+        ],
+        "id": "77f33a35-2cd5-45e5-a28e-135414937ed1"
     },
     {
-        "type": "Objeto",
         "answer": "Binóculos",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "É um objeto usado para ampliar a visão",
             "É composto por duas lentes que permitem visualizar objetos distantes",
@@ -466,11 +529,13 @@
             "Algumas características importantes a serem consideradas ao escolher binóculos incluem o diâmetro da lente, o campo de visão e a ampliação",
             "É um item comum para entusiastas de atividades ao ar livre e esportes",
             "Os primeiros binóculos foram inventados no século XVIII"
-        ]
+        ],
+        "id": "cfe43103-9c4f-470d-a565-c056e5dfc963"
     },
     {
-        "type": "Filme",
         "answer": "Cidade de Deus",
+        "category": ["Filme"],
+        "type": "Lugar",
         "tips": [
             "Filme brasileiro lançado em 2002",
             "Dirigido por Fernando Meirelles e Kátia Lund",
@@ -478,11 +543,13 @@
             "Conta a história de jovens que crescem em uma favela no Rio de Janeiro",
             "Ganhou vários prêmios internacionais, incluindo um BAFTA e um Independent Spirit Award",
             "Foi indicado a quatro categorias do Oscar em 2004"
-        ]
+        ],
+        "id": "cc0b335b-aec5-4167-a065-ac9b799499ea"
     },
     {
-        "type": "Lugar",
         "answer": "Austrália",
+        "category": ["Lugar"],
+        "type": "Lugar",
         "tips": [
             "País localizado na Oceania",
             "Possui a sexta maior área territorial do mundo",
@@ -491,11 +558,13 @@
             "O país é conhecido por sua fauna diversificada, incluindo animais como cangurus, koalas e dingos",
             "Foi uma colônia britânica até 1901, quando se tornou uma federação de seis estados",
             "A Austrália é um dos países mais desenvolvidos do mundo, com uma economia forte e uma alta qualidade de vida"
-        ]
+        ],
+        "id": "de8ae18a-d0c9-4645-b975-c60fbadef35c"
     },
     {
-        "type": "Pessoa",
         "answer": "Albert Einstein",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Físico teórico nascido em Ulm, Alemanha, em 1879",
             "Desenvolveu a teoria da relatividade e a equação E=mc²",
@@ -507,11 +576,13 @@
             "Faleceu em Princeton, Nova Jersey, em 1955, aos 76 anos",
             "Sua célebre fórmula, E=mc², significa que a massa é uma forma de energia, e que uma pequena quantidade de massa pode ser convertida em uma grande quantidade de energia",
             "Einstein também é conhecido por sua frase 'Deus não joga dados com o universo', expressando sua crença em uma ordem e lógica subjacentes à natureza"
-        ]
+        ],
+        "id": "eabf448c-8ff4-4a54-bba6-46f36234b461"
     },
     {
-        "type": "Coisa",
         "answer": "Zelda Ocarina of Time",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Jogo de ação e aventura lançado em 1998 para o console Nintendo 64",
             "Desenvolvido pela Nintendo EAD e dirigido por Shigeru Miyamoto",
@@ -519,11 +590,13 @@
             "Segue o jovem herói Link em sua jornada para salvar o reino de Hyrule do vilão Ganondorf",
             "O jogo é famoso por sua jogabilidade inovadora, que inclui o uso da ocarina para resolver quebra-cabeças e viajar no tempo",
             "Apresenta uma variedade de personagens memoráveis, como a princesa Zelda, o cavaleiro Link e o mago Impa"
-        ]
+        ],
+        "id": "a15a1f1b-4ba0-4f44-92c8-3ca11ef5cfaf"
     },
     {
-        "type": "Lugar",
         "answer": "Paris",
+        "category": ["Lugar"],
+        "type": "Lugar",
         "tips": [
             "Capital da França",
             "Conhecida como a Cidade do Amor",
@@ -532,11 +605,13 @@
             "Famosa por sua culinária refinada e seus vinhos finos",
             "Berço da arte impressionista, com o Museu d'Orsay abrigando uma das maiores coleções do mundo",
             "Localizada às margens do rio Sena, que corta a cidade ao meio"
-        ]
+        ],
+        "id": "3877b798-ec1b-4084-a2f3-6977c19972af"
     },
     {
-        "type": "Coisa",
         "answer": "Girafa",
+        "category": ["Animal"],
+        "type": "Coisa",
         "tips": [
             "Animal alto e elegante, conhecido por seu pescoço longo",
             "É o animal mais alto do mundo, podendo chegar a 5,5 metros de altura",
@@ -547,11 +622,13 @@
             "É um animal social, vivendo em grupos que podem chegar a 20 indivíduos",
             "É uma das principais atrações de zoológicos e parques de safári ao redor do mundo",
             "Acredita-se que o nome 'girafa' tenha vindo do árabe 'zirafah', que significa 'a que caminha elegantemente'"
-        ]
+        ],
+        "id": "12c69720-dd26-4b54-b07c-ac96882aaea2"
     },
     {
-        "type": "Coisa",
         "answer": "1984",
+        "category": ["Livro"],
+        "type": "Ano",
         "tips": [
             "Obra distópica escrita por George Orwell e publicada em 1949",
             "Retrata um futuro sombrio e totalitário em que o Estado controla todos os aspectos da vida dos cidadãos",
@@ -559,11 +636,13 @@
             "Influenciou profundamente a cultura popular e o debate político, sendo considerado um clássico da literatura",
             "Foi proibido em alguns países e criticado por governos autoritários devido a suas críticas ao poder e à opressão",
             "Ainda hoje é amplamente lido e estudado em todo o mundo, e muitas de suas previsões sobre a sociedade moderna continuam a ser discutidas e analisadas"
-        ]
+        ],
+        "id": "b997f950-435c-43f7-8d75-197f5add1177"
     },
     {
-        "type": "Coisa",
         "answer": "Leão",
+        "category": ["Animal"],
+        "type": "Coisa",
         "tips": [
             "Espécie de mamífero da família Felidae",
             "Encontrado em várias partes da África",
@@ -574,11 +653,13 @@
             "Passa a maior parte do dia descansando e dormindo",
             "São considerados o 'rei da selva'",
             "São animais sociais e vivem em grupos chamados de 'coalizões'"
-        ]
+        ],
+        "id": "357ac8ef-12a3-4db9-941a-538313a9819d"
     },
     {
-        "type": "Lugar",
         "answer": "Japão",
+        "category": ["Lugar"],
+        "type": "Lugar",
         "tips": [
             "País localizado na Ásia Oriental",
             "Arquipélago composto por quatro ilhas principais e outras menores",
@@ -589,11 +670,13 @@
             "Famoso por sua cultura tradicional, incluindo a cerimônia do chá e o teatro Kabuki",
             "Também é conhecido por suas tecnologias avançadas e a indústria de jogos eletrônicos",
             "O Japão é um país insular, sendo cercado pelo Oceano Pacífico a leste e pelo Mar do Japão a oeste"
-        ]
+        ],
+        "id": "63818ee7-bddc-4cbe-8e02-2117aee17605"
     },
     {
-        "type": "Pessoa",
         "answer": "Lionel Messi",
+        "category": ["Esporte"],
+        "type": "Pessoa",
         "tips": [
             "Nasceu em 1987 na Argentina",
             "Começou a jogar profissionalmente pelo Barcelona em 2004",
@@ -603,11 +686,13 @@
             "Já venceu a Liga dos Campeões da UEFA quatro vezes",
             "Foi capitão da Seleção Argentina durante a Copa do Mundo de 2018",
             "Além de seu talento no futebol, é conhecido por ser um filantropo e apoiar diversas causas sociais"
-        ]
+        ],
+        "id": "bb91ea20-9afd-4ff1-8f0b-a3b524a50cc0"
     },
     {
-        "type": "Pessoa",
         "answer": "Salvador Dalí",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Nasceu em 1904 na Espanha e faleceu em 1989",
             "Foi um dos principais representantes do movimento surrealista",
@@ -618,11 +703,13 @@
             "Dalí também é conhecido por sua excentricidade e comportamento extravagante",
             "Foi casado com a também artista Gala Éluard e os dois tiveram uma relação conturbada e polêmica",
             "Continua sendo um dos artistas mais influentes e populares da história da arte"
-        ]
+        ],
+        "id": "64509321-281c-4293-8448-44cb38882bc4"
     },
     {
-        "type": "Lugar",
         "answer": "Nova Iorque",
+        "category": ["Lugar"],
+        "type": "Lugar",
         "tips": [
             "É a cidade mais populosa dos Estados Unidos",
             "Foi fundada pelos holandeses em 1624",
@@ -633,11 +720,13 @@
             "Abriga alguns dos museus mais importantes do mundo, como o Metropolitan Museum of Art e o Museu de Arte Moderna",
             "Tem um clima temperado continental, com verões quentes e úmidos e invernos frios e secos",
             "Também é conhecida como 'Big Apple'"
-        ]
+        ],
+        "id": "6fbdf77d-2f12-4355-bf49-1756eb83a5e5"
     },
     {
-        "type": "Coisa",
         "answer": "Clube da Luta",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Filme lançado em 1999, dirigido por David Fincher e estrelado por Brad Pitt e Edward Norton",
             "Baseado no romance homônimo de Chuck Palahniuk",
@@ -648,11 +737,13 @@
             "Foi indicado a diversos prêmios, incluindo o Oscar de Melhor Ator Coadjuvante para Brad Pitt",
             "Também é conhecido por suas reviravoltas surpreendentes e diálogos memoráveis",
             "Tornou-se um filme influente, inspirando outras obras de cinema, televisão e literatura"
-        ]
+        ],
+        "id": "88552b61-3b96-4ae6-9878-d7451b940e35"
     },
     {
-        "type": "Coisa",
         "answer": "Minecraft",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Lançado em 2011",
             "Desenvolvido pelo estúdio Mojang",
@@ -663,11 +754,13 @@
             "Modos de jogo incluem Sobrevivência, Criativo e Aventura",
             "Possui uma comunidade ativa de jogadores e criadores de conteúdo",
             "Atualizações frequentes adicionam novos recursos e funcionalidades ao jogo"
-        ]
+        ],
+        "id": "371fed12-6352-4f60-8848-b0f5b4976831"
     },
     {
-        "type": "Banda",
         "answer": "Queen",
+        "category": ["Banda"],
+        "type": "Coisa",
         "tips": [
             "Formada em Londres em 1970",
             "Composta por Freddie Mercury, Brian May, John Deacon e Roger Taylor",
@@ -678,11 +771,13 @@
             "Freddie Mercury faleceu em 1991, mas a banda continua ativa com shows e lançamentos de música",
             "Conhecidos por sua mistura de rock, pop e elementos operísticos",
             "Inspiraram diversas gerações de músicos e fãs"
-        ]
+        ],
+        "id": "be7b41d3-2636-4ad0-8789-0a5149058003"
     },
     {
-        "type": "Coisa",
         "answer": "Matrix",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Lançado em 1999",
             "Dirigido pelos irmãos Wachowski",
@@ -693,11 +788,13 @@
             "Inspirou diversos filmes, séries e obras de arte subsequentes",
             "Possui duas sequências, Matrix Reloaded e Matrix Revolutions",
             "A frase \"There is no spoon\" tornou-se um ícone cultural"
-        ]
+        ],
+        "id": "59babf84-0180-401b-9ab0-727c51f74a04"
     },
     {
-        "type": "Coisa",
         "answer": "Elefante",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Mamífero terrestre de grande porte",
             "É encontrado na África e na Ásia",
@@ -708,11 +805,13 @@
             "Os elefantes são inteligentes e têm uma memória excepcional",
             "São frequentemente retratados em filmes, livros e outras formas de mídia",
             "Infelizmente, os elefantes são frequentemente caçados por causa de seus dentes de marfim, o que coloca a espécie em risco de extinção"
-        ]
+        ],
+        "id": "fda730a0-533e-4ee1-a6ca-ad26ebd5e7e3"
     },
     {
-        "type": "Lugar",
         "answer": "Nova York",
+        "category": ["Lugar"],
+        "type": "Lugar",
         "tips": [
             "Localizada na costa leste dos Estados Unidos",
             "É a cidade mais populosa do país",
@@ -723,11 +822,13 @@
             "Foi fundada em 1624 pelos holandeses e originalmente chamada de Nova Amsterdã",
             "Nova York é uma cidade global e um importante centro de comércio internacional",
             "Sua economia é uma das mais poderosas do mundo"
-        ]
+        ],
+        "id": "c497c438-0851-4dc1-be18-a2cb8e24c777"
     },
     {
-        "type": "Coisa",
         "answer": "Xadrez",
+        "category": ["Coisa"],
+        "type": "Coisa",
         "tips": [
             "Jogo de estratégia para dois jogadores",
             "Cada jogador começa com dezesseis peças: um rei, uma rainha, dois cavalos, dois bispos, duas torres e oito peões",
@@ -738,11 +839,13 @@
             "O xadrez é jogado em todo o mundo e é um esporte popular em muitos países",
             "Existem torneios de xadrez internacionais com jogadores profissionais",
             "O xadrez é frequentemente usado como uma metáfora para a estratégia e planejamento em outras áreas da vida"
-        ]
+        ],
+        "id": "3013cfa4-4649-4e7d-b9a0-e0fd84196d30"
     },
     {
-        "type": "Pessoa",
         "answer": "Serena Williams",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Tenista profissional",
             "Nasceu em 1981 em Michigan, nos Estados Unidos",
@@ -755,11 +858,13 @@
             "Lançou sua própria linha de roupas de tênis",
             "Tem sido uma voz ativa na luta contra a desigualdade racial e de gênero no esporte",
             "Também é mãe de uma filha e tem sido uma defensora da maternidade e do apoio às mães no esporte"
-        ]
+        ],
+        "id": "b1b3b3e9-b013-4e5e-9f8e-f899f07c40eb"
     },
     {
-        "type": "Pessoa",
         "answer": "Stephen Hawking",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Físico teórico e cosmólogo",
             "Nasceu em 1942 em Oxford, no Reino Unido",
@@ -771,11 +876,13 @@
             "Comunicava-se usando um sintetizador de voz eletrônico",
             "Defendeu o direito de pessoas com deficiência e a importância da exploração espacial",
             "Seu trabalho influenciou a física, a filosofia e a cultura popular"
-        ]
+        ],
+        "id": "34719ca6-703d-4df9-860a-cfdf5c57d4e4"
     },
     {
-        "type": "Líder Político",
         "answer": "Nelson Mandela",
+        "category": ["Líder Político"],
+        "type": "Pessoa",
         "tips": [
             "Lutou contra o apartheid na África do Sul",
             "Passou 27 anos na prisão por suas crenças políticas",
@@ -787,11 +894,13 @@
             "Tornou-se um líder mundialmente conhecido e admirado",
             "Faleceu em 2013, aos 95 anos de idade",
             "Deixou um legado duradouro de coragem e determinação"
-        ]
+        ],
+        "id": "5e9988ed-f091-43f3-a4cc-8cc6250eed30"
     },
     {
-        "type": "Objeto",
         "answer": "Câmera Fotográfica",
+        "category": ["Objeto"],
+        "type": "Coisa",
         "tips": [
             "Instrumento usado para registrar imagens",
             "Existem diversos tipos, desde as analógicas até as digitais",
@@ -803,11 +912,13 @@
             "A câmera polaroid permite a impressão instantânea das fotos",
             "A popularização das câmeras de celulares mudou a forma como as pessoas registram suas vidas",
             "A arte de fotografar é uma expressão artística que vem sendo desenvolvida há séculos"
-        ]
+        ],
+        "id": "34e5fd59-e2df-4cd5-8fa5-b1f85181876f"
     },
     {
-        "type": "Pessoa",
         "answer": "Malala Yousafzai",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Ativista pelos direitos das mulheres e da educação",
             "Nasceu em 1997 em Mingora, no Paquistão",
@@ -819,11 +930,13 @@
             "Se tornou um símbolo global da luta pelos direitos das mulheres e da educação",
             "Recebeu diversas homenagens e títulos honorários por seu trabalho, incluindo cidadania honorária do Canadá",
             "Continua a lutar pelos direitos das mulheres e da educação em todo o mundo"
-        ]
+        ],
+        "id": "e33c0eae-4148-4f16-8592-e129dd84b05d"
     },
     {
-        "type": "Animal",
         "answer": "Orangotango",
+        "category": ["Animal"],
+        "type": "Coisa",
         "tips": [
             "Um dos três grandes primatas da Ásia, juntamente com os gorilas e chimpanzés",
             "Habitat natural é nas florestas tropicais da ilha de Bornéu e Sumatra",
@@ -835,11 +948,13 @@
             "Têm uma aparência distinta, com braços longos e um rosto largo e peludo",
             "Podem viver até 40 anos em cativeiro",
             "São conhecidos por sua capacidade de imitar sons, incluindo a fala humana"
-        ]
+        ],
+        "id": "0431b8b3-bcd9-49d5-9aee-33a6fde0adad"
     },
     {
-        "type": "Pessoa",
         "answer": "Leonardo da Vinci",
+        "category": ["Pessoa"],
+        "type": "Pessoa",
         "tips": [
             "Artista renascentista italiano",
             "Nasceu em 1452 na cidade de Vinci",
@@ -851,11 +966,13 @@
             "Criou uma série de trabalhos que influenciaram a arte, a ciência e a cultura em geral",
             "Foi um dos artistas mais importantes da Renascença e sua obra teve um impacto duradouro na arte ocidental",
             "Faleceu em 1519 na cidade francesa de Amboise"
-        ]
+        ],
+        "id": "fa03a692-e2e9-42d1-b30d-3c69a9867cd7"
     },
     {
-        "type": "Lugar",
         "answer": "Machu Picchu",
+        "category": ["Lugar"],
+        "type": "Lugar",
         "tips": [
             "Sítio arqueológico localizado no Peru",
             "Foi construído no século XV pelos incas",
@@ -867,6 +984,7 @@
             "Possui uma série de terraços agrícolas e sistemas de irrigação complexos",
             "A construção não utilizou argamassa, e as pedras foram encaixadas perfeitamente umas nas outras",
             "O nome da cidade perdida significa 'montanha velha' em quéchua, a língua dos incas"
-        ]
+        ],
+        "id": "6ee7f21d-ea46-4ad5-ac43-334fbd45c20a"
     }
 ]

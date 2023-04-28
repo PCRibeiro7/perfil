@@ -1,5 +1,7 @@
 export type ICard = {
-    type: string;
     answer: string;
+    category: string[];
+    type: string;
     tips: string[];
+    id: string;
 };
