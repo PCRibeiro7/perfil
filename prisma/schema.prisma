@@ -19,4 +19,5 @@ model User {
   seenCardIds    String[] @default([])
   correctCardIds String[] @default([])
   skippedCardIds String[] @default([])
+  userCreated    Boolean  @default(true)
 }

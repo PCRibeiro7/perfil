@@ -1,5 +1,5 @@
 import '@/styles/globals.css';
-import { useUser } from '@/pages/hooks/useUser';
+import { useUser } from '@/hooks/useUser';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 

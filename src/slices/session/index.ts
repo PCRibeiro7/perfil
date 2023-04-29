@@ -11,6 +11,7 @@ const initialSessionState: ISessionState = {
         name: 'Usuário anônimo',
         seenCardIds: [],
         skippedCardIds: [],
+        userCreated: false,
     },
 };
 
