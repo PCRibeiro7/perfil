@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { gameSlice } from '@/slices/game';
-import { Zoom } from '@mui/material';
 import { IGameActions } from '@/models/game/IGameActions';
+import CustomZoom from '@/components/CustomZoom';
+import useSound from 'use-sound';
 
 type GuessOptionsProps = {
     askedQuestions: number[];
@@ -10,7 +11,10 @@ type GuessOptionsProps = {
 };
 
 export default function GuessOptions() {
+    const [play] = useSound('/sounds/tip.mp3');
     const [mounted, setMounted] = useState(false);
+    const [playHoverSound] = useSound('/sounds/hover.mp3');
+
     const state = gameSlice.use();
     const currentCard = state.cards[state.currentCardIndex];
 
@@ -21,6 +25,7 @@ export default function GuessOptions() {
     }, []);
 
     const handleClickonGuessOption = (index: number) => {
+        play();
         gameSlice.dispatch({
             type: IGameActions.HANDLE_CLICK_ON_TIP_OPTION,
             payload: { index },
@@ -33,8 +38,8 @@ export default function GuessOptions() {
             <div className="grid grid-cols-3 gap-2 sm:block sm:overflow-auto sm:whitespace-nowrap">
                 {[...Array(currentCard.tips.length).keys()].map(
                     (question, index) => (
-                        <Zoom
-                            in={mounted}
+                        <CustomZoom
+                            shouldStart={mounted}
                             key={question}
                             style={{
                                 transitionDelay: mounted
@@ -43,6 +48,7 @@ export default function GuessOptions() {
                             }}
                         >
                             <button
+                                onMouseEnter={() => playHoverSound()}
                                 onClick={e => handleClickonGuessOption(index)}
                                 className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600 sm:rounded-full sm:w-12 sm:mx-1"
                                 disabled={state.askedQuestions.includes(index)}
@@ -51,7 +57,7 @@ export default function GuessOptions() {
                                     {index + 1}
                                 </h1>
                             </button>
-                        </Zoom>
+                        </CustomZoom>
                     ),
                 )}
             </div>

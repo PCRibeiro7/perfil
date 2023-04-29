@@ -1,18 +1,22 @@
+import CustomZoom from '@/components/CustomZoom';
 import { useDelay } from '@/hooks/useDelay';
 import ICurrentPage from '@/models/game/ICurrentPage';
 import { IGameActions } from '@/models/game/IGameActions';
 import { ISessionAction } from '@/models/session/ISessionAction';
 import { gameSlice } from '@/slices/game';
 import { sessionSlice } from '@/slices/session';
-import { Zoom } from '@mui/material';
-import { User } from '@prisma/client';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
+import useSound from 'use-sound';
 
 const MINIMUN_SIMILARITY = 0.6;
 
 export default function GuessComponent() {
+    const [playWrongSound] = useSound('/sounds/wrongAnswer.mp3');
+    const [playCorrectSound] = useSound('/sounds/success.mp3');
+    const [playSkipSound] = useSound('/sounds/skip.mp3');
+    const [playHoverSound] = useSound('/sounds/hover.mp3');
     const [shake, setShake] = useState(false);
     const state = gameSlice.use();
     const session = sessionSlice.use();
@@ -35,6 +39,7 @@ export default function GuessComponent() {
                 skippedCardIds: [currentCard.id],
             },
         );
+        playSkipSound();
         sessionSlice.dispatch({
             type: ISessionAction.SET_USER,
             payload: user,
@@ -58,6 +63,7 @@ export default function GuessComponent() {
                 currentCard.answer.toLowerCase(),
             ) > MINIMUN_SIMILARITY
         ) {
+            playCorrectSound();
             const { data: user } = await axios.put(
                 `/api/users/${session.user.id}`,
                 {
@@ -77,6 +83,7 @@ export default function GuessComponent() {
                 payload: { page: ICurrentPage.SUCCESS },
             });
         } else {
+            playWrongSound();
             gameSlice.dispatch({
                 type: IGameActions.HANDLE_QUESTION_ANSWERED_WRONG,
             });
@@ -85,26 +92,27 @@ export default function GuessComponent() {
     };
 
     return (
-        <div className="self-center bg-white rounded-xl w-full p-3 flex flex-col items-center">
+        <div className="self-center bg-white rounded-xl w-full p-6 flex flex-col items-center">
             <form
                 onSubmit={handleQuestionAnswered}
                 className="w-full"
                 autoComplete="off"
             >
-                <Zoom in={mounted}>
+                <CustomZoom shouldStart={mounted}>
                     <input
                         type="text"
                         name="answer"
                         placeholder="Digite seu palpite aqui..."
                         className="text-center w-full h-10 text-xl border-2 border-slate-200 rounded-xl mb-2 placeholder:text-slate-400"
                     />
-                </Zoom>
-                <Zoom
-                    in={mounted}
+                </CustomZoom>
+                <CustomZoom
+                    shouldStart={mounted}
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
                     <div>
                         <button
+                            onMouseEnter={() => playHoverSound()}
                             className={`w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600 ${
                                 shake ? 'shake' : ''
                             }`}
@@ -114,10 +122,12 @@ export default function GuessComponent() {
                             </h1>
                         </button>
                     </div>
-                </Zoom>
+                </CustomZoom>
             </form>
-            <Zoom
-                in={currentCard.tips.length === state.askedQuestions.length}
+            <CustomZoom
+                shouldStart={
+                    currentCard.tips.length === state.askedQuestions.length
+                }
                 style={{
                     transitionDelay:
                         currentCard.tips.length === state.askedQuestions.length
@@ -128,14 +138,15 @@ export default function GuessComponent() {
                 unmountOnExit
             >
                 <button
+                    onMouseEnter={() => playHoverSound()}
                     className={`w-full h-10 bg-slate-300 rounded-xl hover:bg-slate-200 mt-2`}
                     onClick={skipQuestion}
                 >
                     <h1 className="text-xl text-black">{'Pular'}</h1>
                 </button>
-            </Zoom>
-            <Zoom
-                in={mounted}
+            </CustomZoom>
+            <CustomZoom
+                shouldStart={mounted}
                 style={{ transitionDelay: mounted ? `1500ms` : '0ms' }}
             >
                 <div className="mt-4 text-center">
@@ -148,7 +159,7 @@ export default function GuessComponent() {
                         Dicas Usadas: {state.usedTips}
                     </h1>
                 </div>
-            </Zoom>
+            </CustomZoom>
         </div>
     );
 }

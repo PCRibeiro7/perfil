@@ -9,8 +9,10 @@ import { gameSlice } from '@/slices/game';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { ISessionAction } from '@/models/session/ISessionAction';
+import useSound from 'use-sound';
 
 export default function Game(): JSX.Element {
+    const [playSound] = useSound('/sounds/slide.mp3', { interrupt: true });
     const secondSlideReady = useDelay(4000);
     const game = gameSlice.use();
     const session = sessionSlice.use();
@@ -33,7 +35,12 @@ export default function Game(): JSX.Element {
     return (
         <main className="flex justify-center min-h-screen bg-slate-200">
             <div className="justify-between flex flex-col p-3 w-[30rem] max-w-full sm:p-2">
-                <Slide direction="up" in={true} timeout={1000}>
+                <Slide
+                    direction="up"
+                    in={true}
+                    timeout={1000}
+                    onEntered={() => playSound()}
+                >
                     <div className="bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200">
                         <TipTypePanel />
                         <TipPanel />

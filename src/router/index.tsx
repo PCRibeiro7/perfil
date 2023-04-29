@@ -1,10 +1,9 @@
 import Home from '../views/Home';
 import Game from '../views/Game';
-import Success from '../views/Success';
-import Failure from '@/views/Failure';
 import ICurrentPage from '@/models/game/ICurrentPage';
 
 import { gameSlice } from '@/slices/game';
+import Result from '@/views/Result';
 
 export default function Router(): JSX.Element {
     const state = gameSlice.use();
@@ -14,8 +13,8 @@ export default function Router(): JSX.Element {
         case ICurrentPage.GAME:
             return <Game />;
         case ICurrentPage.SUCCESS:
-            return <Success />;
+            return <Result title="Parabéns!!" subtitle="Resposta:" />;
         case ICurrentPage.FAILURE:
-            return <Failure />;
+            return <Result title="Oops!" subtitle="A resposta era:" />;
     }
 }

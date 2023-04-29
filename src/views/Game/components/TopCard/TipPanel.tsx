@@ -1,7 +1,7 @@
+import CustomZoom from '@/components/CustomZoom';
 import { IGameActions } from '@/models/game/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
-import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 type TipPanelProps = {
@@ -46,17 +46,17 @@ export default function TipPanel() {
     return (
         <div className="h-fit bg-white rounded-xl p-2 relative">
             <div>
-                <Zoom in={mounted}>
+                <CustomZoom shouldStart={mounted}>
                     <h1 className="text-xl mb-4 text-slate-400">{'Dica: '}</h1>
-                </Zoom>
-                <Zoom
-                    in={mounted}
+                </CustomZoom>
+                <CustomZoom
+                    shouldStart={mounted}
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
                     <h1 className="text-xl max-w-md">
                         {currentCard.tips[state.currentQuestionIndex]}
                     </h1>
-                </Zoom>
+                </CustomZoom>
             </div>
             <div className="absolute px-4 right-0 top-4">
                 <button
