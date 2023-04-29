@@ -1,23 +1,23 @@
+import { useDelay } from '@/hooks/useDelay';
 import ICurrentPage from '@/models/game/ICurrentPage';
 import { IGameActions } from '@/models/game/IGameActions';
+import { ISessionAction } from '@/models/session/ISessionAction';
 import { gameSlice } from '@/slices/game';
+import { sessionSlice } from '@/slices/session';
 import { Zoom } from '@mui/material';
+import { User } from '@prisma/client';
+import axios from 'axios';
 import { useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
 
 const MINIMUN_SIMILARITY = 0.6;
 
 export default function GuessComponent() {
-    const [mounted, setMounted] = useState(false);
     const [shake, setShake] = useState(false);
     const state = gameSlice.use();
+    const session = sessionSlice.use();
     const currentCard = state.cards[state.currentCardIndex];
-
-    useEffect(() => {
-        setTimeout(() => {
-            setMounted(true);
-        }, 1500 + currentCard.tips.length * 300);
-    }, [currentCard.tips.length]);
+    const mounted = useDelay(1500 + currentCard.tips.length * 300);
 
     useEffect(() => {
         if (state.wrongAnswers > 0) {
@@ -28,7 +28,17 @@ export default function GuessComponent() {
         }
     }, [state.wrongAnswers]);
 
-    const skipQuestion = () => {
+    const skipQuestion = async () => {
+        const { data: user } = await axios.put(
+            `/api/users/${session.user.id}`,
+            {
+                skippedCardIds: [currentCard.id],
+            },
+        );
+        sessionSlice.dispatch({
+            type: ISessionAction.SET_USER,
+            payload: user,
+        });
         gameSlice.dispatch({
             type: IGameActions.SETUP_NEXT_CARD,
             payload: { currentCard },
@@ -39,7 +49,7 @@ export default function GuessComponent() {
         });
     };
 
-    const handleQuestionAnswered = (event: any) => {
+    const handleQuestionAnswered = async (event: any) => {
         event.preventDefault();
         const value: string = event.target.answer.value || '';
         if (
@@ -48,6 +58,16 @@ export default function GuessComponent() {
                 currentCard.answer.toLowerCase(),
             ) > MINIMUN_SIMILARITY
         ) {
+            const { data: user } = await axios.put(
+                `/api/users/${session.user.id}`,
+                {
+                    correctCardIds: [currentCard.id],
+                },
+            );
+            sessionSlice.dispatch({
+                type: ISessionAction.SET_USER,
+                payload: user,
+            });
             gameSlice.dispatch({
                 type: IGameActions.SETUP_NEXT_CARD,
                 payload: { currentCard },

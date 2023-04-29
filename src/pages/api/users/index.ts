@@ -17,6 +17,6 @@ export default async function handler(
         }
     } catch (error) {
         console.log(error);
-        res.status(500).json(JSON.stringify(error));
+        res.status(500).send(JSON.stringify(error));
     }
 }

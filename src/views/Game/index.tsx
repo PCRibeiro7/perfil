@@ -1,24 +1,39 @@
+import { useDelay } from '@/hooks/useDelay';
 import GuessComponent from './components/BottomCard/GuessComponent';
 import GuessOptions from './components/BottomCard/GuessOptions';
 import TipPanel from './components/TopCard/TipPanel';
 import TipTypePanel from './components/TopCard/TipTypePanel';
 import { Slide } from '@mui/material';
-import { useEffect, useState } from 'react';
+import { sessionSlice } from '@/slices/session';
+import { gameSlice } from '@/slices/game';
+import { useEffect } from 'react';
+import axios from 'axios';
+import { ISessionAction } from '@/models/session/ISessionAction';
 
 export default function Game(): JSX.Element {
-    const [slides, setSlides] = useState({ first: false, second: false });
+    const secondSlideReady = useDelay(4000);
+    const game = gameSlice.use();
+    const session = sessionSlice.use();
+    const currentCard = game.cards[game.currentCardIndex];
+
+    const markCardAsSeen = async (cardId: string, userId: string) => {
+        const { data: user } = await axios.put(`/api/users/${userId}`, {
+            seenCardIds: [cardId],
+        });
+        sessionSlice.dispatch({
+            type: ISessionAction.SET_USER,
+            payload: user,
+        });
+    };
 
     useEffect(() => {
-        setSlides({ first: true, second: false });
-        setTimeout(() => {
-            setSlides({ first: true, second: true });
-        }, 4000);
-    }, []);
+        markCardAsSeen(currentCard.id, session.user.id);
+    }, [currentCard.id, session.user.id]);
 
     return (
         <main className="flex justify-center min-h-screen bg-slate-200">
             <div className="justify-between flex flex-col p-3 w-[30rem] max-w-full sm:p-2">
-                <Slide direction="up" in={slides.first} timeout={1000}>
+                <Slide direction="up" in={true} timeout={1000}>
                     <div className="bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200">
                         <TipTypePanel />
                         <TipPanel />
@@ -26,7 +41,7 @@ export default function Game(): JSX.Element {
                 </Slide>
                 <Slide
                     direction="up"
-                    in={slides.second}
+                    in={secondSlideReady}
                     timeout={1000}
                     mountOnEnter
                     unmountOnExit

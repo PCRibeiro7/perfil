@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
-export function useDelay(time: number, after = true) {
+export function useDelay(timeInSeconds: number, shouldStartTimer = true) {
     const [isReady, setIsReady] = useState(false);
 
     useEffect(() => {
-        if (!after) return;
+        if (!shouldStartTimer) return;
         setTimeout(() => {
             setIsReady(true);
-        }, time);
-    }, [time, after]);
+        }, timeInSeconds);
+    }, [timeInSeconds, shouldStartTimer]);
 
     return isReady;
 }

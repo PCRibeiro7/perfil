@@ -11,7 +11,7 @@ export function sessionReducer(
     { type, payload }: ISessionReducerActions,
 ): ISessionState {
     switch (type) {
-        case ISessionAction.SET_USER_ID:
+        case ISessionAction.SET_USER:
             return {
                 ...state,
                 user: payload,

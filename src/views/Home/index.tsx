@@ -3,18 +3,18 @@ import ICurrentPage from '@/models/game/ICurrentPage';
 import { IGameActions } from '@/models/game/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { sessionSlice } from '@/slices/session';
+import { shuffleArray } from '@/utils/shuffleArray';
 import { Zoom } from '@mui/material';
 
 import Typewriter from 'typewriter-effect';
 import useSound from 'use-sound';
 
-const instructions = [
+const instructions = shuffleArray([
     'Descubra a palavra secreta',
     'Pode ser uma coisa, pessoa, lugar ou ano',
     'Use suas dicas com sabedoria',
     'Use o mínimo de dicas e palpites errados para ganhar mais pontos',
-    'Boa sorte!',
-];
+]);
 
 export default function Home(): JSX.Element {
     const [playSound] = useSound('/sounds/background.mp3', {
@@ -23,8 +23,16 @@ export default function Home(): JSX.Element {
     const startButtonIsReady = useDelay(4000);
     const instructionsIsReady = useDelay(1000);
     const session = sessionSlice.use();
+    const game = gameSlice.use();
+
     const startGame = () => {
         playSound({});
+        gameSlice.dispatch({
+            type: IGameActions.FILTER_CARDS,
+            payload: game.cards.filter(
+                card => !session.user.seenCardIds.includes(card.id),
+            ),
+        });
         gameSlice.dispatch({
             type: IGameActions.CHANGE_PAGE,
             payload: { page: ICurrentPage.GAME },
@@ -45,9 +53,9 @@ export default function Home(): JSX.Element {
                                 strings: [
                                     `Olá, ${session.user.name}`,
                                     ...instructions,
+                                    'Boa sorte!',
                                 ],
                                 autoStart: true,
-
                                 loop: true,
                                 wrapperClassName: 'text-3xl',
                                 deleteSpeed: 5,

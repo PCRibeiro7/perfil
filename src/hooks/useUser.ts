@@ -16,7 +16,7 @@ export function useUser() {
         }
         const user = response.data;
         sessionSlice.dispatch({
-            type: ISessionAction.SET_USER_ID,
+            type: ISessionAction.SET_USER,
             payload: user,
         });
         localStorage.setItem('userId', user.id);

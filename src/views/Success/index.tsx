@@ -5,6 +5,7 @@ import ICurrentPage from '@/models/game/ICurrentPage';
 
 export default function Sucess(): JSX.Element {
     const state = gameSlice.use();
+
     return (
         <div className="h-screen bg-slate-200">
             <Zoom in={true} timeout={1000}>

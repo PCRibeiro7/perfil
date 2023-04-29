@@ -44,6 +44,11 @@ export function gameReducer(
                     payload.currentCard.answer,
                 ],
             };
+        case IGameActions.FILTER_CARDS:
+            return {
+                ...state,
+                cards: payload,
+            };
         default:
             throw new Error(`Invalid action type: ${type}`);
     }
