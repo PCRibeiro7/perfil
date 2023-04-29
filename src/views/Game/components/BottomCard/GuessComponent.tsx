@@ -1,5 +1,5 @@
-import ICurrentPage from '@/models/ICurrentPage';
-import { IGameActions } from '@/models/IGameActions';
+import ICurrentPage from '@/models/game/ICurrentPage';
+import { IGameActions } from '@/models/game/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
 import { useEffect, useState } from 'react';

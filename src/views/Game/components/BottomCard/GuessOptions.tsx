@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { gameSlice } from '@/slices/game';
 import { Zoom } from '@mui/material';
-import { IGameActions } from '@/models/IGameActions';
+import { IGameActions } from '@/models/game/IGameActions';
 
 type GuessOptionsProps = {
     askedQuestions: number[];

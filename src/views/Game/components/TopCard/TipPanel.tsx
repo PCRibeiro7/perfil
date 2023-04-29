@@ -1,4 +1,4 @@
-import { IGameActions } from '@/models/IGameActions';
+import { IGameActions } from '@/models/game/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { Zoom } from '@mui/material';

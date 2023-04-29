@@ -1,5 +1,4 @@
 import { UserRepository } from '@/repositories/User';
-import { Card, User } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -7,14 +6,14 @@ export default async function handler(
     res: NextApiResponse,
 ) {
     try {
-        if (req.method === 'GET') {
-            const users: User[] = await UserRepository.getAllUsers();
+        const { method } = req;
+        if (method === 'GET') {
+            const users = await UserRepository.getAllUsers();
             res.status(200).json(users);
         }
-        if (req.method === 'POST') {
-            const users: User[] = req.body;
-            await UserRepository.createUsers(users);
-            res.status(200);
+        if (method === 'POST') {
+            const user = await UserRepository.createNewUser();
+            res.status(200).json(user);
         }
     } catch (error) {
         console.log(error);

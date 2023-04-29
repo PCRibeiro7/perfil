@@ -2,7 +2,7 @@ import Home from '../views/Home';
 import Game from '../views/Game';
 import Success from '../views/Success';
 import Failure from '@/views/Failure';
-import ICurrentPage from '@/models/ICurrentPage';
+import ICurrentPage from '@/models/game/ICurrentPage';
 
 import { gameSlice } from '@/slices/game';
 
