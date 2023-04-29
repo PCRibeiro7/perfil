@@ -3,6 +3,7 @@ import ICurrentPage from '@/models/game/ICurrentPage';
 import { IGameActions } from '@/models/game/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { sessionSlice } from '@/slices/session';
+import { filterCardsForUser } from '@/utils/filterCardsForUser';
 import { shuffleArray } from '@/utils/shuffleArray';
 import { Zoom } from '@mui/material';
 
@@ -29,9 +30,7 @@ export default function Home(): JSX.Element {
         playSound({});
         gameSlice.dispatch({
             type: IGameActions.FILTER_CARDS,
-            payload: game.cards.filter(
-                card => !session.user.seenCardIds.includes(card.id),
-            ),
+            payload: filterCardsForUser(game.cards, session.user),
         });
         gameSlice.dispatch({
             type: IGameActions.CHANGE_PAGE,
