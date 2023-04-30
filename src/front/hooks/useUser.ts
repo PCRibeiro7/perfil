@@ -1,5 +1,5 @@
-import { ISessionAction } from '@/models/session/ISessionAction';
-import { sessionSlice } from '@/slices/session';
+import { ISessionAction } from '@/front/models/session/ISessionAction';
+import { sessionSlice } from '@/front/slices/session';
 import { User } from '@prisma/client';
 import axios from 'axios';
 import { AxiosResponse } from 'axios';

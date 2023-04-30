@@ -1,5 +1,5 @@
-import { IGameActions } from '@/models/game/IGameActions';
-import { IGameState } from '@/models/game/IGameState';
+import { IGameActions } from '@/front/models/game/IGameActions';
+import { IGameState } from '@/front/models/game/IGameState';
 export interface IGameReducerActions {
     type: IGameActions;
     payload?: any;

@@ -1,14 +1,14 @@
-import { useDelay } from '@/hooks/useDelay';
+import { useDelay } from '@/front/hooks/useDelay';
 import GuessComponent from './components/BottomCard/GuessComponent';
 import GuessOptions from './components/BottomCard/GuessOptions';
 import TipPanel from './components/TopCard/TipPanel';
 import TipTypePanel from './components/TopCard/TipTypePanel';
 import { Slide } from '@mui/material';
-import { sessionSlice } from '@/slices/session';
-import { gameSlice } from '@/slices/game';
+import { sessionSlice } from '@/front/slices/session';
+import { gameSlice } from '@/front/slices/game';
 import { useEffect } from 'react';
 import axios from 'axios';
-import { ISessionAction } from '@/models/session/ISessionAction';
+import { ISessionAction } from '@/front/models/session/ISessionAction';
 import useSound from 'use-sound';
 import { GLOBAL_VOLUME } from '@/utils/consts';
 

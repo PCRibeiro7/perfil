@@ -1,8 +1,8 @@
 import { createSlice } from 'react-slice';
-import cards from '../../assets/cards.json';
-import { IGameState } from '@/models/game/IGameState';
+import cards from '../../../assets/cards.json';
+import { IGameState } from '@/front/models/game/IGameState';
 import { gameReducer } from './reducer';
-import ICurrentPage from '@/models/game/ICurrentPage';
+import ICurrentPage from '@/front/models/game/ICurrentPage';
 import { shuffleArray } from '@/utils/shuffleArray';
 
 const initialGameState: IGameState = {

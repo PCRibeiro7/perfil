@@ -1,10 +1,10 @@
-import CustomZoom from '@/components/CustomZoom';
-import { useDelay } from '@/hooks/useDelay';
-import ICurrentPage from '@/models/game/ICurrentPage';
-import { IGameActions } from '@/models/game/IGameActions';
-import { ISessionAction } from '@/models/session/ISessionAction';
-import { gameSlice } from '@/slices/game';
-import { sessionSlice } from '@/slices/session';
+import CustomZoom from '@/front/components/CustomZoom';
+import { useDelay } from '@/front/hooks/useDelay';
+import ICurrentPage from '@/front/models/game/ICurrentPage';
+import { IGameActions } from '@/front/models/game/IGameActions';
+import { ISessionAction } from '@/front/models/session/ISessionAction';
+import { gameSlice } from '@/front/slices/game';
+import { sessionSlice } from '@/front/slices/session';
 import { GLOBAL_VOLUME } from '@/utils/consts';
 import axios from 'axios';
 import { useEffect, useState } from 'react';

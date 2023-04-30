@@ -1,5 +1,5 @@
-import { ISessionAction } from '@/models/session/ISessionAction';
-import ISessionState from '@/models/session/ISessionState';
+import { ISessionAction } from '@/front/models/session/ISessionAction';
+import ISessionState from '@/front/models/session/ISessionState';
 
 export interface ISessionReducerActions {
     type: ISessionAction;

@@ -1,4 +1,4 @@
-import { ICard } from '@/models/game/ICard';
+import { ICard } from '@/front/models/game/ICard';
 import { User } from '@prisma/client';
 
 export const filterCardsForUser = (cards: ICard[], user: User): ICard[] => {

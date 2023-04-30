@@ -1,6 +1,6 @@
 import { createSlice } from 'react-slice';
 import { sessionReducer } from './reducer';
-import ISessionState from '@/models/session/ISessionState';
+import ISessionState from '@/front/models/session/ISessionState';
 
 const initialSessionState: ISessionState = {
     user: {

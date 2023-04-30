@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { gameSlice } from '@/slices/game';
-import { IGameActions } from '@/models/game/IGameActions';
-import CustomZoom from '@/components/CustomZoom';
+import { gameSlice } from '@/front/slices/game';
+import { IGameActions } from '@/front/models/game/IGameActions';
+import CustomZoom from '@/front/components/CustomZoom';
 import useSound from 'use-sound';
 import { GLOBAL_VOLUME } from '@/utils/consts';
 

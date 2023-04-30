@@ -1,9 +1,9 @@
-import CustomZoom from '@/components/CustomZoom';
-import { useDelay } from '@/hooks/useDelay';
-import ICurrentPage from '@/models/game/ICurrentPage';
-import { IGameActions } from '@/models/game/IGameActions';
-import { gameSlice } from '@/slices/game';
-import { sessionSlice } from '@/slices/session';
+import CustomZoom from '@/front/components/CustomZoom';
+import { useDelay } from '@/front/hooks/useDelay';
+import ICurrentPage from '@/front/models/game/ICurrentPage';
+import { IGameActions } from '@/front/models/game/IGameActions';
+import { gameSlice } from '@/front/slices/game';
+import { sessionSlice } from '@/front/slices/session';
 import { GLOBAL_VOLUME } from '@/utils/consts';
 import { filterCardsForUser } from '@/utils/filterCardsForUser';
 import { shuffleArray } from '@/utils/shuffleArray';

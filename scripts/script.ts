@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 import cards from '../src/assets/cards.json';
-import { ICard } from '@/models/game/ICard';
+import { ICard } from '@/front/models/game/ICard';
 import { randomUUID } from 'crypto';
 
 // const answers = cards.map(card => {
