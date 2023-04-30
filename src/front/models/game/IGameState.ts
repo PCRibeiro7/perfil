@@ -10,4 +10,5 @@ export interface IGameState {
     currentQuestionIndex: number;
     wrongAnswers: number;
     usedTips: number;
+    loading: boolean;
 }

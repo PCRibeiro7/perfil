@@ -49,6 +49,11 @@ export function gameReducer(
                 ...state,
                 cards: payload,
             };
+        case IGameActions.SET_LOADING:
+            return {
+                ...state,
+                loading: payload,
+            };
         default:
             throw new Error(`Invalid action type: ${type}`);
     }

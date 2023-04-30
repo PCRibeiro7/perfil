@@ -4,8 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
     content: [
         './src/pages/**/*.{js,ts,jsx,tsx}',
-        './src/views/**/*.{js,ts,jsx,tsx}',
-        './src/app/**/*.{js,ts,jsx,tsx}',
+        './src/front/views/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
         screens: {

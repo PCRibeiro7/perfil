@@ -7,10 +7,10 @@ import { Slide } from '@mui/material';
 import { sessionSlice } from '@/front/slices/session';
 import { gameSlice } from '@/front/slices/game';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { ISessionAction } from '@/front/models/session/ISessionAction';
 import useSound from 'use-sound';
 import { GLOBAL_VOLUME } from '@/utils/consts';
+import axiosInstance from '@/front/client';
 
 export default function Game(): JSX.Element {
     const [playSound] = useSound('/sounds/slide.mp3', {
@@ -23,7 +23,7 @@ export default function Game(): JSX.Element {
     const currentCard = game.cards[game.currentCardIndex];
 
     const markCardAsSeen = async (cardId: string, userId: string) => {
-        const { data: user } = await axios.put(`/api/users/${userId}`, {
+        const { data: user } = await axiosInstance.put(`/api/users/${userId}`, {
             seenCardIds: [cardId],
         });
         sessionSlice.dispatch({

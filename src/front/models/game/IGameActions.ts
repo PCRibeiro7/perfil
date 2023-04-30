@@ -5,4 +5,5 @@ export enum IGameActions {
     SETUP_NEXT_CARD = 'SETUP_NEXT_CARD',
     CHANGE_PAGE = 'CHANGE_PAGE',
     FILTER_CARDS = 'FILTER_CARDS',
+    SET_LOADING = 'SET_LOADING',
 }

@@ -14,6 +14,7 @@ const initialGameState: IGameState = {
     currentQuestionIndex: 0,
     wrongAnswers: 0,
     usedTips: 1,
+    loading: false,
 };
 
 export const gameSlice = createSlice({

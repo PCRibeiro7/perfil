@@ -1,3 +1,4 @@
+import axiosInstance from '@/front/client';
 import CustomZoom from '@/front/components/CustomZoom';
 import { useDelay } from '@/front/hooks/useDelay';
 import ICurrentPage from '@/front/models/game/ICurrentPage';
@@ -6,7 +7,6 @@ import { ISessionAction } from '@/front/models/session/ISessionAction';
 import { gameSlice } from '@/front/slices/game';
 import { sessionSlice } from '@/front/slices/session';
 import { GLOBAL_VOLUME } from '@/utils/consts';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
 import useSound from 'use-sound';
@@ -42,7 +42,7 @@ export default function GuessComponent() {
     }, [state.wrongAnswers]);
 
     const skipQuestion = async () => {
-        const { data: user } = await axios.put(
+        const { data: user } = await axiosInstance.put(
             `/api/users/${session.user.id}`,
             {
                 skippedCardIds: [currentCard.id],
@@ -73,7 +73,7 @@ export default function GuessComponent() {
             ) > MINIMUN_SIMILARITY
         ) {
             playCorrectSound();
-            const { data: user } = await axios.put(
+            const { data: user } = await axiosInstance.put(
                 `/api/users/${session.user.id}`,
                 {
                     correctCardIds: [currentCard.id],

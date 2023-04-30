@@ -1,18 +1,18 @@
 import { ISessionAction } from '@/front/models/session/ISessionAction';
 import { sessionSlice } from '@/front/slices/session';
 import { User } from '@prisma/client';
-import axios from 'axios';
 import { AxiosResponse } from 'axios';
 import { useCallback, useEffect } from 'react';
+import axiosInstance from '../client';
 
 export function useUser() {
     const setUpUser = useCallback(async () => {
         let stored = localStorage.getItem('userId');
         let response: AxiosResponse<User>;
         if (!stored) {
-            response = await axios.post('/api/users');
+            response = await axiosInstance.post('/api/users');
         } else {
-            response = await axios.get('/api/users/' + stored);
+            response = await axiosInstance.get('/api/users/' + stored);
         }
         const user = response.data;
         sessionSlice.dispatch({

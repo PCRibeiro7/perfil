@@ -14,8 +14,8 @@ export default function Result({
 }): JSX.Element {
     const state = gameSlice.use();
     const session = sessionSlice.use();
-    const secondCardIsReady = useDelay(3000);
-    const buttonIsReady = useDelay(3000, secondCardIsReady);
+    const secondCardIsReady = useDelay(2000);
+    const buttonIsReady = useDelay(2000, secondCardIsReady);
 
     return (
         <div className="h-screen flex flex-col justify-evenly items-center bg-slate-200">
