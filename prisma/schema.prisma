@@ -21,3 +21,11 @@ model User {
   skippedCardIds String[] @default([])
   userCreated    Boolean  @default(true)
 }
+
+model CardStats {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now()) 
+  cardId    String 
+  seenCount Int      @default(0)
+  correctCount Int   @default(0)
+}

@@ -4,6 +4,7 @@ import ICurrentPage from '@/models/game/ICurrentPage';
 import { IGameActions } from '@/models/game/IGameActions';
 import { gameSlice } from '@/slices/game';
 import { sessionSlice } from '@/slices/session';
+import { GLOBAL_VOLUME } from '@/utils/consts';
 import { filterCardsForUser } from '@/utils/filterCardsForUser';
 import { shuffleArray } from '@/utils/shuffleArray';
 

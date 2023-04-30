@@ -1,1 +1,1 @@
-const GLOBAL_VOLUME = 0;
+export const GLOBAL_VOLUME = 0;

@@ -10,6 +10,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { ISessionAction } from '@/models/session/ISessionAction';
 import useSound from 'use-sound';
+import { GLOBAL_VOLUME } from '@/utils/consts';
 
 export default function Game(): JSX.Element {
     const [playSound] = useSound('/sounds/slide.mp3', {

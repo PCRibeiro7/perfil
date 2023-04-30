@@ -3,6 +3,7 @@ import { gameSlice } from '@/slices/game';
 import { IGameActions } from '@/models/game/IGameActions';
 import CustomZoom from '@/components/CustomZoom';
 import useSound from 'use-sound';
+import { GLOBAL_VOLUME } from '@/utils/consts';
 
 export default function GuessOptions() {
     const [play] = useSound('/sounds/tip.mp3', { volume: GLOBAL_VOLUME });
