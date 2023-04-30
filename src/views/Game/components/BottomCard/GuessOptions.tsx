@@ -4,16 +4,12 @@ import { IGameActions } from '@/models/game/IGameActions';
 import CustomZoom from '@/components/CustomZoom';
 import useSound from 'use-sound';
 
-type GuessOptionsProps = {
-    askedQuestions: number[];
-    handleClickonGuessOption: (index: number) => void;
-    currentCard: any;
-};
-
 export default function GuessOptions() {
-    const [play] = useSound('/sounds/tip.mp3');
+    const [play] = useSound('/sounds/tip.mp3', { volume: GLOBAL_VOLUME });
     const [mounted, setMounted] = useState(false);
-    const [playHoverSound] = useSound('/sounds/hover.mp3');
+    const [playHoverSound] = useSound('/sounds/hover.mp3', {
+        volume: GLOBAL_VOLUME,
+    });
 
     const state = gameSlice.use();
     const currentCard = state.cards[state.currentCardIndex];

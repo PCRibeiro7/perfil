@@ -19,7 +19,7 @@ const instructions = shuffleArray([
 
 export default function Home(): JSX.Element {
     const [playSound, { sound }] = useSound('/sounds/background.mp3', {
-        volume: process.env.NEXT_PUBLIC_ENV ? 0.1 : 0.1,
+        volume: GLOBAL_VOLUME,
     });
     const startButtonIsReady = useDelay(4000);
     const instructionsIsReady = useDelay(1000);

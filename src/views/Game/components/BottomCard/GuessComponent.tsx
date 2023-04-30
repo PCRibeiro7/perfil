@@ -13,10 +13,18 @@ import useSound from 'use-sound';
 const MINIMUN_SIMILARITY = 0.6;
 
 export default function GuessComponent() {
-    const [playWrongSound] = useSound('/sounds/wrongAnswer.mp3');
-    const [playCorrectSound] = useSound('/sounds/success.mp3');
-    const [playSkipSound] = useSound('/sounds/skip.mp3');
-    const [playHoverSound] = useSound('/sounds/hover.mp3');
+    const [playWrongSound] = useSound('/sounds/wrongAnswer.mp3', {
+        volume: GLOBAL_VOLUME,
+    });
+    const [playCorrectSound] = useSound('/sounds/success.mp3', {
+        volume: GLOBAL_VOLUME,
+    });
+    const [playSkipSound] = useSound('/sounds/skip.mp3', {
+        volume: GLOBAL_VOLUME,
+    });
+    const [playHoverSound] = useSound('/sounds/hover.mp3', {
+        volume: GLOBAL_VOLUME,
+    });
     const [shake, setShake] = useState(false);
     const state = gameSlice.use();
     const session = sessionSlice.use();

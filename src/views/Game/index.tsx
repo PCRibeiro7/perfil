@@ -12,7 +12,10 @@ import { ISessionAction } from '@/models/session/ISessionAction';
 import useSound from 'use-sound';
 
 export default function Game(): JSX.Element {
-    const [playSound] = useSound('/sounds/slide.mp3', { interrupt: true });
+    const [playSound] = useSound('/sounds/slide.mp3', {
+        interrupt: true,
+        volume: GLOBAL_VOLUME,
+    });
     const secondSlideReady = useDelay(4000);
     const game = gameSlice.use();
     const session = sessionSlice.use();
