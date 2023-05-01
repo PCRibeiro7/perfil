@@ -59,6 +59,11 @@ export function gameReducer(
                 ...state,
                 showCardStats: payload,
             };
+        case IGameActions.SET_SOUND_DATA:
+            return {
+                ...state,
+                sound: payload,
+            };
         default:
             throw new Error(`Invalid action type: ${type}`);
     }

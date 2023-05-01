@@ -7,42 +7,47 @@ import { ISessionAction } from '@/frontend/models/session/ISessionAction';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
 import { CardStatsType } from '@/shared/models/CardStatsType';
-import { GLOBAL_VOLUME } from '@/utils/consts';
+import { MINIMUN_SIMILARITY } from '@/utils/consts';
 import { useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
 import useSound from 'use-sound';
 
-const MINIMUN_SIMILARITY = 0.6;
-
 export default function GuessComponent() {
-    const [playWrongSound] = useSound('/sounds/wrongAnswer.mp3', {
-        volume: GLOBAL_VOLUME,
+    const game = gameSlice.use();
+    const session = sessionSlice.use();
+    const [shake, setShake] = useState(false);
+
+    const [playWrongSound] = useSound('/sounds/wrongAnswer.wav', {
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
     });
-    const [playCorrectSound] = useSound('/sounds/success.mp3', {
-        volume: GLOBAL_VOLUME,
+    const [playCorrectSound] = useSound('/sounds/success.wav', {
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
     });
-    const [playSkipSound] = useSound('/sounds/skip.mp3', {
-        volume: GLOBAL_VOLUME,
+    const [playSkipSound] = useSound('/sounds/skip.wav', {
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
     });
     const [playHoverSound] = useSound('/sounds/hover.mp3', {
-        volume: GLOBAL_VOLUME,
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
     });
-    const [shake, setShake] = useState(false);
-    const state = gameSlice.use();
-    const session = sessionSlice.use();
-    const currentCard = state.cards[state.currentCardIndex];
+
+    const currentCard = game.cards[game.currentCardIndex];
     const mounted = useDelay(1500 + currentCard.tips.length * 300);
 
     useEffect(() => {
-        if (state.wrongAnswers > 0) {
+        if (game.wrongAnswers > 0) {
             setShake(true);
             setTimeout(() => {
                 setShake(false);
             }, 1000);
         }
-    }, [state.wrongAnswers]);
+    }, [game.wrongAnswers]);
 
     const skipQuestion = async () => {
+        playSkipSound();
         const { data: user } = await axiosInstance.put(
             `/api/users/${session.user.id}`,
             {
@@ -53,7 +58,6 @@ export default function GuessComponent() {
             cardId: currentCard.id,
             type: CardStatsType.SKIPPED,
         });
-        playSkipSound();
         sessionSlice.dispatch({
             type: ISessionAction.SET_USER,
             payload: user,
@@ -165,11 +169,11 @@ export default function GuessComponent() {
                 <div className="mt-4 text-center">
                     <h1 className="text-slate-400">
                         {' '}
-                        Palpites Errados: {state.wrongAnswers}
+                        Palpites Errados: {game.wrongAnswers}
                     </h1>
                     <h1 className="text-slate-400">
                         {' '}
-                        Dicas Usadas: {state.usedTips}
+                        Dicas Usadas: {game.usedTips}
                     </h1>
                 </div>
             </CustomZoom>

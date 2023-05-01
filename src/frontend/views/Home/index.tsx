@@ -4,11 +4,9 @@ import ICurrentPage from '@/frontend/models/game/ICurrentPage';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
-import { GLOBAL_VOLUME } from '@/utils/consts';
 import { filterCardsForUser } from '@/utils/filterCardsForUser';
 import { shuffleArray } from '@/utils/shuffleArray';
 import Typewriter from 'typewriter-effect';
-import useSound from 'use-sound';
 
 const instructions = shuffleArray([
     'Descubra a palavra secreta',
@@ -18,16 +16,12 @@ const instructions = shuffleArray([
 ]);
 
 export default function Home(): JSX.Element {
-    const [playSound, { sound }] = useSound('/sounds/background.mp3', {
-        volume: GLOBAL_VOLUME,
-    });
+    const game = gameSlice.use();
+    const session = sessionSlice.use();
     const startButtonIsReady = useDelay(4000);
     const instructionsIsReady = useDelay(1000);
-    const session = sessionSlice.use();
-    const game = gameSlice.use();
 
     const startGame = () => {
-        playSound();
         gameSlice.dispatch({
             type: IGameActions.FILTER_CARDS,
             payload: filterCardsForUser(game.cards, session.user),

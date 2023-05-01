@@ -33,7 +33,7 @@ export function CardStats({ cardId }: { cardId: string }) {
 
     return (
         <Modal open={game.showCardStats} onClose={closeModal}>
-            <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%  ] sm:p-2">
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%] sm:p-2">
                 <div className="bg-white p-6 rounded-xl">
                     {cardStats === undefined ? (
                         <>

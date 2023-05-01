@@ -1,19 +1,23 @@
 import { useEffect, useState } from 'react';
 import useSound from 'use-sound';
-import { GLOBAL_VOLUME } from '@/utils/consts';
 import { gameSlice } from '@/frontend/slices/game';
 import CustomZoom from '@/frontend/components/CustomZoom';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
 
 export default function GuessOptions() {
-    const [play] = useSound('/sounds/tip.mp3', { volume: GLOBAL_VOLUME });
+    const game = gameSlice.use();
     const [mounted, setMounted] = useState(false);
+
+    const [play] = useSound('/sounds/tip.wav', {
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
+    });
     const [playHoverSound] = useSound('/sounds/hover.mp3', {
-        volume: GLOBAL_VOLUME,
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
     });
 
-    const state = gameSlice.use();
-    const currentCard = state.cards[state.currentCardIndex];
+    const currentCard = game.cards[game.currentCardIndex];
 
     useEffect(() => {
         setTimeout(() => {
@@ -48,7 +52,7 @@ export default function GuessOptions() {
                                 onMouseEnter={() => playHoverSound()}
                                 onClick={e => handleClickonGuessOption(index)}
                                 className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600 sm:rounded-full sm:w-12 sm:mx-1"
-                                disabled={state.askedQuestions.includes(index)}
+                                disabled={game.askedQuestions.includes(index)}
                             >
                                 <h1 className="text-xl text-white">
                                     {index + 1}

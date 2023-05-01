@@ -3,7 +3,6 @@ import { useDelay } from '@/frontend/hooks/useDelay';
 import { ISessionAction } from '@/frontend/models/session/ISessionAction';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
-import { GLOBAL_VOLUME } from '@/utils/consts';
 import { Slide } from '@mui/material';
 import { useEffect } from 'react';
 import useSound from 'use-sound';
@@ -13,16 +12,18 @@ import TipPanel from './components/TopCard/TipPanel';
 import TipTypePanel from './components/TopCard/TipTypePanel';
 import { CardStatsType } from '@/shared/models/CardStatsType';
 import { CardStats } from './components/CardStats';
+import SoundController from '@/frontend/components/SoundController';
 
 export default function Game(): JSX.Element {
-    const [playSound] = useSound('/sounds/slide.mp3', {
-        interrupt: true,
-        volume: GLOBAL_VOLUME,
-    });
     const secondSlideReady = useDelay(4000);
     const game = gameSlice.use();
     const session = sessionSlice.use();
     const currentCard = game.cards[game.currentCardIndex];
+    const [playSound] = useSound('/sounds/slide.wav', {
+        interrupt: true,
+        volume: game.sound.masterVolume * 0.5,
+        soundEnabled: !game.sound.isMuted,
+    });
 
     const markCardAsSeen = async (cardId: string, userId: string) => {
         const { data: user } = await axiosInstance.put(`/api/users/${userId}`, {
@@ -43,7 +44,7 @@ export default function Game(): JSX.Element {
     }, [currentCard.id, session.user.id]);
 
     return (
-        <main className="flex justify-center min-h-screen bg-slate-200">
+        <main className="flex justify-center min-h-screen bg-slate-200  relative">
             <div className="justify-between flex flex-col p-3 w-[30rem] max-w-full sm:p-2">
                 <Slide
                     direction="up"
@@ -70,6 +71,7 @@ export default function Game(): JSX.Element {
                 </Slide>
                 <CardStats cardId={currentCard.id} />
             </div>
+            <SoundController />
         </main>
     );
 }

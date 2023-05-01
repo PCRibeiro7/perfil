@@ -1,1 +1,1 @@
-export const GLOBAL_VOLUME = 0;
+export const MINIMUN_SIMILARITY = 0.6;

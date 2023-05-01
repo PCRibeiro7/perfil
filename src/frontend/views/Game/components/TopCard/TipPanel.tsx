@@ -3,6 +3,7 @@ import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { gameSlice } from '@/frontend/slices/game';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
+import useSound from 'use-sound';
 
 type TipPanelProps = {
     currentQuestionIndex: number;
@@ -13,15 +14,25 @@ type TipPanelProps = {
 };
 export default function TipPanel() {
     const [mounted, setMounted] = useState(false);
-    const state = gameSlice.use();
-    const currentCard = state.cards[state.currentCardIndex];
-    const askedQuestionsIndex = state.askedQuestions.indexOf(
-        state.currentQuestionIndex,
+    const game = gameSlice.use();
+
+    const [playHover] = useSound('/sounds/hover.mp3', {
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
+    });
+    const [playClickSound] = useSound('/sounds/tip.wav', {
+        volume: game.sound.masterVolume * 0.2,
+        soundEnabled: !game.sound.isMuted,
+    });
+
+    const currentCard = game.cards[game.currentCardIndex];
+    const askedQuestionsIndex = game.askedQuestions.indexOf(
+        game.currentQuestionIndex,
     );
     const canGoForward =
-        state.askedQuestions[askedQuestionsIndex + 1] !== undefined;
+        game.askedQuestions[askedQuestionsIndex + 1] !== undefined;
     const canGoBack =
-        state.askedQuestions[askedQuestionsIndex - 1] !== undefined;
+        game.askedQuestions[askedQuestionsIndex - 1] !== undefined;
 
     useEffect(() => {
         setTimeout(() => {
@@ -30,8 +41,8 @@ export default function TipPanel() {
     }, []);
 
     const changeTip = (direction: 'back' | 'forward') => {
-        const askedQuestionsIndex = state.askedQuestions.indexOf(
-            state.currentQuestionIndex,
+        const askedQuestionsIndex = game.askedQuestions.indexOf(
+            game.currentQuestionIndex,
         );
         const newAskedQuestionsIndex =
             direction === 'back'
@@ -47,32 +58,44 @@ export default function TipPanel() {
         <div className="h-fit bg-white rounded-xl p-2 relative">
             <div>
                 <CustomZoom shouldStart={mounted}>
-                    <h1 className="text-xl mb-4 text-slate-400">{'Dica: '}</h1>
+                    <div className="flex justify-between items-end">
+                        <h1 className="text-xl mb-4 text-slate-400">
+                            {'Dica: '}
+                        </h1>
+                        <div className="mb-4">
+                            <button
+                                onClick={() => {
+                                    changeTip('back');
+                                    playClickSound();
+                                }}
+                                disabled={!canGoBack}
+                                className="disabled:opacity-10 hover:enabled:bg-slate-200 rounded-full h-10 w-10"
+                                onMouseEnter={() => playHover()}
+                            >
+                                <ChevronLeft />
+                            </button>
+                            <button
+                                onClick={() => {
+                                    changeTip('forward');
+                                    playClickSound();
+                                }}
+                                disabled={!canGoForward}
+                                className="disabled:opacity-10 hover:enabled:bg-slate-200 rounded-full h-10 w-10"
+                                onMouseEnter={() => playHover()}
+                            >
+                                <ChevronRight />
+                            </button>
+                        </div>
+                    </div>
                 </CustomZoom>
                 <CustomZoom
                     shouldStart={mounted}
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
                     <h1 className="text-xl max-w-md">
-                        {currentCard.tips[state.currentQuestionIndex]}
+                        {currentCard.tips[game.currentQuestionIndex]}
                     </h1>
                 </CustomZoom>
-            </div>
-            <div className="absolute px-4 right-0 top-4">
-                <button
-                    onClick={() => changeTip('back')}
-                    disabled={!canGoBack}
-                    className="disabled:opacity-10 hover:enabled:bg-slate-200 rounded-full"
-                >
-                    <ChevronLeft />
-                </button>
-                <button
-                    onClick={() => changeTip('forward')}
-                    disabled={!canGoForward}
-                    className="disabled:opacity-10 hover:enabled:bg-slate-200 rounded-full"
-                >
-                    <ChevronRight />
-                </button>
             </div>
         </div>
     );
