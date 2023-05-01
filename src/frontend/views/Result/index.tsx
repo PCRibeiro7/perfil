@@ -1,9 +1,9 @@
-import { gameSlice } from '@/front/slices/game';
-import { IGameActions } from '@/front/models/game/IGameActions';
-import ICurrentPage from '@/front/models/game/ICurrentPage';
-import { useDelay } from '@/front/hooks/useDelay';
-import { sessionSlice } from '@/front/slices/session';
-import CustomZoom from '@/front/components/CustomZoom';
+import CustomZoom from '@/frontend/components/CustomZoom';
+import { useDelay } from '@/frontend/hooks/useDelay';
+import ICurrentPage from '@/frontend/models/game/ICurrentPage';
+import { IGameActions } from '@/frontend/models/game/IGameActions';
+import { gameSlice } from '@/frontend/slices/game';
+import { sessionSlice } from '@/frontend/slices/session';
 
 export default function Result({
     title,

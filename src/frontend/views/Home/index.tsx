@@ -1,13 +1,12 @@
-import CustomZoom from '@/front/components/CustomZoom';
-import { useDelay } from '@/front/hooks/useDelay';
-import ICurrentPage from '@/front/models/game/ICurrentPage';
-import { IGameActions } from '@/front/models/game/IGameActions';
-import { gameSlice } from '@/front/slices/game';
-import { sessionSlice } from '@/front/slices/session';
+import CustomZoom from '@/frontend/components/CustomZoom';
+import { useDelay } from '@/frontend/hooks/useDelay';
+import ICurrentPage from '@/frontend/models/game/ICurrentPage';
+import { IGameActions } from '@/frontend/models/game/IGameActions';
+import { gameSlice } from '@/frontend/slices/game';
+import { sessionSlice } from '@/frontend/slices/session';
 import { GLOBAL_VOLUME } from '@/utils/consts';
 import { filterCardsForUser } from '@/utils/filterCardsForUser';
 import { shuffleArray } from '@/utils/shuffleArray';
-
 import Typewriter from 'typewriter-effect';
 import useSound from 'use-sound';
 

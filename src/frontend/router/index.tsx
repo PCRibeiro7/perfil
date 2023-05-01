@@ -1,9 +1,9 @@
 import Home from '../views/Home';
 import Game from '../views/Game';
-import ICurrentPage from '@/front/models/game/ICurrentPage';
+import ICurrentPage from '@/frontend/models/game/ICurrentPage';
 
-import { gameSlice } from '@/front/slices/game';
-import Result from '@/front/views/Result';
+import { gameSlice } from '@/frontend/slices/game';
+import Result from '@/frontend/views/Result';
 
 export default function Router(): JSX.Element {
     const state = gameSlice.use();

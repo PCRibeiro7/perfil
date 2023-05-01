@@ -1,6 +1,6 @@
-import CustomZoom from '@/front/components/CustomZoom';
-import { IGameActions } from '@/front/models/game/IGameActions';
-import { gameSlice } from '@/front/slices/game';
+import CustomZoom from '@/frontend/components/CustomZoom';
+import { IGameActions } from '@/frontend/models/game/IGameActions';
+import { gameSlice } from '@/frontend/slices/game';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 import { useEffect, useState } from 'react';
 

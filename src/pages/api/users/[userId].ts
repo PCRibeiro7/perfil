@@ -1,4 +1,4 @@
-import { UserRepository } from '@/back/repositories/User';
+import { UserRepository } from '@/backend/repositories/User';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(

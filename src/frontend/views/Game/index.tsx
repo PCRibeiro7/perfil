@@ -1,16 +1,16 @@
-import { useDelay } from '@/front/hooks/useDelay';
+import axiosInstance from '@/frontend/client';
+import { useDelay } from '@/frontend/hooks/useDelay';
+import { ISessionAction } from '@/frontend/models/session/ISessionAction';
+import { gameSlice } from '@/frontend/slices/game';
+import { sessionSlice } from '@/frontend/slices/session';
+import { GLOBAL_VOLUME } from '@/utils/consts';
+import { Slide } from '@mui/material';
+import { useEffect } from 'react';
+import useSound from 'use-sound';
 import GuessComponent from './components/BottomCard/GuessComponent';
 import GuessOptions from './components/BottomCard/GuessOptions';
 import TipPanel from './components/TopCard/TipPanel';
 import TipTypePanel from './components/TopCard/TipTypePanel';
-import { Slide } from '@mui/material';
-import { sessionSlice } from '@/front/slices/session';
-import { gameSlice } from '@/front/slices/game';
-import { useEffect } from 'react';
-import { ISessionAction } from '@/front/models/session/ISessionAction';
-import useSound from 'use-sound';
-import { GLOBAL_VOLUME } from '@/utils/consts';
-import axiosInstance from '@/front/client';
 
 export default function Game(): JSX.Element {
     const [playSound] = useSound('/sounds/slide.mp3', {

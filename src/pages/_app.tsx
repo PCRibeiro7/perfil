@@ -1,8 +1,8 @@
-import '@/styles/globals.css';
-import { useUser } from '@/front/hooks/useUser';
+import '@/frontend/styles/globals.css';
+import { useUser } from '@/frontend/hooks/useUser';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import Loading from '@/front/components/Loading';
+import Loading from '@/frontend/components/Loading';
 
 export default function App({ Component, pageProps }: AppProps) {
     useUser();

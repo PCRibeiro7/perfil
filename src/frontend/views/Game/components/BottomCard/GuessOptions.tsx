@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { gameSlice } from '@/front/slices/game';
-import { IGameActions } from '@/front/models/game/IGameActions';
-import CustomZoom from '@/front/components/CustomZoom';
 import useSound from 'use-sound';
 import { GLOBAL_VOLUME } from '@/utils/consts';
+import { gameSlice } from '@/frontend/slices/game';
+import CustomZoom from '@/frontend/components/CustomZoom';
+import { IGameActions } from '@/frontend/models/game/IGameActions';
 
 export default function GuessOptions() {
     const [play] = useSound('/sounds/tip.mp3', { volume: GLOBAL_VOLUME });

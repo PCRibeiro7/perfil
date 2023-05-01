@@ -1,5 +1,5 @@
-import CustomZoom from '@/front/components/CustomZoom';
-import { gameSlice } from '@/front/slices/game';
+import CustomZoom from '@/frontend/components/CustomZoom';
+import { gameSlice } from '@/frontend/slices/game';
 import { useEffect, useState } from 'react';
 
 export default function TipTypePanel() {
