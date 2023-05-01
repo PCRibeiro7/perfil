@@ -1,4 +1,4 @@
-import { UserRepository } from '@/backend/repositories/User';
+import { UsersRepository } from '@/backend/repositories/Users';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -14,7 +14,7 @@ export default async function handler(
             throw new Error('userId must be a string');
 
         if (method == 'GET') {
-            const user = await UserRepository.getUserById(userId);
+            const user = await UsersRepository.getUserById(userId);
 
             res.status(200).json(user);
         }
@@ -22,7 +22,7 @@ export default async function handler(
         if (method === 'PUT') {
             if (!body) throw new Error('body is required');
 
-            const user = await UserRepository.updateUserById(userId, body);
+            const user = await UsersRepository.updateUserById(userId, body);
             res.status(200).json(user);
         }
     } catch (error) {

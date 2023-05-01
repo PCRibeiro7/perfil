@@ -6,6 +6,7 @@ import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { ISessionAction } from '@/frontend/models/session/ISessionAction';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
+import { CardStatsType } from '@/shared/models/CardStatsType';
 import { GLOBAL_VOLUME } from '@/utils/consts';
 import { useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
@@ -48,6 +49,10 @@ export default function GuessComponent() {
                 skippedCardIds: [currentCard.id],
             },
         );
+        await axiosInstance.put(`/api/cardStats`, {
+            cardId: currentCard.id,
+            type: CardStatsType.SKIPPED,
+        });
         playSkipSound();
         sessionSlice.dispatch({
             type: ISessionAction.SET_USER,
@@ -82,6 +87,10 @@ export default function GuessComponent() {
             sessionSlice.dispatch({
                 type: ISessionAction.SET_USER,
                 payload: user,
+            });
+            await axiosInstance.put(`/api/cardStats`, {
+                cardId: currentCard.id,
+                type: CardStatsType.CORRECT,
             });
             gameSlice.dispatch({
                 type: IGameActions.SETUP_NEXT_CARD,

@@ -15,6 +15,7 @@ const initialGameState: IGameState = {
     wrongAnswers: 0,
     usedTips: 1,
     loading: false,
+    showCardStats: false,
 };
 
 export const gameSlice = createSlice({

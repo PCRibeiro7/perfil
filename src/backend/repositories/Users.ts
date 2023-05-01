@@ -3,7 +3,7 @@ import { User, PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export class UserRepository {
+export class UsersRepository {
     static async createNewUser(): Promise<User> {
         return await prisma.user.create({ data: {} });
     }

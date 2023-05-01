@@ -1,4 +1,4 @@
-import { UserRepository } from '@/backend/repositories/User';
+import { UsersRepository } from '@/backend/repositories/Users';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -8,11 +8,11 @@ export default async function handler(
     try {
         const { method } = req;
         if (method === 'GET') {
-            const users = await UserRepository.getAllUsers();
+            const users = await UsersRepository.getAllUsers();
             res.status(200).json(users);
         }
         if (method === 'POST') {
-            const user = await UserRepository.createNewUser();
+            const user = await UsersRepository.createNewUser();
             res.status(200).json(user);
         }
     } catch (error) {

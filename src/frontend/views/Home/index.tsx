@@ -28,7 +28,6 @@ export default function Home(): JSX.Element {
 
     const startGame = () => {
         playSound();
-        console.log(game.cards, filterCardsForUser(game.cards, session.user));
         gameSlice.dispatch({
             type: IGameActions.FILTER_CARDS,
             payload: filterCardsForUser(game.cards, session.user),

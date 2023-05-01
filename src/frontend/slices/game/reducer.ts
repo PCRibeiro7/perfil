@@ -54,6 +54,11 @@ export function gameReducer(
                 ...state,
                 loading: payload,
             };
+        case IGameActions.SET_SHOW_CARD_STATS:
+            return {
+                ...state,
+                showCardStats: payload,
+            };
         default:
             throw new Error(`Invalid action type: ${type}`);
     }

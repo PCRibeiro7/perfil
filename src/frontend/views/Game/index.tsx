@@ -11,6 +11,8 @@ import GuessComponent from './components/BottomCard/GuessComponent';
 import GuessOptions from './components/BottomCard/GuessOptions';
 import TipPanel from './components/TopCard/TipPanel';
 import TipTypePanel from './components/TopCard/TipTypePanel';
+import { CardStatsType } from '@/shared/models/CardStatsType';
+import { CardStats } from './components/CardStats';
 
 export default function Game(): JSX.Element {
     const [playSound] = useSound('/sounds/slide.mp3', {
@@ -25,6 +27,10 @@ export default function Game(): JSX.Element {
     const markCardAsSeen = async (cardId: string, userId: string) => {
         const { data: user } = await axiosInstance.put(`/api/users/${userId}`, {
             seenCardIds: [cardId],
+        });
+        await axiosInstance.put(`/api/cardStats`, {
+            cardId,
+            type: CardStatsType.SEEN,
         });
         sessionSlice.dispatch({
             type: ISessionAction.SET_USER,
@@ -62,6 +68,7 @@ export default function Game(): JSX.Element {
                         <GuessComponent />
                     </div>
                 </Slide>
+                <CardStats cardId={currentCard.id} />
             </div>
         </main>
     );

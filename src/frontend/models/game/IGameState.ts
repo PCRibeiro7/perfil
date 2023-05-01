@@ -11,4 +11,5 @@ export interface IGameState {
     wrongAnswers: number;
     usedTips: number;
     loading: boolean;
+    showCardStats: boolean;
 }
