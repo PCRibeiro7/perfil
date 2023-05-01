@@ -15,7 +15,7 @@ model User {
   id             String   @id @default(auto()) @map("_id") @db.ObjectId
   createdAt      DateTime @default(now())
   name           String   @default("Usuário Anônimo")
-  email          String?  @unique
+  email          String?  
   seenCardIds    String[] @default([])
   correctCardIds String[] @default([])
   skippedCardIds String[] @default([])
