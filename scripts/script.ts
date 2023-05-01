@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs';
-import cards from '../src/assets/cards.json';
+import cards from '../src/frontend/assets/cards.json';
 import { ICard } from '@/frontend/models/game/ICard';
 import { randomUUID } from 'crypto';
 
