@@ -134,9 +134,7 @@ export default function GuessComponent() {
                 </CustomZoom>
             </form>
             <CustomZoom
-                shouldStart={
-                    currentCard.tips.length === state.askedQuestions.length
-                }
+                shouldStart={mounted}
                 style={{
                     transitionDelay:
                         currentCard.tips.length === state.askedQuestions.length
