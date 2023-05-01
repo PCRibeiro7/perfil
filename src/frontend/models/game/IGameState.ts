@@ -1,6 +1,10 @@
 import { ICard } from './ICard';
 import ICurrentPage from './ICurrentPage';
 
+export interface ISound {
+    isMuted: boolean;
+    masterVolume: number;
+}
 export interface IGameState {
     currentPage: ICurrentPage;
     cards: ICard[];
@@ -12,4 +16,5 @@ export interface IGameState {
     usedTips: number;
     loading: boolean;
     showCardStats: boolean;
+    sound: ISound;
 }

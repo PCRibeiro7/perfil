@@ -16,6 +16,10 @@ const initialGameState: IGameState = {
     usedTips: 1,
     loading: false,
     showCardStats: false,
+    sound: {
+        isMuted: true,
+        masterVolume: 0.5,
+    },
 };
 
 export const gameSlice = createSlice({
