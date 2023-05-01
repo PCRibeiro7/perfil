@@ -136,10 +136,7 @@ export default function GuessComponent() {
             <CustomZoom
                 shouldStart={mounted}
                 style={{
-                    transitionDelay:
-                        currentCard.tips.length === state.askedQuestions.length
-                            ? `500ms`
-                            : '0ms',
+                    transitionDelay: mounted ? `1500ms` : '0ms',
                 }}
                 mountOnEnter
                 unmountOnExit
