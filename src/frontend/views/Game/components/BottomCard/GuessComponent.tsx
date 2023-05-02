@@ -7,6 +7,7 @@ import { ISessionAction } from '@/frontend/models/session/ISessionAction';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
 import { CardStatsType } from '@/shared/models/CardStatsType';
+import calculateScore from '@/utils/calculateScore';
 import { MINIMUN_SIMILARITY } from '@/utils/consts';
 import { useEffect, useState } from 'react';
 import stringSimilarity from 'string-similarity';
@@ -82,6 +83,7 @@ export default function GuessComponent() {
                 `/api/users/${session.user.id}`,
                 {
                     correctCardIds: [currentCard.id],
+                    score: (session.user.score || 0) + calculateScore(game),
                 },
             );
             sessionSlice.dispatch({

@@ -35,19 +35,19 @@ export default function Result({
     return (
         <div className="h-screen flex flex-col justify-evenly items-center bg-slate-200">
             <CustomZoom shouldStart={true} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl mb-8 min-w-[25%] max-w-[90%]">
-                    <h1 className="text-2xl text-slate-400 mb-1">{title}</h1>
-                    <h1 className="text-3xl mb-4">{subtitle}</h1>
-                    <h1 className="text-5xl">{currentCard.answer}</h1>
+                <div className="bg-white p-6 rounded-xl min-w-[25%] max-w-[90%]">
+                    <h1 className="text-xl text-slate-400 mb-1">{title}</h1>
+                    <h1 className="text-2xl mb-4">{subtitle}</h1>
+                    <h1 className="text-3xl">{currentCard.answer}</h1>
                 </div>
             </CustomZoom>
             <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl mb-8 min-w-[25%] max-w-[90%]">
+                <div className="bg-white p-6 rounded-xl min-w-[25%] max-w-[90%]">
                     <div className="flex justify-between mb-4">
-                        <h1 className="text-2xl text-slate-400">
+                        <h1 className="text-xl text-slate-400">
                             Pontuação na rodada:{' '}
                         </h1>
-                        <h1 className="text-2xl">
+                        <h1 className="text-xl">
                             {' '}
                             {type === ICurrentPage.FAILURE
                                 ? 0
@@ -56,33 +56,33 @@ export default function Result({
                         </h1>
                     </div>
                     {type === ICurrentPage.FAILURE ? (
-                        <h1 className="text-2xl text-slate-400">
+                        <h1 className="text-xl text-slate-400">
                             Voce não pontuou porque pulou a carta...
                         </h1>
                     ) : (
                         <>
                             <div className="flex justify-between">
-                                <h1 className="text-2xl text-slate-400">
-                                    Pontuação Base:
+                                <h1 className="text-xl text-slate-400">
+                                    Pontuação Máxima:
                                 </h1>
-                                <h1 className="text-2xl">100 pontos</h1>
+                                <h1 className="text-xl">100 pontos</h1>
                             </div>
                             <div className="flex justify-between">
-                                <h1 className="text-2xl text-slate-400">
-                                    Dicas Usadas:
+                                <h1 className="text-xl text-slate-400">
+                                    Dicas Usadas{`(${game.usedTips - 1})`}:
                                 </h1>
-                                <h1 className="text-2xl">
-                                    -{5 * (game.usedTips - 1)}
-                                    pontos
+                                <h1 className="text-xl">
+                                    -5x{game.usedTips - 1} = -
+                                    {5 * (game.usedTips - 1)} pontos
                                 </h1>
                             </div>
                             <div className="flex justify-between">
-                                <h1 className="text-2xl text-slate-400">
-                                    Palpites Errados:
+                                <h1 className="text-xl text-slate-400">
+                                    Palpites Errados:{`(${game.wrongAnswers})`}
                                 </h1>
-                                <h1 className="text-2xl">
-                                    -{2 * (game.usedTips - 1)}
-                                    pontos
+                                <h1 className="text-xl">
+                                    -2x{game.wrongAnswers} = -
+                                    {2 * game.wrongAnswers} pontos
                                 </h1>
                             </div>
                         </>
@@ -90,7 +90,7 @@ export default function Result({
                 </div>
             </CustomZoom>
             <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl mb-8 min-w-[25%] max-w-[90%]">
+                <div className="bg-white p-6 rounded-xl min-w-[25%] max-w-[90%]">
                     <div className="flex justify-between">
                         <h1 className="text-2xl text-slate-400">Já acertou:</h1>
                         <h1 className="text-2xl">
