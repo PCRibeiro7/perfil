@@ -19,7 +19,8 @@ model User {
   seenCardIds    String[] @default([])
   correctCardIds String[] @default([])
   skippedCardIds String[] @default([])
-  userCreated    Boolean  @default(true)
+  userCreated    Boolean  @default(false)
+  score          Int      @default(0)
 }
 
 model CardStats {

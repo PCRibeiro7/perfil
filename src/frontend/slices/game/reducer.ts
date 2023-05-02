@@ -43,6 +43,8 @@ export function gameReducer(
                     ...state.correctAnswers,
                     payload.currentCard.answer,
                 ],
+                wrongAnswers: 0,
+                usedTips: 1,
             };
         case IGameActions.FILTER_CARDS:
             return {

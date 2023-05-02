@@ -1,7 +1,6 @@
 import { PrismaClient, CardStats } from '@prisma/client';
 import { CardStatsType } from '../../shared/models/CardStatsType';
-
-const prisma = new PrismaClient();
+import { prisma } from '../client';
 
 export class CardStatsRepository {
     static async getCardStatsByCardId(

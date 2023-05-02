@@ -1,7 +1,6 @@
 import mergeTwoArrays from '@/utils/mergeTwoArrays';
 import { User, PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '../client';
 
 export class UsersRepository {
     static async createNewUser(): Promise<User> {
