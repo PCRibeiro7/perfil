@@ -4,6 +4,10 @@ import { User } from '@prisma/client';
 import { useEffect, useState } from 'react';
 import axiosInstance from '../client';
 
+interface UsersRanking extends User {
+    rank: number;
+}
+
 export default function UsersRanking({
     isOpen,
     onClose,
@@ -11,12 +15,23 @@ export default function UsersRanking({
     isOpen: boolean;
     onClose: () => void;
 }) {
-    const [users, setUsers] = useState<User[]>([]);
+    const [users, setUsers] = useState<UsersRanking[]>([]);
 
     useEffect(() => {
         async function getUsers() {
             const { data: users } = await axiosInstance.get('/api/users');
-            setUsers(users);
+
+            const sortedUsers = users.sort(
+                (a: User, b: User) => b.score - a.score,
+            );
+
+            const userWithRanking: UsersRanking[] = sortedUsers.map(
+                (user: User, index: number) => ({
+                    ...user,
+                    rank: index + 1,
+                }),
+            );
+            setUsers(userWithRanking);
         }
         getUsers();
     }, []);
@@ -30,23 +45,34 @@ export default function UsersRanking({
                 <DataGrid
                     rows={users}
                     columns={[
-                        { field: 'name', headerName: 'Nome', flex: 70 },
+                        {
+                            field: 'rank',
+                            headerName: 'Rank',
+                            flex: 1,
+                            valueGetter: (params: GridValueGetterParams) =>
+                                params.row.rank,
+                        },
+                        { field: 'name', headerName: 'Nome', flex: 1 },
                         {
                             field: 'correctCardIds',
                             headerName: 'Cartas Corretas',
-                            flex: 70,
+                            flex: 1,
                             valueGetter: (params: GridValueGetterParams) =>
                                 params.row.correctCardIds.length,
+                            align: 'right',
+                            headerAlign: 'right',
                         },
                         {
                             field: 'score',
                             headerName: 'Score',
-                            flex: 70,
+                            flex: 1,
+                            align: 'right',
+                            headerAlign: 'right',
                         },
                     ]}
                     initialState={{
                         sorting: {
-                            sortModel: [{ field: 'score', sort: 'desc' }],
+                            sortModel: [{ field: 'rank', sort: 'asc' }],
                         },
                     }}
                     paginationModel={{ page: 0, pageSize: 10 }}
