@@ -63,10 +63,6 @@ export default function GuessComponent() {
             payload: user,
         });
         gameSlice.dispatch({
-            type: IGameActions.SETUP_NEXT_CARD,
-            payload: { currentCard },
-        });
-        gameSlice.dispatch({
             type: IGameActions.CHANGE_PAGE,
             payload: { page: ICurrentPage.FAILURE },
         });
@@ -95,10 +91,6 @@ export default function GuessComponent() {
             await axiosInstance.put(`/api/cardStats`, {
                 cardId: currentCard.id,
                 type: CardStatsType.CORRECT,
-            });
-            gameSlice.dispatch({
-                type: IGameActions.SETUP_NEXT_CARD,
-                payload: { currentCard },
             });
             gameSlice.dispatch({
                 type: IGameActions.CHANGE_PAGE,

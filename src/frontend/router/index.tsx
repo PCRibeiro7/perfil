@@ -13,8 +13,20 @@ export default function Router(): JSX.Element {
         case ICurrentPage.GAME:
             return <Game />;
         case ICurrentPage.SUCCESS:
-            return <Result title="Parabéns!!" subtitle="Resposta:" />;
+            return (
+                <Result
+                    title="Parabéns!!"
+                    subtitle="Resposta:"
+                    type={ICurrentPage.SUCCESS}
+                />
+            );
         case ICurrentPage.FAILURE:
-            return <Result title="Oops!" subtitle="A resposta era:" />;
+            return (
+                <Result
+                    title="Oops!"
+                    subtitle="A resposta era:"
+                    type={ICurrentPage.FAILURE}
+                />
+            );
     }
 }

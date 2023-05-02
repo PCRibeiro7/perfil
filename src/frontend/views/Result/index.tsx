@@ -14,7 +14,7 @@ export default function Result({
 }: {
     title: string;
     subtitle: string;
-    type: 'correctAnswer' | 'skipQuestion';
+    type: ICurrentPage.SUCCESS | ICurrentPage.FAILURE;
 }): JSX.Element {
     const game = gameSlice.use();
     const session = sessionSlice.use();
@@ -38,40 +38,55 @@ export default function Result({
                 <div className="bg-white p-6 rounded-xl mb-8 min-w-[25%] max-w-[90%]">
                     <h1 className="text-2xl text-slate-400 mb-1">{title}</h1>
                     <h1 className="text-3xl mb-4">{subtitle}</h1>
-                    <h1 className="text-5xl">
-                        {game.correctAnswers[game.correctAnswers.length - 1]}
-                    </h1>
+                    <h1 className="text-5xl">{currentCard.answer}</h1>
                 </div>
             </CustomZoom>
             <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
                 <div className="bg-white p-6 rounded-xl mb-8 min-w-[25%] max-w-[90%]">
-                    <h1 className="text-2xl text-slate-400 mb-1">
-                        Pontuação na rodada: {calculateScore(game)} pontos
-                    </h1>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between mb-4">
                         <h1 className="text-2xl text-slate-400">
-                            Pontuação Base:
-                        </h1>
-                        <h1 className="text-2xl">100 pontos</h1>
-                    </div>
-                    <div className="flex justify-between">
-                        <h1 className="text-2xl text-slate-400">
-                            Dicas Usadas:
+                            Pontuação na rodada:{' '}
                         </h1>
                         <h1 className="text-2xl">
-                            -{5 * (game.usedTips - 1)}
+                            {' '}
+                            {type === ICurrentPage.FAILURE
+                                ? 0
+                                : calculateScore(game)}{' '}
                             pontos
                         </h1>
                     </div>
-                    <div className="flex justify-between">
+                    {type === ICurrentPage.FAILURE ? (
                         <h1 className="text-2xl text-slate-400">
-                            Palpites Errados:
+                            Voce não pontuou porque pulou a carta...
                         </h1>
-                        <h1 className="text-2xl">
-                            -{2 * (game.usedTips - 1)}
-                            pontos
-                        </h1>
-                    </div>
+                    ) : (
+                        <>
+                            <div className="flex justify-between">
+                                <h1 className="text-2xl text-slate-400">
+                                    Pontuação Base:
+                                </h1>
+                                <h1 className="text-2xl">100 pontos</h1>
+                            </div>
+                            <div className="flex justify-between">
+                                <h1 className="text-2xl text-slate-400">
+                                    Dicas Usadas:
+                                </h1>
+                                <h1 className="text-2xl">
+                                    -{5 * (game.usedTips - 1)}
+                                    pontos
+                                </h1>
+                            </div>
+                            <div className="flex justify-between">
+                                <h1 className="text-2xl text-slate-400">
+                                    Palpites Errados:
+                                </h1>
+                                <h1 className="text-2xl">
+                                    -{2 * (game.usedTips - 1)}
+                                    pontos
+                                </h1>
+                            </div>
+                        </>
+                    )}
                 </div>
             </CustomZoom>
             <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
