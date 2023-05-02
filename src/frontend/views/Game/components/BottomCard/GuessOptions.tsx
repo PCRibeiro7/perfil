@@ -45,7 +45,7 @@ export default function GuessOptions() {
                                     : '0ms',
                             }}
                         >
-                            <div>
+                            <>
                                 <CustomButton
                                     onClick={() =>
                                         handleClickonGuessOption(index)
@@ -59,7 +59,7 @@ export default function GuessOptions() {
                                         {index + 1}
                                     </h1>
                                 </CustomButton>
-                            </div>
+                            </>
                         </CustomZoom>
                     ),
                 )}
