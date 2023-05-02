@@ -12,6 +12,7 @@ const initialSessionState: ISessionState = {
         seenCardIds: [],
         skippedCardIds: [],
         userCreated: false,
+        score: 0,
     },
 };
 
