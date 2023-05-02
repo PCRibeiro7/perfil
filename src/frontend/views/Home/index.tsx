@@ -110,7 +110,10 @@ export default function Home(): JSX.Element {
                         }}
                         className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
                     >
-                        <h1 className="text-xl text-white">Criar Usuário</h1>
+                        <h1 className="text-xl text-white">
+                            {session.user.userCreated ? 'Alterar' : 'Cadastrar'}{' '}
+                            nome
+                        </h1>
                     </CustomButton>
                     <CustomButton
                         onClick={() => {
@@ -139,8 +142,9 @@ export default function Home(): JSX.Element {
                         autoComplete="off"
                     >
                         <label>
-                            <h1 className="text-xl text-slate-600 mb-6">
-                                Bem Vindo! <br /> Esse nome te identificará no
+                            <h1 className="text-base text-slate-600 mb-6">
+                                Olá, {session.user.name}! <br />
+                                <br /> Escolha o nome que te identificará no
                                 ranking:
                             </h1>
                         </label>
@@ -149,13 +153,16 @@ export default function Home(): JSX.Element {
                             name="userName"
                             placeholder="Senhor Waldemar"
                             className="text-center w-full h-10 text-xl border-2 border-slate-200 rounded-xl mb-2 placeholder:text-slate-400"
+                            defaultValue={session.user.name}
                         />
                         <div>
                             <CustomButton
                                 className={`w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600`}
                             >
                                 <h1 className="text-xl text-white">
-                                    {'Criar'}
+                                    {session.user.userCreated
+                                        ? 'Alterar'
+                                        : 'Cadastrar'}
                                 </h1>
                             </CustomButton>
                         </div>
