@@ -1,5 +1,5 @@
 import { Modal } from '@mui/material';
-// import { DataGrid, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridValueGetterParams } from '@mui/x-data-grid';
 import { User } from '@prisma/client';
 import { useEffect, useState } from 'react';
 import axiosInstance from '../client';
@@ -27,7 +27,7 @@ export default function UsersRanking({
                 <h1 className="text-xl text-slate-600 mb-6">
                     Ranking de Jogadores:
                 </h1>
-                {/* <DataGrid
+                <DataGrid
                     rows={users}
                     columns={[
                         { field: 'name', headerName: 'Nome', flex: 70 },
@@ -50,7 +50,7 @@ export default function UsersRanking({
                         },
                     }}
                     paginationModel={{ page: 0, pageSize: 10 }}
-                /> */}
+                />
             </div>
         </Modal>
     );

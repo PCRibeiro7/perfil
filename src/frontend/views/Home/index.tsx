@@ -105,17 +105,17 @@ export default function Home(): JSX.Element {
                         onClick={() => {
                             setCreateUserModalIsOpen(true);
                         }}
-                        className="bg-slate-400 rounded-xl hover:bg-slate-600 mt-4 w-60"
+                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-60"
                     >
-                        <h1 className="text-xl text-black">Criar Usuário</h1>
+                        <h1 className="text-xl text-white">Criar Usuário</h1>
                     </button>
                     <button
                         onClick={() => {
                             setRankingModalIsOpen(true);
                         }}
-                        className="bg-slate-400 rounded-xl hover:bg-slate-600 mt-4 w-60"
+                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-60"
                     >
-                        <h1 className="text-xl text-black">Ranking</h1>
+                        <h1 className="text-xl text-white">Ranking</h1>
                     </button>
                 </div>
             </CustomZoom>
