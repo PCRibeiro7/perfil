@@ -43,6 +43,7 @@ export default function UsersRanking({
                     Ranking de Jogadores:
                 </h1>
                 <DataGrid
+                    sx={{ fontFamily: 'DM Sans', maxHeight: '70vh' }}
                     rows={users}
                     columns={[
                         {
