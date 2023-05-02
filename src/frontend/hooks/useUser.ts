@@ -12,7 +12,9 @@ export function useUser() {
         if (!stored) {
             response = await axiosInstance.post('/api/users');
         } else {
-            response = await axiosInstance.get('/api/users/' + stored);
+            response = await axiosInstance
+                .get('/api/users/' + stored)
+                .catch(async _e => await axiosInstance.post('/api/users'));
         }
         const user = response.data;
         sessionSlice.dispatch({
