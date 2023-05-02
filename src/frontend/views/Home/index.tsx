@@ -1,4 +1,5 @@
 import axiosInstance from '@/frontend/client';
+import CustomButton from '@/frontend/components/CustomButton';
 import CustomZoom from '@/frontend/components/CustomZoom';
 import UsersRanking from '@/frontend/components/UsersRanking';
 import { useDelay } from '@/frontend/hooks/useDelay';
@@ -86,12 +87,14 @@ export default function Home(): JSX.Element {
                 )}
             </div>
             <CustomZoom shouldStart={startButtonIsReady} timeout={1000}>
-                <button
-                    onClick={startGame}
-                    className="bg-black p-2 rounded-xl w-60  hover:bg-slate-600"
-                >
-                    <h1 className="text-3xl text-white">Jogar</h1>
-                </button>
+                <div>
+                    <CustomButton
+                        onClick={startGame}
+                        className="bg-black p-2 rounded-xl w-60  hover:bg-slate-600"
+                    >
+                        <h1 className="text-3xl text-white">Jogar</h1>
+                    </CustomButton>
+                </div>
             </CustomZoom>
             <CustomZoom
                 shouldStart={startButtonIsReady}
@@ -101,22 +104,22 @@ export default function Home(): JSX.Element {
                 }}
             >
                 <div className="flex flex-col">
-                    <button
+                    <CustomButton
                         onClick={() => {
                             setCreateUserModalIsOpen(true);
                         }}
-                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-60"
+                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
                     >
                         <h1 className="text-xl text-white">Criar Usuário</h1>
-                    </button>
-                    <button
+                    </CustomButton>
+                    <CustomButton
                         onClick={() => {
                             setRankingModalIsOpen(true);
                         }}
-                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-60"
+                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
                     >
                         <h1 className="text-xl text-white">Ranking</h1>
-                    </button>
+                    </CustomButton>
                 </div>
             </CustomZoom>
             <UsersRanking
@@ -148,14 +151,13 @@ export default function Home(): JSX.Element {
                             className="text-center w-full h-10 text-xl border-2 border-slate-200 rounded-xl mb-2 placeholder:text-slate-400"
                         />
                         <div>
-                            <button
-                                // onMouseEnter={() => playHoverSound()}
+                            <CustomButton
                                 className={`w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600`}
                             >
                                 <h1 className="text-xl text-white">
                                     {'Criar'}
                                 </h1>
-                            </button>
+                            </CustomButton>
                         </div>
                     </form>
                 </div>

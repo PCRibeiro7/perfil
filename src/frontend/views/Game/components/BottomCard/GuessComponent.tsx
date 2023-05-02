@@ -1,4 +1,5 @@
 import axiosInstance from '@/frontend/client';
+import CustomButton from '@/frontend/components/CustomButton';
 import CustomZoom from '@/frontend/components/CustomZoom';
 import { useDelay } from '@/frontend/hooks/useDelay';
 import ICurrentPage from '@/frontend/models/game/ICurrentPage';
@@ -27,10 +28,6 @@ export default function GuessComponent() {
         soundEnabled: !game.sound.isMuted,
     });
     const [playSkipSound] = useSound('/sounds/skip.wav', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
-    const [playHoverSound] = useSound('/sounds/hover.mp3', {
         volume: game.sound.masterVolume * 0.2,
         soundEnabled: !game.sound.isMuted,
     });
@@ -127,8 +124,7 @@ export default function GuessComponent() {
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
                     <div>
-                        <button
-                            onMouseEnter={() => playHoverSound()}
+                        <CustomButton
                             className={`w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600 ${
                                 shake ? 'shake' : ''
                             }`}
@@ -136,7 +132,7 @@ export default function GuessComponent() {
                             <h1 className="text-xl text-white">
                                 {'Responder'}
                             </h1>
-                        </button>
+                        </CustomButton>
                     </div>
                 </CustomZoom>
             </form>
@@ -148,13 +144,14 @@ export default function GuessComponent() {
                 mountOnEnter
                 unmountOnExit
             >
-                <button
-                    onMouseEnter={() => playHoverSound()}
-                    className={`w-full h-10 bg-slate-300 rounded-xl hover:bg-slate-200 mt-2`}
-                    onClick={skipQuestion}
-                >
-                    <h1 className="text-xl text-black">{'Pular'}</h1>
-                </button>
+                <div>
+                    <CustomButton
+                        className={`w-full h-10 bg-slate-300 rounded-xl hover:bg-slate-200 mt-2`}
+                        onClick={skipQuestion}
+                    >
+                        <h1 className="text-xl text-black">{'Pular'}</h1>
+                    </CustomButton>
+                </div>
             </CustomZoom>
             <CustomZoom
                 shouldStart={mounted}

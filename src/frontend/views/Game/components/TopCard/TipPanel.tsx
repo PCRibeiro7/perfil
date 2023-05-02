@@ -1,3 +1,4 @@
+import CustomButton from '@/frontend/components/CustomButton';
 import CustomZoom from '@/frontend/components/CustomZoom';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { gameSlice } from '@/frontend/slices/game';
@@ -15,15 +16,6 @@ type TipPanelProps = {
 export default function TipPanel() {
     const [mounted, setMounted] = useState(false);
     const game = gameSlice.use();
-
-    const [playHover] = useSound('/sounds/hover.mp3', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
-    const [playClickSound] = useSound('/sounds/tip.wav', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
 
     const currentCard = game.cards[game.currentCardIndex];
     const askedQuestionsIndex = game.askedQuestions.indexOf(
@@ -63,28 +55,24 @@ export default function TipPanel() {
                             {'Dica: '}
                         </h1>
                         <div className="mb-4">
-                            <button
+                            <CustomButton
                                 onClick={() => {
                                     changeTip('back');
-                                    playClickSound();
                                 }}
                                 disabled={!canGoBack}
                                 className="disabled:opacity-10 hover:enabled:bg-slate-200 rounded-full h-10 w-10"
-                                onMouseEnter={() => playHover()}
                             >
                                 <ChevronLeft />
-                            </button>
-                            <button
+                            </CustomButton>
+                            <CustomButton
                                 onClick={() => {
                                     changeTip('forward');
-                                    playClickSound();
                                 }}
                                 disabled={!canGoForward}
                                 className="disabled:opacity-10 hover:enabled:bg-slate-200 rounded-full h-10 w-10"
-                                onMouseEnter={() => playHover()}
                             >
                                 <ChevronRight />
-                            </button>
+                            </CustomButton>
                         </div>
                     </div>
                 </CustomZoom>

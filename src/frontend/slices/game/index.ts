@@ -17,7 +17,7 @@ const initialGameState: IGameState = {
     loading: false,
     showCardStats: false,
     sound: {
-        isMuted: true,
+        isMuted: false,
         masterVolume: 0.5,
     },
 };

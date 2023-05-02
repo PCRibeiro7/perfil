@@ -3,16 +3,13 @@ import useSound from 'use-sound';
 import { gameSlice } from '@/frontend/slices/game';
 import CustomZoom from '@/frontend/components/CustomZoom';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
+import CustomButton from '@/frontend/components/CustomButton';
 
 export default function GuessOptions() {
     const game = gameSlice.use();
     const [mounted, setMounted] = useState(false);
 
     const [play] = useSound('/sounds/tip.wav', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
-    const [playHoverSound] = useSound('/sounds/hover.mp3', {
         volume: game.sound.masterVolume * 0.2,
         soundEnabled: !game.sound.isMuted,
     });
@@ -48,16 +45,21 @@ export default function GuessOptions() {
                                     : '0ms',
                             }}
                         >
-                            <button
-                                onMouseEnter={() => playHoverSound()}
-                                onClick={e => handleClickonGuessOption(index)}
-                                className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600 sm:rounded-full sm:w-12 sm:mx-1"
-                                disabled={game.askedQuestions.includes(index)}
-                            >
-                                <h1 className="text-xl text-white">
-                                    {index + 1}
-                                </h1>
-                            </button>
+                            <div>
+                                <CustomButton
+                                    onClick={() =>
+                                        handleClickonGuessOption(index)
+                                    }
+                                    className="w-full h-12 justify-self-center rounded-md bg-slate-950 disabled:bg-slate-200 hover:bg-slate-600 sm:rounded-full sm:w-12 sm:mx-1"
+                                    disabled={game.askedQuestions.includes(
+                                        index,
+                                    )}
+                                >
+                                    <h1 className="text-xl text-white">
+                                        {index + 1}
+                                    </h1>
+                                </CustomButton>
+                            </div>
                         </CustomZoom>
                     ),
                 )}

@@ -1,3 +1,4 @@
+import CustomButton from '@/frontend/components/CustomButton';
 import CustomZoom from '@/frontend/components/CustomZoom';
 import { useDelay } from '@/frontend/hooks/useDelay';
 import ICurrentPage from '@/frontend/models/game/ICurrentPage';
@@ -22,15 +23,6 @@ export default function Result({
     const buttonIsReady = useDelay(2000, secondCardIsReady);
 
     const currentCard = game.cards[game.currentCardIndex];
-
-    const [playHover] = useSound('/sounds/hover.mp3', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
-    const [playClickSound] = useSound('/sounds/tip.wav', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
 
     return (
         <div className="h-screen flex flex-col justify-evenly items-center bg-slate-200">
@@ -111,23 +103,23 @@ export default function Result({
                 </div>
             </CustomZoom>
             <CustomZoom shouldStart={buttonIsReady} timeout={1000}>
-                <button
-                    onMouseEnter={() => playHover()}
-                    onClick={() => {
-                        playClickSound();
-                        gameSlice.dispatch({
-                            type: IGameActions.SETUP_NEXT_CARD,
-                            payload: { currentCard },
-                        });
-                        gameSlice.dispatch({
-                            type: IGameActions.CHANGE_PAGE,
-                            payload: { page: ICurrentPage.GAME },
-                        });
-                    }}
-                    className="bg-black p-2 rounded-xl w-40 hover:bg-slate-600"
-                >
-                    <h1 className="text-2xl text-white ">Próxima Carta</h1>
-                </button>
+                <div>
+                    <CustomButton
+                        onClick={() => {
+                            gameSlice.dispatch({
+                                type: IGameActions.SETUP_NEXT_CARD,
+                                payload: { currentCard },
+                            });
+                            gameSlice.dispatch({
+                                type: IGameActions.CHANGE_PAGE,
+                                payload: { page: ICurrentPage.GAME },
+                            });
+                        }}
+                        className="bg-black p-2 rounded-xl w-40 hover:bg-slate-600"
+                    >
+                        <h1 className="text-2xl text-white ">Próxima Carta</h1>
+                    </CustomButton>
+                </div>
             </CustomZoom>
         </div>
     );
