@@ -144,14 +144,14 @@ export default function GuessComponent() {
                 mountOnEnter
                 unmountOnExit
             >
-                <>
+                <div className="w-full">
                     <CustomButton
                         className={`w-full h-10 bg-slate-300 rounded-xl hover:bg-slate-200 mt-2`}
                         onClick={skipQuestion}
                     >
                         <h1 className="text-xl text-black">{'Pular'}</h1>
                     </CustomButton>
-                </>
+                </div>
             </CustomZoom>
             <CustomZoom
                 shouldStart={mounted}
