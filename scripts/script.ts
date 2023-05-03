@@ -2,6 +2,7 @@ import { writeFileSync } from 'fs';
 import cards from '../src/frontend/assets/cards.json';
 import { ICard } from '@/frontend/models/game/ICard';
 import { randomUUID } from 'crypto';
+import { ICardCategories } from '@/frontend/models/game/ICardCategories';
 
 // const answers = cards.map(card => {
 //     return card.answer;
@@ -148,7 +149,9 @@ const mapper = {
 };
 
 const cardsWithIds = cards.map((card: ICard, index: number) => {
-    const categories = mapper[card.answer as keyof typeof mapper];
+    const categories = mapper[
+        card.answer as keyof typeof mapper
+    ] as ICardCategories[];
     console.log(categories);
     return {
         ...card,
