@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
-import cards from '../src/frontend/assets/cards.json';
 import { ICard } from '@/frontend/models/game/ICard';
+import cards from '../src/frontend/assets/cards.json';
 import { randomUUID } from 'crypto';
 import { ICardCategories } from '@/frontend/models/game/ICardCategories';
 
@@ -148,11 +148,8 @@ const mapper = {
     'Machu Picchu': ['Geografia'],
 };
 
-const cardsWithIds = cards.map((card: ICard, index: number) => {
-    const categories = mapper[
-        card.answer as keyof typeof mapper
-    ] as ICardCategories[];
-    console.log(categories);
+const cardsWithIds = cards.map((card: any, index: number) => {
+    const categories = mapper[card.answer as keyof typeof mapper];
     return {
         ...card,
         categories,
