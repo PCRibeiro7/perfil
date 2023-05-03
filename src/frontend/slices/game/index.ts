@@ -4,6 +4,9 @@ import { IGameState } from '@/frontend/models/game/IGameState';
 import { gameReducer } from './reducer';
 import ICurrentPage from '@/frontend/models/game/ICurrentPage';
 import { shuffleArray } from '@/utils/shuffleArray';
+import { ICardCategories } from '@/frontend/models/game/ICardCategories';
+
+const cardCategories = Object.keys(ICardCategories) as ICardCategories[];
 
 const initialGameState: IGameState = {
     currentPage: ICurrentPage.HOME,
@@ -20,6 +23,7 @@ const initialGameState: IGameState = {
         isMuted: false,
         masterVolume: 0.5,
     },
+    selectedCategories: cardCategories,
 };
 
 export const gameSlice = createSlice({

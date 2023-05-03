@@ -1,4 +1,5 @@
 import axiosInstance from '@/frontend/client';
+import CategoryModal from '@/frontend/components/CategoryModal';
 import CustomButton from '@/frontend/components/CustomButton';
 import CustomZoom from '@/frontend/components/CustomZoom';
 import UsersRanking from '@/frontend/components/UsersRanking';
@@ -28,11 +29,16 @@ export default function Home(): JSX.Element {
     const instructionsIsReady = useDelay(1000);
     const [createUserModalIsOpen, setCreateUserModalIsOpen] = useState(false);
     const [rankingModalIsOpen, setRankingModalIsOpen] = useState(false);
+    const [categoryModalIsOpen, setCategoryModalIsOpen] = useState(false);
 
     const startGame = () => {
         gameSlice.dispatch({
             type: IGameActions.FILTER_CARDS,
-            payload: filterCardsForUser(game.cards, session.user),
+            payload: filterCardsForUser(
+                game.cards,
+                session.user,
+                game.selectedCategories,
+            ),
         });
         gameSlice.dispatch({
             type: IGameActions.CHANGE_PAGE,
@@ -123,8 +129,20 @@ export default function Home(): JSX.Element {
                     >
                         <h1 className="text-xl text-white">Ranking</h1>
                     </CustomButton>
+                    <CustomButton
+                        onClick={() => {
+                            setCategoryModalIsOpen(true);
+                        }}
+                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
+                    >
+                        <h1 className="text-xl text-white">Categorias</h1>
+                    </CustomButton>
                 </div>
             </CustomZoom>
+            <CategoryModal
+                isOpen={categoryModalIsOpen}
+                onClose={() => setCategoryModalIsOpen(false)}
+            />
             <UsersRanking
                 isOpen={rankingModalIsOpen}
                 onClose={() => setRankingModalIsOpen(false)}

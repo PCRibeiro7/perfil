@@ -56,25 +56,25 @@ export default function Result({
                     ) : (
                         <>
                             <div className="flex justify-between">
-                                <h1 className="text-xl text-slate-400">
+                                <h1 className="text-base text-slate-400">
                                     Pontuação Máxima:
                                 </h1>
-                                <h1 className="text-xl">100 pontos</h1>
+                                <h1 className="text-base">100 pontos</h1>
                             </div>
                             <div className="flex justify-between">
-                                <h1 className="text-xl text-slate-400">
+                                <h1 className="text-base text-slate-400">
                                     Dicas Usadas{`(${game.usedTips - 1})`}:
                                 </h1>
-                                <h1 className="text-xl">
+                                <h1 className="text-base">
                                     -5x{game.usedTips - 1} = -
                                     {5 * (game.usedTips - 1)} pontos
                                 </h1>
                             </div>
                             <div className="flex justify-between">
-                                <h1 className="text-xl text-slate-400">
+                                <h1 className="text-base text-slate-400">
                                     Palpites Errados:{`(${game.wrongAnswers})`}
                                 </h1>
-                                <h1 className="text-xl">
+                                <h1 className="text-base">
                                     -2x{game.wrongAnswers} = -
                                     {2 * game.wrongAnswers} pontos
                                 </h1>

@@ -1,4 +1,5 @@
 import { ICard } from './ICard';
+import { ICardCategories } from './ICardCategories';
 import ICurrentPage from './ICurrentPage';
 
 export interface ISound {
@@ -17,4 +18,5 @@ export interface IGameState {
     loading: boolean;
     showCardStats: boolean;
     sound: ISound;
+    selectedCategories: ICardCategories[];
 }

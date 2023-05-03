@@ -85,11 +85,81 @@ import { randomUUID } from 'crypto';
 
 // writeFileSync('./src/assets/categories.json', JSON.stringify(categoryCards));
 
+const mapper = {
+    'Michael Jackson': ['Música', 'Cultura Pop'],
+    'Abraham Lincoln': ['História', 'Política'],
+    Telefone: ['Tecnologia'],
+    Tigre: ['Natureza'],
+    'Forrest Gump': ['Cinema', 'Ficção'],
+    Sushi: ['Comida'],
+    'Harry Potter': ['Literatura', 'Ficção'],
+    'O Poderoso Chefão': ['Cinema'],
+    'The Beatles': ['Música', 'Cultura Pop'],
+    Brasil: ['Geografia', 'Cultura Pop'],
+    'Sherlock Holmes': ['Literatura', 'Ficção'],
+    Pizza: ['Comida'],
+    Futebol: ['Esporte'],
+    'Gabriel García Márquez': ['Literatura'],
+    'Vincent van Gogh': ['Arte'],
+    'Meryl Streep': ['Cinema'],
+    'Usain Bolt': ['Esporte'],
+    'J. K. Rowling': ['Literatura', 'Ficção'],
+    'Machado de Assis': ['Literatura'],
+    'David Bowie': ['Música', 'Cultura Pop'],
+    Adele: ['Música', 'Cultura Pop'],
+    'Tom Hanks': ['Cinema'],
+    'O Senhor dos Anéis: O Retorno do Rei': ['Literatura', 'Ficção'],
+    'Friedrich Nietzsche': ['Filosofia'],
+    'Aretha Franklin': ['Música', 'Cultura Pop'],
+    'Jorge Luis Borges': ['Literatura'],
+    Cadeira: ['Tecnologia'],
+    'Máquina de Lavar': ['Tecnologia'],
+    Relógio: ['Tecnologia'],
+    'Relógio de Parede': ['Tecnologia'],
+    Cafeteira: ['Tecnologia', 'Comida'],
+    Binóculos: ['Tecnologia'],
+    'Cidade de Deus': ['Cinema'],
+    Austrália: ['Geografia'],
+    'Albert Einstein': ['Ciência', 'História'],
+    'Zelda Ocarina of Time': ['Cultura Pop', 'Video Games'],
+    Paris: ['Viagem', 'Cultura Pop'],
+    Girafa: ['Natureza'],
+    '1984': ['Literatura', 'Ficção'],
+    Leão: ['Natureza'],
+    Japão: ['Geografia', 'Cultura Pop'],
+    'Lionel Messi': ['Esporte'],
+    'Salvador Dalí': ['Arte'],
+    'Nova Iorque': ['Geografia'],
+    'Clube da Luta': ['Cinema', 'Ficção'],
+    Minecraft: ['Video Games'],
+    Queen: ['Música', 'Cultura Pop'],
+    Matrix: ['Cinema', 'Ficção'],
+    Elefante: ['Natureza'],
+    'Nova York': ['Geografia'],
+    Xadrez: ['Jogo'],
+    'Serena Williams': ['Esporte'],
+    'Stephen Hawking': ['Ciência'],
+    'Nelson Mandela': ['História', 'Política'],
+    'Câmera Fotográfica': ['Tecnologia'],
+    'Malala Yousafzai': ['História', 'Política'],
+    Orangotango: ['Natureza'],
+    'Leonardo da Vinci': ['Arte', 'História'],
+    'Machu Picchu': ['Geografia'],
+};
+
 const cardsWithIds = cards.map((card: ICard, index: number) => {
+    const categories = mapper[card.answer as keyof typeof mapper];
+    console.log(categories);
     return {
         ...card,
-        id: randomUUID(),
+        categories,
     };
 });
+// .forEach(card => {
+//     if (card.categories.length === 0) console.log(card);
+// });
 
-writeFileSync('./src/assets/cardsId.json', JSON.stringify(cardsWithIds));
+writeFileSync(
+    './src/frontend/assets/newCards.json',
+    JSON.stringify(cardsWithIds),
+);

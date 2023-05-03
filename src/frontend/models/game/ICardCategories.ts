@@ -1,0 +1,18 @@
+export enum ICardCategories {
+    Arte = 'Arte',
+    Cinema = 'Cinema',
+    Comida = 'Comida',
+    CulturaPop = 'Cultura Pop',
+    Esporte = 'Esporte',
+    Ficção = 'Ficção',
+    Filosofia = 'Filosofia',
+    Geografia = 'Geografia',
+    História = 'História',
+    Literatura = 'Literatura',
+    Música = 'Música',
+    Natureza = 'Natureza',
+    Política = 'Política',
+    Religião = 'Religião',
+    Tecnologia = 'Tecnologia',
+    Viagem = 'Viagem',
+}

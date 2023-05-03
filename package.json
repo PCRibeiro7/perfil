@@ -10,11 +10,10 @@
         "test": "jest",
         "lint": "next lint",
         "lint-fix": "eslint --fix",
-        "build-cards-json": "ts-node script.ts",
+        "build-cards-json": "ts-node scripts/script.ts",
         "prettier-format": "prettier --config .prettierrc src/**/*.{ts,tsx,js,css,md,html,json} --write",
         "prisma-push": "npx prisma db push",
         "prisma-format": "npx prisma format",
-        "pscale-dev": "pscale connect perfil main --port 3309",
         "prepare": "husky install"
     },
     "dependencies": {

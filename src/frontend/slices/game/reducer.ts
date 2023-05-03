@@ -66,6 +66,11 @@ export function gameReducer(
                 ...state,
                 sound: payload,
             };
+        case IGameActions.SET_SELECTED_CATEGORIES:
+            return {
+                ...state,
+                selectedCategories: payload,
+            };
         default:
             throw new Error(`Invalid action type: ${type}`);
     }

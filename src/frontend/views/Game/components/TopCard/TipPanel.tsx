@@ -51,7 +51,7 @@ export default function TipPanel() {
             <div>
                 <CustomZoom shouldStart={mounted}>
                     <div className="flex justify-between items-end">
-                        <h1 className="text-xl mb-4 text-slate-400">
+                        <h1 className="text-xl mb-4 text-slate-400 sm:text-lg">
                             {'Dica: '}
                         </h1>
                         <div className="mb-4">
@@ -80,7 +80,7 @@ export default function TipPanel() {
                     shouldStart={mounted}
                     style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
                 >
-                    <h1 className="text-xl max-w-md">
+                    <h1 className="text-xl max-w-md sm:text-base">
                         {currentCard.tips[game.currentQuestionIndex]}
                     </h1>
                 </CustomZoom>
