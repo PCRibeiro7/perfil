@@ -141,8 +141,6 @@ export default function GuessComponent() {
                 style={{
                     transitionDelay: mounted ? `1500ms` : '0ms',
                 }}
-                mountOnEnter
-                unmountOnExit
             >
                 <div className="w-full">
                     <CustomButton

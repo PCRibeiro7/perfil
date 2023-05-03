@@ -26,13 +26,15 @@ export default function Result({
 
     return (
         <div className="h-screen flex flex-col justify-evenly items-center bg-slate-200">
-            <CustomZoom shouldStart={true} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
-                    <h1 className="text-xl text-slate-400 mb-1">{title}</h1>
-                    <h1 className="text-2xl mb-4">{subtitle}</h1>
-                    <h1 className="text-3xl">{currentCard.answer}</h1>
-                </div>
-            </CustomZoom>
+            {type === ICurrentPage.SUCCESS && (
+                <CustomZoom shouldStart={true} timeout={1000}>
+                    <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
+                        <h1 className="text-xl text-slate-400 mb-1">{title}</h1>
+                        <h1 className="text-2xl mb-4">{subtitle}</h1>
+                        <h1 className="text-3xl">{currentCard.answer}</h1>
+                    </div>
+                </CustomZoom>
+            )}
             <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
                 <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
                     <div className="flex justify-between mb-4">
