@@ -33,7 +33,7 @@ export default function GuessComponent() {
     });
 
     const currentCard = game.cards[game.currentCardIndex];
-    const mounted = useDelay(1500 + currentCard.tips.length * 300);
+    const mounted = useDelay(1000);
 
     useEffect(() => {
         if (game.wrongAnswers > 0) {
@@ -119,10 +119,7 @@ export default function GuessComponent() {
                         className="text-center w-full h-10 text-xl border-2 border-slate-200 rounded-xl mb-2 placeholder:text-slate-400"
                     />
                 </CustomZoom>
-                <CustomZoom
-                    shouldStart={mounted}
-                    style={{ transitionDelay: mounted ? `500ms` : '0ms' }}
-                >
+                <CustomZoom shouldStart={mounted}>
                     <div>
                         <CustomButton
                             className={`w-full h-10 bg-slate-950 rounded-xl hover:bg-slate-600 ${
@@ -139,7 +136,7 @@ export default function GuessComponent() {
             <CustomZoom
                 shouldStart={mounted}
                 style={{
-                    transitionDelay: mounted ? `1500ms` : '0ms',
+                    transitionDelay: mounted ? `1000ms` : '0ms',
                 }}
             >
                 <div className="w-full">
@@ -153,7 +150,7 @@ export default function GuessComponent() {
             </CustomZoom>
             <CustomZoom
                 shouldStart={mounted}
-                style={{ transitionDelay: mounted ? `1500ms` : '0ms' }}
+                style={{ transitionDelay: mounted ? `1000ms` : '0ms' }}
             >
                 <div className="mt-4 text-center">
                     <h1 className="text-slate-400">

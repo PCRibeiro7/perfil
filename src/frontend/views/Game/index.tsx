@@ -15,7 +15,7 @@ import { CardStats } from './components/CardStats';
 import SoundController from '@/frontend/components/SoundController';
 
 export default function Game(): JSX.Element {
-    const secondSlideReady = useDelay(4000);
+    const secondSlideReady = useDelay(1000);
     const game = gameSlice.use();
     const session = sessionSlice.use();
     const currentCard = game.cards[game.currentCardIndex];

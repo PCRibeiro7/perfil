@@ -46,8 +46,9 @@ export default function UserNameModal() {
                 onClose={() => {
                     setCreateUserModalIsOpen(false);
                 }}
+                sx={{ top: '10%' }}
             >
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%]">
+                <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%]">
                     <form
                         onSubmit={createUserName}
                         className="w-full"

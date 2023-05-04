@@ -8,12 +8,10 @@ import UsersRanking from '@/frontend/components/UsersRanking';
 import { useDelay } from '@/frontend/hooks/useDelay';
 import ICurrentPage from '@/frontend/models/game/ICurrentPage';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
-import { ISessionAction } from '@/frontend/models/session/ISessionAction';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
 import { filterCardsForUser } from '@/utils/filterCardsForUser';
 import { shuffleArray } from '@/utils/shuffleArray';
-import { Modal } from '@mui/material';
 import { useState } from 'react';
 import Typewriter from 'typewriter-effect';
 
@@ -27,13 +25,8 @@ const instructions = shuffleArray([
 export default function Home(): JSX.Element {
     const game = gameSlice.use();
     const session = sessionSlice.use();
-    const startButtonIsReady = useDelay(4000);
+    const startButtonIsReady = useDelay(1000);
     const instructionsIsReady = useDelay(1000);
-    const [createUserModalIsOpen, setCreateUserModalIsOpen] = useState(false);
-    const [rankingModalIsOpen, setRankingModalIsOpen] = useState(false);
-    const [categoryModalIsOpen, setCategoryModalIsOpen] = useState(false);
-    const [resetProgressModalIsOpen, setResetProgessModalIsOpen] =
-        useState(false);
 
     const startGame = () => {
         const gameCards = filterCardsForUser(
@@ -97,10 +90,10 @@ export default function Home(): JSX.Element {
                 shouldStart={startButtonIsReady}
                 timeout={1000}
                 style={{
-                    transitionDelay: startButtonIsReady ? `1500ms` : '0ms',
+                    transitionDelay: startButtonIsReady ? `1000ms` : '0ms',
                 }}
             >
-                <div className="flex flex-col">
+                <div className="flex flex-col w-52">
                     <UserNameModal />
                     <CategoryModal />
                     <UsersRanking />

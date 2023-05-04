@@ -37,7 +37,11 @@ export default function ResetProgress() {
             <Modal
                 open={resetProgressModalIsOpen}
                 onClose={() => setResetProgessModalIsOpen(false)}
-                sx={{ accentColor: 'rgb(71 85 105)', fontFamily: 'DM Sans' }}
+                sx={{
+                    accentColor: 'rgb(71 85 105)',
+                    fontFamily: 'DM Sans',
+                    top: '10%',
+                }}
             >
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%]">
                     <h1 className="text-xl text-slate-600 mb-2">

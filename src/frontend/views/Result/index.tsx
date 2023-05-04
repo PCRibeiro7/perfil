@@ -18,8 +18,8 @@ export default function Result({
 }): JSX.Element {
     const game = gameSlice.use();
     const session = sessionSlice.use();
-    const secondCardIsReady = useDelay(2000);
-    const buttonIsReady = useDelay(2000, secondCardIsReady);
+    const secondCardIsReady = useDelay(1000);
+    const buttonIsReady = useDelay(1000, secondCardIsReady);
 
     const currentCard = game.cards[game.currentCardIndex];
 
