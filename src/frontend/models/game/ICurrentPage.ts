@@ -3,6 +3,7 @@ enum ICurrentPage {
     'GAME' = 'GAME',
     'SUCCESS' = 'SUCCESS',
     'FAILURE' = 'FAILURE',
+    'END' = 'END',
 }
 
 export default ICurrentPage;

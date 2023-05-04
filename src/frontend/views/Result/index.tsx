@@ -6,7 +6,6 @@ import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
 import calculateScore from '@/utils/calculateScore';
-import useSound from 'use-sound';
 
 export default function Result({
     title,
@@ -108,14 +107,24 @@ export default function Result({
                 <div>
                     <CustomButton
                         onClick={() => {
-                            gameSlice.dispatch({
-                                type: IGameActions.SETUP_NEXT_CARD,
-                                payload: { currentCard },
-                            });
-                            gameSlice.dispatch({
-                                type: IGameActions.CHANGE_PAGE,
-                                payload: { page: ICurrentPage.GAME },
-                            });
+                            if (
+                                game.currentCardIndex ===
+                                game.cards.length - 1
+                            ) {
+                                gameSlice.dispatch({
+                                    type: IGameActions.CHANGE_PAGE,
+                                    payload: { page: ICurrentPage.END },
+                                });
+                            } else {
+                                gameSlice.dispatch({
+                                    type: IGameActions.SETUP_NEXT_CARD,
+                                    payload: { currentCard },
+                                });
+                                gameSlice.dispatch({
+                                    type: IGameActions.CHANGE_PAGE,
+                                    payload: { page: ICurrentPage.GAME },
+                                });
+                            }
                         }}
                         className="bg-black p-2 rounded-xl w-40 hover:bg-slate-600"
                     >

@@ -1,5 +1,4 @@
 import { Modal } from '@mui/material';
-import { useState } from 'react';
 import { gameSlice } from '../slices/game';
 import { ICardCategories } from '../models/game/ICardCategories';
 import { IGameActions } from '../models/game/IGameActions';
@@ -13,7 +12,6 @@ export default function CategoryModal({
 }) {
     const game = gameSlice.use();
     const allCategories = Object.keys(ICardCategories).sort();
-    const [selectAll, setSelectAll] = useState(true);
 
     const handleChange = (e: any, category: ICardCategories) => {
         const checked = e.target.checked;
@@ -33,7 +31,6 @@ export default function CategoryModal({
 
     const toggleSelectAll = (e: any) => {
         const checked = e.target.checked;
-        setSelectAll(checked);
         if (checked) {
             gameSlice.dispatch({
                 type: IGameActions.SET_SELECTED_CATEGORIES,
@@ -48,18 +45,25 @@ export default function CategoryModal({
     };
 
     return (
-        <Modal open={isOpen} onClose={onClose}>
+        <Modal
+            open={isOpen}
+            onClose={onClose}
+            sx={{ accentColor: 'rgb(71 85 105)', fontFamily: 'DM Sans' }}
+        >
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%]">
                 <h1 className="text-xl text-slate-600 mb-6">Categorias:</h1>
                 <div className="flex items-center mb-2">
                     <input
                         type="checkbox"
                         className="mr-2"
-                        checked={selectAll}
+                        checked={
+                            game.selectedCategories.length ===
+                            allCategories.length
+                        }
                         onChange={toggleSelectAll}
                     />
                     <h1 className="text-base text-slate-600 ">
-                        Selcionar Todas:
+                        Selecionar Todas:
                     </h1>
                 </div>
 

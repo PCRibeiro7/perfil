@@ -34,7 +34,7 @@ export default function UsersRanking({
             setUsers(userWithRanking);
         }
         getUsers();
-    }, []);
+    }, [isOpen]);
 
     return (
         <Modal open={isOpen} onClose={onClose}>
@@ -76,7 +76,7 @@ export default function UsersRanking({
                             sortModel: [{ field: 'rank', sort: 'asc' }],
                         },
                     }}
-                    paginationModel={{ page: 0, pageSize: 10 }}
+                    autoHeight
                 />
             </div>
         </Modal>

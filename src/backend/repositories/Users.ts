@@ -7,7 +7,7 @@ export class UsersRepository {
         return await prisma.user.create({ data: {} });
     }
 
-    static async getUserById(id: string): Promise<User | null> {
+    static async getUserById(id: User['id']): Promise<User | null> {
         return await prisma.user.findUnique({ where: { id } });
     }
 
@@ -19,11 +19,11 @@ export class UsersRepository {
         return await prisma.user.createMany({ data: users });
     }
 
-    static async deleteUserById(id: string): Promise<User> {
+    static async deleteUserById(id: User['id']): Promise<User> {
         return await prisma.user.delete({ where: { id } });
     }
 
-    static async updateUserById(id: string, data: User): Promise<User> {
+    static async updateUserById(id: User['id'], data: User): Promise<User> {
         const oldUser = await prisma.user.findUnique({ where: { id } });
 
         const newUser: Partial<User> = {
@@ -44,5 +44,23 @@ export class UsersRepository {
         );
         delete newUser.id;
         return await prisma.user.update({ where: { id }, data: newUser });
+    }
+
+    static async resetUserById(id: User['id']): Promise<User> {
+        const oldUser = await prisma.user.findUnique({ where: { id } });
+
+        const resetUser: Partial<User> = {
+            ...oldUser,
+            score: 0,
+            seenCardIds: [],
+            correctCardIds: [],
+            skippedCardIds: [],
+        };
+        delete resetUser.id;
+
+        return await prisma.user.update({
+            where: { id },
+            data: resetUser,
+        });
     }
 }

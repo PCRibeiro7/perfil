@@ -4,9 +4,11 @@ import ICurrentPage from '@/frontend/models/game/ICurrentPage';
 
 import { gameSlice } from '@/frontend/slices/game';
 import Result from '@/frontend/views/Result';
+import End from '../views/End';
 
 export default function Router(): JSX.Element {
     const state = gameSlice.use();
+
     switch (state.currentPage) {
         case ICurrentPage.HOME:
             return <Home />;
@@ -28,5 +30,7 @@ export default function Router(): JSX.Element {
                     type={ICurrentPage.FAILURE}
                 />
             );
+        case ICurrentPage.END:
+            return <End />;
     }
 }

@@ -2,6 +2,7 @@ import axiosInstance from '@/frontend/client';
 import CategoryModal from '@/frontend/components/CategoryModal';
 import CustomButton from '@/frontend/components/CustomButton';
 import CustomZoom from '@/frontend/components/CustomZoom';
+import ResetProgress from '@/frontend/components/ResetProgress';
 import UsersRanking from '@/frontend/components/UsersRanking';
 import { useDelay } from '@/frontend/hooks/useDelay';
 import ICurrentPage from '@/frontend/models/game/ICurrentPage';
@@ -30,15 +31,24 @@ export default function Home(): JSX.Element {
     const [createUserModalIsOpen, setCreateUserModalIsOpen] = useState(false);
     const [rankingModalIsOpen, setRankingModalIsOpen] = useState(false);
     const [categoryModalIsOpen, setCategoryModalIsOpen] = useState(false);
+    const [resetProgressModalIsOpen, setResetProgessModalIsOpen] =
+        useState(false);
 
     const startGame = () => {
+        const gameCards = filterCardsForUser(
+            game.cards,
+            session.user,
+            game.selectedCategories,
+        );
+        if (gameCards.length === 0) {
+            alert(
+                'Não há cartas suficientes para jogar com as categorias selecionadas',
+            );
+            return;
+        }
         gameSlice.dispatch({
             type: IGameActions.FILTER_CARDS,
-            payload: filterCardsForUser(
-                game.cards,
-                session.user,
-                game.selectedCategories,
-            ),
+            payload: gameCards,
         });
         gameSlice.dispatch({
             type: IGameActions.CHANGE_PAGE,
@@ -123,6 +133,14 @@ export default function Home(): JSX.Element {
                     </CustomButton>
                     <CustomButton
                         onClick={() => {
+                            setCategoryModalIsOpen(true);
+                        }}
+                        className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
+                    >
+                        <h1 className="text-xl text-white">{`Categorias (${game.selectedCategories.length})`}</h1>
+                    </CustomButton>
+                    <CustomButton
+                        onClick={() => {
                             setRankingModalIsOpen(true);
                         }}
                         className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
@@ -131,11 +149,13 @@ export default function Home(): JSX.Element {
                     </CustomButton>
                     <CustomButton
                         onClick={() => {
-                            setCategoryModalIsOpen(true);
+                            setResetProgessModalIsOpen(true);
                         }}
                         className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
                     >
-                        <h1 className="text-xl text-white">Categorias</h1>
+                        <h1 className="text-xl text-white">
+                            Resetar Progresso
+                        </h1>
                     </CustomButton>
                 </div>
             </CustomZoom>
@@ -146,6 +166,10 @@ export default function Home(): JSX.Element {
             <UsersRanking
                 isOpen={rankingModalIsOpen}
                 onClose={() => setRankingModalIsOpen(false)}
+            />
+            <ResetProgress
+                isOpen={resetProgressModalIsOpen}
+                onClose={() => setResetProgessModalIsOpen(false)}
             />
             <Modal
                 open={createUserModalIsOpen}
