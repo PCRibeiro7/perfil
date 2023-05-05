@@ -69,8 +69,9 @@ export default function Home(): JSX.Element {
                                 ],
                                 autoStart: true,
                                 loop: true,
-                                wrapperClassName: 'text-3xl',
-                                deleteSpeed: 5,
+                                wrapperClassName: 'text-2xl',
+                                deleteSpeed: 10,
+                                delay: 50,
                             }}
                         />
                     </div>
