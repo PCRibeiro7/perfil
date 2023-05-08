@@ -33,7 +33,7 @@ export default function GuessOptions() {
     return (
         <div className="rounded-xl p-2">
             <h1 className="text-xl mb-4 text-slate-400">Dicas disponíveis:</h1>
-            <div className="grid grid-cols-3 gap-2 sm:flex sm:overflow-auto sm:whitespace-nowrap sm:gap-0">
+            <div className="grid grid-cols-5 gap-2 sm:flex sm:overflow-auto sm:whitespace-nowrap sm:gap-0">
                 {[...Array(currentCard.tips.length).keys()].map(
                     (question, index) => (
                         <CustomZoom
