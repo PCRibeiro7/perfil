@@ -1,6 +1,6 @@
+import AppShell from '@/frontend/components/AppShell';
 import CustomButton from '@/frontend/components/CustomButton';
-import CustomZoom from '@/frontend/components/CustomZoom';
-import { useDelay } from '@/frontend/hooks/useDelay';
+import Icon from '@/frontend/components/Icon';
 import ICurrentPage from '@/frontend/models/game/ICurrentPage';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { gameSlice } from '@/frontend/slices/game';
@@ -8,8 +8,6 @@ import { sessionSlice } from '@/frontend/slices/session';
 import calculateScore from '@/utils/calculateScore';
 
 export default function Result({
-    title,
-    subtitle,
     type,
 }: {
     title: string;
@@ -17,121 +15,118 @@ export default function Result({
     type: ICurrentPage.SUCCESS | ICurrentPage.FAILURE;
 }): JSX.Element {
     const game = gameSlice.use();
-    const session = sessionSlice.use();
-    const secondCardIsReady = useDelay(1000);
-    const buttonIsReady = useDelay(1000, secondCardIsReady);
-
-    const currentCard = game.cards[game.currentCardIndex];
-
+    const { user } = sessionSlice.use();
+    const card = game.cards[game.currentCardIndex];
+    const success = type === ICurrentPage.SUCCESS;
+    const last = game.currentCardIndex === game.cards.length - 1;
+    const next = () => {
+        if (!last)
+            gameSlice.dispatch({
+                type: IGameActions.SETUP_NEXT_CARD,
+                payload: { currentCard: card },
+            });
+        gameSlice.dispatch({
+            type: IGameActions.CHANGE_PAGE,
+            payload: { page: last ? ICurrentPage.END : ICurrentPage.GAME },
+        });
+    };
     return (
-        <div className="h-screen flex flex-col justify-evenly items-center bg-slate-200">
-            {type === ICurrentPage.SUCCESS && (
-                <CustomZoom shouldStart={true} timeout={1000}>
-                    <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
-                        <h1 className="text-xl text-slate-400 mb-1">{title}</h1>
-                        <h1 className="text-2xl mb-4">{subtitle}</h1>
-                        <h1 className="text-3xl">{currentCard.answer}</h1>
-                    </div>
-                </CustomZoom>
-            )}
-            <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
-                    <div className="flex justify-between mb-4">
-                        <h1 className="text-xl text-slate-400">
-                            Pontuação na rodada:{' '}
-                        </h1>
-                        <h1 className="text-xl">
-                            {' '}
-                            {type === ICurrentPage.FAILURE
-                                ? 0
-                                : calculateScore(game)}{' '}
-                            pontos
-                        </h1>
-                    </div>
-                    {type === ICurrentPage.FAILURE ? (
-                        <h1 className="text-xl text-slate-400">
-                            Voce não pontuou porque pulou a carta...
-                        </h1>
-                    ) : (
-                        <>
-                            <div className="flex justify-between">
-                                <h1 className="text-base text-slate-400">
-                                    Pontuação Máxima:
-                                </h1>
-                                <h1 className="text-base">100 pontos</h1>
-                            </div>
-                            <div className="flex justify-between">
-                                <h1 className="text-base text-slate-400">
-                                    Dicas Usadas{`(${game.usedTips - 1})`}:
-                                </h1>
-                                <h1 className="text-base">
-                                    -5x{game.usedTips - 1} = -
-                                    {5 * (game.usedTips - 1)} pontos
-                                </h1>
-                            </div>
-                            <div className="flex justify-between">
-                                <h1 className="text-base text-slate-400">
-                                    Palpites Errados:{`(${game.wrongAnswers})`}
-                                </h1>
-                                <h1 className="text-base">
-                                    -2x{game.wrongAnswers} = -
-                                    {2 * game.wrongAnswers} pontos
-                                </h1>
-                            </div>
-                        </>
-                    )}
+        <AppShell>
+            <main id="main-content" className="result-main page-width">
+                <div
+                    className={`result-symbol ${
+                        success ? '' : 'result-skipped'
+                    }`}
+                >
+                    <Icon
+                        name={success ? 'sparkles' : 'bulb'}
+                        width="36"
+                        height="36"
+                    />
                 </div>
-            </CustomZoom>
-            <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
-                    <div className="flex justify-between">
-                        <h1 className="text-xl text-slate-400">Já acertou:</h1>
-                        <h1 className="text-xl">
-                            {session.user.correctCardIds.length} cartas
-                        </h1>
+                <span className="section-kicker">
+                    {success ? 'PISTAS CONECTADAS!' : 'MAIS UMA DESCOBERTA'}
+                </span>
+                <h1>
+                    {success
+                        ? 'A curiosidade te levou lá.'
+                        : 'Essa fica para a próxima.'}
+                </h1>
+                <p className="result-subtitle">
+                    {success
+                        ? 'Você descobriu o perfil. Mandou bem!'
+                        : 'Nem todo mistério se resolve de primeira. Continue curioso.'}
+                </p>
+                <section className="result-card">
+                    <div className="answer-reveal">
+                        <span className="section-kicker">
+                            {success ? 'O PERFIL É' : 'A RESPOSTA ERA'}
+                        </span>
+                        <h2>{card.answer}</h2>
+                        <span className="answer-type">{card.type}</span>
                     </div>
-                    <div className="flex justify-between">
-                        <h1 className="text-xl text-slate-400">Faltam:</h1>
-                        <h1 className="text-xl">
-                            {game.cards.length - game.correctAnswers.length}{' '}
-                            cartas
-                        </h1>
+                    <div className="score-breakdown">
+                        <div className="round-score">
+                            <span>Pontos nesta carta</span>
+                            <strong>
+                                +{success ? calculateScore(game) : 0}
+                                <small>pts</small>
+                            </strong>
+                        </div>
+                        {success ? (
+                            <>
+                                <div>
+                                    <span>Pontuação inicial</span>
+                                    <span>100</span>
+                                </div>
+                                <div>
+                                    <span>
+                                        Dicas extras ({game.usedTips - 1})
+                                    </span>
+                                    <span>−{(game.usedTips - 1) * 5}</span>
+                                </div>
+                                <div>
+                                    <span>
+                                        Palpites errados ({game.wrongAnswers})
+                                    </span>
+                                    <span>−{game.wrongAnswers * 2}</span>
+                                </div>
+                            </>
+                        ) : (
+                            <p className="skip-explanation">
+                                Cartas puladas não somam pontos. A próxima pode
+                                ser a sua!
+                            </p>
+                        )}
                     </div>
-                    <div className="flex justify-between">
-                        <h1 className="text-xl text-slate-400">Score atual:</h1>
-                        <h1 className="text-xl">{session.user.score} pontos</h1>
-                    </div>
+                </section>
+                <div className="result-totals">
+                    <span>
+                        <strong>{user.score.toLocaleString('pt-BR')}</strong>{' '}
+                        pontos no total
+                    </span>
+                    <span>
+                        <strong>{user.correctCardIds.length}</strong> cartas
+                        descobertas
+                    </span>
+                    <span>
+                        <strong>
+                            {Math.max(
+                                0,
+                                game.cards.length - game.currentCardIndex - 1,
+                            )}
+                        </strong>{' '}
+                        cartas pela frente
+                    </span>
                 </div>
-            </CustomZoom>
-            <CustomZoom shouldStart={buttonIsReady} timeout={1000}>
-                <div>
-                    <CustomButton
-                        onClick={() => {
-                            if (
-                                game.currentCardIndex ===
-                                game.cards.length - 1
-                            ) {
-                                gameSlice.dispatch({
-                                    type: IGameActions.CHANGE_PAGE,
-                                    payload: { page: ICurrentPage.END },
-                                });
-                            } else {
-                                gameSlice.dispatch({
-                                    type: IGameActions.SETUP_NEXT_CARD,
-                                    payload: { currentCard },
-                                });
-                                gameSlice.dispatch({
-                                    type: IGameActions.CHANGE_PAGE,
-                                    payload: { page: ICurrentPage.GAME },
-                                });
-                            }
-                        }}
-                        className="bg-black p-2 rounded-xl w-40 hover:bg-slate-600"
-                    >
-                        <h1 className="text-2xl text-white ">Próxima Carta</h1>
-                    </CustomButton>
-                </div>
-            </CustomZoom>
-        </div>
+                <CustomButton
+                    className="button button-primary next-button"
+                    onClick={next}
+                >
+                    {last ? 'Ver meu resultado' : 'Próxima carta'}
+                    <Icon name="arrow" />
+                </CustomButton>
+            </main>
+        </AppShell>
     );
 }

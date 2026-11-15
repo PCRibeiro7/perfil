@@ -50,6 +50,13 @@ export function gameReducer(
             return {
                 ...state,
                 cards: payload,
+                currentCardIndex: 0,
+                askedQuestions: [0],
+                currentQuestionIndex: 0,
+                correctAnswers: [],
+                wrongAnswers: 0,
+                usedTips: 1,
+                showCardStats: false,
             };
         case IGameActions.SET_LOADING:
             return {

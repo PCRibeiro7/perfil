@@ -1,45 +1,25 @@
-import { Fab } from '@mui/material';
-import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
-import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import { gameSlice } from '../slices/game';
 import { IGameActions } from '../models/game/IGameActions';
-import useSound from 'use-sound';
+import Icon from './Icon';
+
 export default function SoundController() {
     const game = gameSlice.use();
-
-    const [playHover] = useSound('/sounds/hover.mp3', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
-    const [playClickSound] = useSound('/sounds/tip.wav', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
-
-    const toggleMute = () => {
-        playClickSound();
-        gameSlice.dispatch({
-            type: IGameActions.SET_SOUND_DATA,
-            payload: {
-                ...game.sound,
-                isMuted: !game.sound.isMuted,
-            },
-        });
-    };
-
+    const label = game.sound.isMuted ? 'Ativar som' : 'Silenciar som';
     return (
-        <Fab
-            onClick={toggleMute}
-            sx={{
-                position: 'absolute',
-                bottom: 16,
-                right: 16,
-                color: 'black',
-                backgroundColor: 'white',
-            }}
-            onMouseEnter={() => playHover()}
+        <button
+            type="button"
+            className="icon-button sound-button"
+            aria-label={label}
+            title={label}
+            aria-pressed={!game.sound.isMuted}
+            onClick={() =>
+                gameSlice.dispatch({
+                    type: IGameActions.SET_SOUND_DATA,
+                    payload: { ...game.sound, isMuted: !game.sound.isMuted },
+                })
+            }
         >
-            {game.sound.isMuted ? <VolumeOffIcon /> : <VolumeMuteIcon />}
-        </Fab>
+            <Icon name={game.sound.isMuted ? 'muted' : 'volume'} />
+        </button>
     );
 }

@@ -1,84 +1,65 @@
+import AppShell from '@/frontend/components/AppShell';
 import CustomButton from '@/frontend/components/CustomButton';
-import CustomZoom from '@/frontend/components/CustomZoom';
-import { useDelay } from '@/frontend/hooks/useDelay';
+import Icon from '@/frontend/components/Icon';
+import UsersRanking from '@/frontend/components/UsersRanking';
 import ICurrentPage from '@/frontend/models/game/ICurrentPage';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { gameSlice } from '@/frontend/slices/game';
 import { sessionSlice } from '@/frontend/slices/session';
-import calculateScore from '@/utils/calculateScore';
 
 export default function End(): JSX.Element {
     const game = gameSlice.use();
-    const session = sessionSlice.use();
-    const secondCardIsReady = useDelay(2000);
-    const buttonIsReady = useDelay(2000, secondCardIsReady);
-
-    const currentCard = game.cards[game.currentCardIndex];
-
+    const { user } = sessionSlice.use();
+    const ids = game.cards.map(card => card.id);
+    const correct = ids.filter(id => user.correctCardIds.includes(id)).length;
     return (
-        <div className="h-screen flex flex-col justify-evenly items-center bg-slate-200">
-            <CustomZoom shouldStart={true} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
-                    <h1 className="text-xl text-slate-400 mb-1">Parabéns!</h1>
-                    <h1 className="text-2xl mb-4">Você acabou com as cartas</h1>
-                    <h1 className="text-3xl">
-                        Score Final: {session.user.score}
-                    </h1>
+        <AppShell navigation={<UsersRanking />}>
+            <main id="main-content" className="result-main end-main page-width">
+                <div className="result-symbol">
+                    <Icon name="trophy" width="38" height="38" />
                 </div>
-            </CustomZoom>
-            <CustomZoom shouldStart={secondCardIsReady} timeout={1000}>
-                <div className="bg-white p-6 rounded-xl w-96 min-w-[25%] max-w-[90%]">
-                    <div className="flex justify-between mb-4">
-                        <h1 className="text-xl text-slate-400">
-                            Pontuação na rodada:
-                        </h1>
-                        <h1 className="text-xl">
-                            {calculateScore(game)} pontos
-                        </h1>
+                <span className="section-kicker">
+                    UMA PARTIDA, MUITAS DESCOBERTAS
+                </span>
+                <h1>Sua curiosidade foi longe.</h1>
+                <p className="result-subtitle">
+                    Você chegou ao fim das cartas selecionadas.
+                    <br />
+                    Sempre há novos assuntos para explorar.
+                </p>
+                <section className="completion-card">
+                    <span className="section-kicker">SUA PONTUAÇÃO TOTAL</span>
+                    <strong className="final-score">
+                        {user.score.toLocaleString('pt-BR')}
+                        <small>pontos</small>
+                    </strong>
+                    <div className="completion-stats">
+                        <div>
+                            <strong>{game.cards.length}</strong>
+                            <span>cartas exploradas</span>
+                        </div>
+                        <div>
+                            <strong>{correct}</strong>
+                            <span>perfis descobertos</span>
+                        </div>
+                        <div>
+                            <strong>{game.cards.length - correct}</strong>
+                            <span>cartas puladas</span>
+                        </div>
                     </div>
-                    <div className="flex justify-between">
-                        <h1 className="text-base text-slate-400">
-                            Pontuação Máxima:
-                        </h1>
-                        <h1 className="text-base">100 pontos</h1>
-                    </div>
-                    <div className="flex justify-between">
-                        <h1 className="text-base text-slate-400">
-                            Dicas Usadas{`(${game.usedTips - 1})`}:
-                        </h1>
-                        <h1 className="text-base">
-                            -5x{game.usedTips - 1} = -{5 * (game.usedTips - 1)}{' '}
-                            pontos
-                        </h1>
-                    </div>
-                    <div className="flex justify-between">
-                        <h1 className="text-base text-slate-400">
-                            Palpites Errados:{`(${game.wrongAnswers})`}
-                        </h1>
-                        <h1 className="text-base">
-                            -2x{game.wrongAnswers} = -{2 * game.wrongAnswers}{' '}
-                            pontos
-                        </h1>
-                    </div>
-                </div>
-            </CustomZoom>
-            <CustomZoom shouldStart={buttonIsReady} timeout={1000}>
-                <div>
-                    <CustomButton
-                        onClick={() => {
-                            gameSlice.dispatch({
-                                type: IGameActions.CHANGE_PAGE,
-                                payload: { page: ICurrentPage.HOME },
-                            });
-                        }}
-                        className="bg-black p-2 rounded-xl w-40 hover:bg-slate-600"
-                    >
-                        <h1 className="text-2xl text-white ">
-                            Voltar para Home
-                        </h1>
-                    </CustomButton>
-                </div>
-            </CustomZoom>
-        </div>
+                </section>
+                <CustomButton
+                    className="button button-primary next-button"
+                    onClick={() =>
+                        gameSlice.dispatch({
+                            type: IGameActions.CHANGE_PAGE,
+                            payload: { page: ICurrentPage.HOME },
+                        })
+                    }
+                >
+                    Explorar mais categorias <Icon name="arrow" />
+                </CustomButton>
+            </main>
+        </AppShell>
     );
 }

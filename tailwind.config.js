@@ -2,10 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    content: [
-        './src/pages/**/*.{js,ts,jsx,tsx}',
-        './src/frontend/views/**/*.{js,ts,jsx,tsx}',
-    ],
+    content: ['./src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         screens: {
             md: { max: '767px' },

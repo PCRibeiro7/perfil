@@ -1,30 +1,50 @@
 import { ISessionAction } from '@/frontend/models/session/ISessionAction';
 import { sessionSlice } from '@/frontend/slices/session';
 import { User } from '@prisma/client';
-import { AxiosResponse } from 'axios';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import axiosInstance from '../client';
 
-export function useUser() {
-    const setUpUser = useCallback(async () => {
-        let stored = localStorage.getItem('userId');
-        let response: AxiosResponse<User>;
-        if (!stored) {
-            response = await axiosInstance.post('/api/users');
-        } else {
-            response = await axiosInstance
-                .get('/api/users/' + stored)
-                .catch(async _e => await axiosInstance.post('/api/users'));
-        }
-        const user = response.data;
-        sessionSlice.dispatch({
-            type: ISessionAction.SET_USER,
-            payload: user,
-        });
-        localStorage.setItem('userId', user.id);
-    }, []);
+let setupRequest: Promise<User> | undefined;
 
+async function loadUser(): Promise<User> {
+    const stored = localStorage.getItem('userId');
+    if (stored) {
+        try {
+            const { data } = await axiosInstance.get<User | null>(
+                `/api/users/${stored}`,
+            );
+            if (data?.id) return data;
+        } catch {
+            // Keep the saved identity so a temporary outage cannot erase progress.
+            throw new Error('connection');
+        }
+    }
+    const { data } = await axiosInstance.post<User>('/api/users');
+    if (!data?.id) throw new Error('connection');
+    return data;
+}
+
+export function useUser() {
+    const [error, setError] = useState(false);
+    const setUpUser = useCallback(async () => {
+        setError(false);
+        try {
+            if (!setupRequest)
+                setupRequest = loadUser().finally(() => {
+                    setupRequest = undefined;
+                });
+            const user = await setupRequest;
+            sessionSlice.dispatch({
+                type: ISessionAction.SET_USER,
+                payload: user,
+            });
+            localStorage.setItem('userId', user.id);
+        } catch {
+            setError(true);
+        }
+    }, []);
     useEffect(() => {
         setUpUser();
     }, [setUpUser]);
+    return { error, retry: setUpUser };
 }

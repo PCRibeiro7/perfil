@@ -1,109 +1,104 @@
-import { Modal } from '@mui/material';
+import { useState } from 'react';
 import { gameSlice } from '../slices/game';
 import { ICardCategories } from '../models/game/ICardCategories';
 import { IGameActions } from '../models/game/IGameActions';
-import { useState } from 'react';
 import CustomButton from './CustomButton';
+import AppDialog from './AppDialog';
+import Icon from './Icon';
 
 export default function CategoryModal() {
     const game = gameSlice.use();
-    const allCategories = Object.keys(ICardCategories).sort();
-    const [categoryModalIsOpen, setCategoryModalIsOpen] = useState(false);
-
-    const handleChange = (e: any, category: ICardCategories) => {
-        const checked = e.target.checked;
-        let categories = [...game.selectedCategories];
-        if (checked) {
-            categories.push(category as ICardCategories);
-        } else {
-            categories = categories.filter(
-                c => c !== (category as ICardCategories),
-            );
-        }
+    const [open, setOpen] = useState(false);
+    const [selected, setSelected] = useState(game.selectedCategories);
+    const categories = Object.keys(ICardCategories) as ICardCategories[];
+    const apply = () => {
         gameSlice.dispatch({
             type: IGameActions.SET_SELECTED_CATEGORIES,
-            payload: categories,
+            payload: selected,
         });
+        setOpen(false);
     };
-
-    const toggleSelectAll = (e: any) => {
-        const checked = e.target.checked;
-        if (checked) {
-            gameSlice.dispatch({
-                type: IGameActions.SET_SELECTED_CATEGORIES,
-                payload: allCategories as ICardCategories[],
-            });
-        } else {
-            gameSlice.dispatch({
-                type: IGameActions.SET_SELECTED_CATEGORIES,
-                payload: [] as ICardCategories[],
-            });
-        }
-    };
-
     return (
         <>
             <CustomButton
+                className="button button-outline button-small"
                 onClick={() => {
-                    setCategoryModalIsOpen(true);
+                    setSelected(game.selectedCategories);
+                    setOpen(true);
                 }}
-                className="bg-black rounded-xl hover:bg-slate-600 mt-4 w-52"
             >
-                <h1 className="text-xl text-white">{`Categorias (${game.selectedCategories.length})`}</h1>
+                Escolher categorias <Icon name="arrow" width="17" />
             </CustomButton>
-            <Modal
-                open={categoryModalIsOpen}
-                onClose={() => setCategoryModalIsOpen(false)}
-                sx={{
-                    accentColor: 'rgb(71 85 105)',
-                    fontFamily: 'DM Sans',
-                    top: '10%',
-                }}
+            <AppDialog
+                open={open}
+                onClose={() => setOpen(false)}
+                title="Siga sua curiosidade."
+                description="Escolha os assuntos da sua próxima partida. Você pode combinar quantos quiser."
+                icon="grid"
             >
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%]">
-                    <h1 className="text-xl text-slate-600 mb-6">Categorias:</h1>
-                    <div className="flex items-center mb-2">
-                        <input
-                            type="checkbox"
-                            className="mr-2"
-                            checked={
-                                game.selectedCategories.length ===
-                                allCategories.length
-                            }
-                            onChange={toggleSelectAll}
-                        />
-                        <h1 className="text-base text-slate-600 ">
-                            Selecionar Todas:
-                        </h1>
-                    </div>
-
-                    <div className="grid grid-cols-3">
-                        {allCategories.map(category => (
-                            <div
-                                className="flex flex-row items-center"
-                                key={category}
-                            >
-                                <input
-                                    type="checkbox"
-                                    className="mr-2"
-                                    checked={game.selectedCategories.includes(
-                                        category as ICardCategories,
-                                    )}
-                                    onChange={e =>
-                                        handleChange(
-                                            e,
-                                            category as ICardCategories,
-                                        )
-                                    }
-                                />
-                                <h1 className="text-base text-slate-600">
-                                    {category}
-                                </h1>
-                            </div>
-                        ))}
-                    </div>
+                <div className="selection-summary">
+                    <span>
+                        {selected.length} de {categories.length} selecionadas
+                    </span>
+                    <button
+                        className="text-button"
+                        onClick={() =>
+                            setSelected(
+                                selected.length === categories.length
+                                    ? []
+                                    : categories,
+                            )
+                        }
+                    >
+                        {selected.length === categories.length
+                            ? 'Limpar seleção'
+                            : 'Selecionar todas'}
+                    </button>
                 </div>
-            </Modal>
+                <div className="category-grid">
+                    {categories.map(category => (
+                        <label
+                            className={`category-option ${
+                                selected.includes(category) ? 'selected' : ''
+                            }`}
+                            key={category}
+                        >
+                            <input
+                                type="checkbox"
+                                checked={selected.includes(category)}
+                                onChange={event =>
+                                    setSelected(
+                                        event.target.checked
+                                            ? [...selected, category]
+                                            : selected.filter(
+                                                  item => item !== category,
+                                              ),
+                                    )
+                                }
+                            />
+                            <span>
+                                {
+                                    ICardCategories[
+                                        category as keyof typeof ICardCategories
+                                    ]
+                                }
+                            </span>
+                        </label>
+                    ))}
+                </div>
+                {selected.length === 0 && (
+                    <p className="field-error" role="status">
+                        Selecione pelo menos uma categoria para jogar.
+                    </p>
+                )}
+                <CustomButton
+                    className="button button-primary dialog-action"
+                    disabled={selected.length === 0}
+                    onClick={apply}
+                >
+                    Tudo pronto <Icon name="check" width="18" />
+                </CustomButton>
+            </AppDialog>
         </>
     );
 }

@@ -1,36 +1,26 @@
+import { ButtonHTMLAttributes } from 'react';
 import useSound from 'use-sound';
 import { gameSlice } from '../slices/game';
 
 export default function CustomButton({
     onClick,
     children,
+    type = 'button',
     ...props
-}: {
-    onClick?: (e?: any) => void;
-    children?: JSX.Element;
-    props?: any;
-    [key: string]: any;
-}) {
+}: ButtonHTMLAttributes<HTMLButtonElement>) {
     const game = gameSlice.use();
-
-    const [playHover] = useSound('/sounds/hover.mp3', {
+    const [playClick] = useSound('/sounds/tip.wav', {
         volume: game.sound.masterVolume * 0.2,
         soundEnabled: !game.sound.isMuted,
     });
-
-    const [playClickSound] = useSound('/sounds/tip.wav', {
-        volume: game.sound.masterVolume * 0.2,
-        soundEnabled: !game.sound.isMuted,
-    });
-
     return (
         <button
-            onClick={() => {
-                playClickSound();
-                if (onClick) onClick();
-            }}
-            onMouseEnter={() => playHover()}
             {...props}
+            type={type}
+            onClick={event => {
+                playClick();
+                onClick?.(event);
+            }}
         >
             {children}
         </button>

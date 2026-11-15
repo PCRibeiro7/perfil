@@ -1,98 +1,86 @@
 import axiosInstance from '@/frontend/client';
+import AppDialog from '@/frontend/components/AppDialog';
 import { IGameActions } from '@/frontend/models/game/IGameActions';
 import { gameSlice } from '@/frontend/slices/game';
-import { Modal } from '@mui/material';
-import { CardStats } from '@prisma/client';
-import BarChartIcon from '@mui/icons-material/BarChart';
+import { CardStats as CardStatsData } from '@prisma/client';
 import { useEffect, useState } from 'react';
 
 export function CardStats({ cardId }: { cardId: string }) {
-    const [cardStats, setCardStats] = useState(
-        undefined as CardStats | undefined,
-    );
+    const [stats, setStats] = useState<CardStatsData | null>(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const [retry, setRetry] = useState(0);
     const game = gameSlice.use();
-
-    const getCardStats = async (cardId: string) => {
-        const { data: cardStats } = await axiosInstance.get(`/api/cardStats`, {
-            params: { cardId },
-        });
-        if (!cardStats) return;
-        setCardStats(cardStats);
-    };
-
     useEffect(() => {
-        getCardStats(cardId);
-    }, [cardId]);
-
-    const closeModal = () => {
-        gameSlice.dispatch({
-            type: IGameActions.SET_SHOW_CARD_STATS,
-            payload: false,
-        });
-    };
-
+        if (!game.showCardStats) return;
+        let active = true;
+        setStats(null);
+        setLoading(true);
+        setError(false);
+        axiosInstance
+            .get('/api/cardStats', { params: { cardId } })
+            .then(({ data }) => {
+                if (active) setStats(data);
+            })
+            .catch(() => {
+                if (active) setError(true);
+            })
+            .finally(() => {
+                if (active) setLoading(false);
+            });
+        return () => {
+            active = false;
+        };
+    }, [cardId, game.showCardStats, retry]);
     return (
-        <Modal open={game.showCardStats} onClose={closeModal}>
-            <div className="absolute top-8 left-1/2 -translate-x-1/2 bg-white flex flex-col p-6 rounded-lg border-b-2 border-slate-200 w-[30rem] max-w-[90%] sm:p-2">
-                <div className="bg-white p-6 rounded-xl">
-                    {cardStats === undefined ? (
-                        <>
-                            <h1 className="text-xl text-slate-600">
-                                Caraca! Não temos estatísticas!
-                            </h1>
-                            <h1 className="text-2xl ">
-                                Você é a primeira pessoa a ver essa carta!
-                            </h1>
-                        </>
-                    ) : (
-                        <>
-                            <h1 className="text-2xl text-slate-600 mb-4 flex items-center">
-                                <BarChartIcon className="mr-1" />
-                                Estatísticas da carta:
-                            </h1>
-                            <div className="flex justify-between">
-                                <h1 className="text-2xl text-slate-400">
-                                    Já viram:
-                                </h1>
-                                <div>
-                                    <h1 className="text-2xl inline-block mr-2">
-                                        {cardStats.seenCount}
-                                    </h1>
-                                    <h1 className="text-2xl text-slate-400 inline-block">
-                                        pessoas
-                                    </h1>
-                                </div>
-                            </div>
-                            <div className="flex justify-between">
-                                <h1 className="text-2xl text-slate-400">
-                                    Pularam:
-                                </h1>
-                                <div>
-                                    <h1 className="text-2xl inline-block mr-2">
-                                        {cardStats.skippedCount}
-                                    </h1>
-                                    <h1 className="text-2xl text-slate-400 inline-block">
-                                        pessoas
-                                    </h1>
-                                </div>
-                            </div>
-                            <div className="flex justify-between">
-                                <h1 className="text-2xl text-slate-400">
-                                    Acertaram:
-                                </h1>
-                                <div>
-                                    <h1 className="text-2xl inline-block mr-2">
-                                        {cardStats.correctCount}
-                                    </h1>
-                                    <h1 className="text-2xl text-slate-400 inline-block">
-                                        pessoas
-                                    </h1>
-                                </div>
-                            </div>
-                        </>
-                    )}
+        <AppDialog
+            open={game.showCardStats}
+            onClose={() =>
+                gameSlice.dispatch({
+                    type: IGameActions.SET_SHOW_CARD_STATS,
+                    payload: false,
+                })
+            }
+            title="Esta carta já deu o que pensar."
+            description="Veja como outras mentes curiosas se saíram neste desafio."
+            icon="chart"
+        >
+            {loading ? (
+                <p className="empty-state" role="status">
+                    Buscando estatísticas...
+                </p>
+            ) : error ? (
+                <div className="empty-state">
+                    <p role="alert">
+                        Não foi possível carregar as estatísticas.
+                    </p>
+                    <button
+                        className="text-button"
+                        onClick={() => setRetry(value => value + 1)}
+                    >
+                        Tentar novamente
+                    </button>
                 </div>
-            </div>
-        </Modal>
+            ) : !stats ? (
+                <p className="empty-state">
+                    Você está entre as primeiras pessoas a descobrir esta carta!
+                </p>
+            ) : (
+                <div className="card-stats-grid">
+                    <div>
+                        <strong>{stats.seenCount}</strong>
+                        <span>visualizações</span>
+                    </div>
+                    <div>
+                        <strong>{stats.correctCount}</strong>
+                        <span>acertos</span>
+                    </div>
+                    <div>
+                        <strong>{stats.skippedCount}</strong>
+                        <span>pularam</span>
+                    </div>
+                </div>
+            )}
+        </AppDialog>
     );
 }
